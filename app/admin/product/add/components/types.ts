@@ -128,3 +128,14 @@ export interface AddProductState {
   serializedInventory: SerializedUnit[];
   quantityInventory: QuantityInventory | null;
 }
+
+export interface SpecTemplate {
+  id: string;
+  name: string;
+  fields: {
+    id: string;
+    name: string;
+    type: string;
+    options?: string[];
+  }[];
+}

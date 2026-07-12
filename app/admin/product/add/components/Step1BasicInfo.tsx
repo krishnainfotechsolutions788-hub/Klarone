@@ -105,7 +105,7 @@ export function Step1BasicInfo({ data, onChange }: Step1BasicInfoProps) {
           
           <div className="space-y-2">
              <label className="text-sm font-medium">Status</label>
-             <Select value={data.status} onValueChange={(val: any) => onChange({ status: val })}>
+             <Select value={data.status} onValueChange={(val: any) => onChange({ status: val || "" })}>
                <SelectTrigger>
                  <SelectValue />
                </SelectTrigger>
@@ -121,7 +121,7 @@ export function Step1BasicInfo({ data, onChange }: Step1BasicInfoProps) {
 
           <div className="space-y-2">
             <label className="text-sm font-medium">Category Group <span className="text-red-500">*</span></label>
-            <Select value={data.categoryGroupId} onValueChange={handleGroupChange}>
+            <Select value={data.categoryGroupId} onValueChange={(val) => handleGroupChange(val || "")}>
               <SelectTrigger>
                 <SelectValue placeholder="Select Group">
                   {data.categoryGroupId ? (groups.find(g => g.id === data.categoryGroupId)?.name || 'Loading...') : undefined}
@@ -137,7 +137,7 @@ export function Step1BasicInfo({ data, onChange }: Step1BasicInfoProps) {
 
           <div className="space-y-2">
             <label className="text-sm font-medium">Category <span className="text-red-500">*</span></label>
-            <Select value={data.categoryId} onValueChange={handleCategoryChange} disabled={!data.categoryGroupId}>
+            <Select value={data.categoryId} onValueChange={(val) => handleCategoryChange(val || "")} disabled={!data.categoryGroupId}>
               <SelectTrigger>
                 <SelectValue placeholder="Select Category">
                   {data.categoryId ? (availableCategories.find(c => c.id === data.categoryId)?.name || 'Loading...') : undefined}
@@ -153,7 +153,7 @@ export function Step1BasicInfo({ data, onChange }: Step1BasicInfoProps) {
 
           <div className="space-y-2">
             <label className="text-sm font-medium">Brand <span className="text-red-500">*</span></label>
-            <Select value={data.brand} onValueChange={handleBrandChange}>
+            <Select value={data.brand} onValueChange={(val) => handleBrandChange(val || "")}>
               <SelectTrigger>
                 <SelectValue placeholder="Select Brand">
                   {data.brand ? (brands.find(b => b.id === data.brand)?.name || 'Loading...') : undefined}
@@ -197,7 +197,7 @@ export function Step1BasicInfo({ data, onChange }: Step1BasicInfoProps) {
                 <Button size="sm" onClick={saveNewSeries}>Add</Button>
               </div>
             ) : (
-              <Select value={data.series} onValueChange={(val) => onChange({ series: val })}>
+              <Select value={data.series} onValueChange={(val) => onChange({ series: val || "" })}>
                 <SelectTrigger>
                   <SelectValue placeholder="Select Series">
                     {data.series === 'none' ? 'No predefined series' : (availableSeries.find(s => s.id === data.series)?.name || data.series || undefined)}

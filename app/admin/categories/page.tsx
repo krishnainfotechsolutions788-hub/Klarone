@@ -425,7 +425,7 @@ export default function CategoriesPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="grid gap-2">
                 <Label>Category Group <span className="text-red-500">*</span></Label>
-                <Select value={formData.group_id} onValueChange={(v) => setFormData({...formData, group_id: v})}>
+                <Select value={formData.group_id || ""} onValueChange={(v) => setFormData({...formData, group_id: v || ""})}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select Group" />
                   </SelectTrigger>
@@ -438,7 +438,7 @@ export default function CategoriesPage() {
               </div>
               <div className="grid gap-2">
                 <Label>Inventory Mode</Label>
-                <Select value={formData.inventory_mode} onValueChange={(v) => setFormData({...formData, inventory_mode: v})}>
+                <Select value={formData.inventory_mode} onValueChange={(v) => setFormData({...formData, inventory_mode: v || ""})}>
                   <SelectTrigger>
                     <SelectValue placeholder="Mode" />
                   </SelectTrigger>
@@ -453,7 +453,7 @@ export default function CategoriesPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="grid gap-2">
                 <Label>PIM Template</Label>
-                <Select value={formData.template_id} onValueChange={(v) => setFormData({...formData, template_id: v})}>
+                <Select value={formData.template_id || ""} onValueChange={(v) => setFormData({...formData, template_id: v || ""})}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select Template" />
                   </SelectTrigger>
@@ -468,7 +468,7 @@ export default function CategoriesPage() {
               
               <div className="grid gap-2">
                 <Label>Status</Label>
-                <Select value={formData.status} onValueChange={(v) => setFormData({...formData, status: v})}>
+                <Select value={formData.status} onValueChange={(v) => setFormData({...formData, status: v || ""})}>
                   <SelectTrigger>
                     <SelectValue placeholder="Status" />
                   </SelectTrigger>

@@ -116,7 +116,7 @@ function ReviewContent() {
         setIcecatData(prod);
 
         // Extract Images
-        const images = [];
+        const images: { url: string; is_primary: boolean }[] = [];
         if (prod.Image?.HighPic || prod.Image?.Pic500x500) {
           images.push({ url: prod.Image.HighPic || prod.Image.Pic500x500, is_primary: true });
         }

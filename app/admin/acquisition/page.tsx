@@ -70,7 +70,7 @@ export default function AcquisitionCenterPage() {
               className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] bg-gray-50/50"
             />
           </div>
-          <Button type="submit" disabled={isSearching || !query.trim()} className="bg-[#111111] hover:bg-gray-800 text-white px-8 py-6 h-auto">
+          <Button type="submit" disabled={isSearching || !query.trim()} className="bg-surface-dark hover:bg-gray-800 text-white px-8 py-6 h-auto">
             {isSearching ? <Loader2 className="w-5 h-5 animate-spin" /> : "Search Icecat"}
           </Button>
         </form>

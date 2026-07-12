@@ -46,8 +46,14 @@ export function Step4Variants({ categoryId, categoryGroupId, hasVariants, data, 
           
         if (attrs) {
           const variantAttrs = attrs
-            .filter(a => a.attribute.data_type === 'Dropdown')
-            .map(a => ({ id: a.attribute_id, name: a.attribute.name }));
+            .filter((a: any) => {
+              const attr = Array.isArray(a.attribute) ? a.attribute[0] : a.attribute;
+              return attr?.data_type === 'Dropdown';
+            })
+            .map((a: any) => {
+              const attr = Array.isArray(a.attribute) ? a.attribute[0] : a.attribute;
+              return { id: a.attribute_id, name: attr?.name };
+            });
           setVariantAttributesList(variantAttrs);
         }
       } catch (e) {

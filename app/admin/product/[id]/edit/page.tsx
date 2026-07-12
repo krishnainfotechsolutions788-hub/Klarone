@@ -81,8 +81,8 @@ export default function EditProductWizard() {
         // For brevity, we'll setup the basics
         const isQuantity = model.categories.inventory_mode === 'Quantity';
         
-        let mappedVariants = [];
-        let mappedSerialized = [];
+        let mappedVariants: any[] = [];
+        let mappedSerialized: any[] = [];
         let mappedQuantity = null;
         
         if (variants && variants.length > 0) {
@@ -104,7 +104,7 @@ export default function EditProductWizard() {
                  };
                }
             } else {
-               mappedSerialized = (variants[0].inventory_units || []).map(u => ({
+               mappedSerialized = (variants[0].inventory_units || []).map((u: any) => ({
                  id: u.id,
                  serialNumber: u.serial_number || '',
                  assetCode: u.asset_code || '',
@@ -124,7 +124,7 @@ export default function EditProductWizard() {
             }
           } else {
             // Has real variants
-            mappedVariants = variants.map(v => ({
+            mappedVariants = variants.map((v: any) => ({
               id: v.id,
               name: `Variant ${v.sku}`, // approximation
               sku: v.sku,
@@ -138,8 +138,8 @@ export default function EditProductWizard() {
             }));
             
             if (!isQuantity) {
-               variants.forEach(v => {
-                 (v.inventory_units || []).forEach(u => {
+               variants.forEach((v: any) => {
+                 (v.inventory_units || []).forEach((u: any) => {
                    mappedSerialized.push({
                      id: u.id,
                      serialNumber: u.serial_number || '',

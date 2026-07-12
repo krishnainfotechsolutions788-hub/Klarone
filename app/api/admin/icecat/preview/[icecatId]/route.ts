@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { icecatId: string } }
+  { params }: { params: Promise<{ icecatId: string }> }
 ) {
   const { icecatId } = await params;
 
