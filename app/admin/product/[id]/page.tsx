@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
-import { Search, Filter, MoreHorizontal, ChevronDown, Plus, ChevronRight, Cpu, MemoryStick, HardDrive, Edit, CheckCircle2, Users, ShoppingCart } from "lucide-react";
+import { Search, Filter, MoreHorizontal, ChevronDown, Plus, ChevronRight, Edit, Database, Laptop, Box } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Badge } from "@/components/ui/badge";
+import { Pagination } from "../../components/Pagination";
 import {
   Table,
   TableBody,
@@ -22,21 +24,64 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { mockFamilies, mockVariants, getFamilyStats, getVariantStats } from "@/lib/mock-data";
+import { createClient } from "@/lib/supabase/client";
 
-export default function ProductFamilyDetailPage() {
+export default function ProductDetailPage() {
   const router = useRouter();
   const params = useParams();
   const [searchQuery, setSearchQuery] = useState("");
+  const [product, setProduct] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+  const supabase = createClient();
 
-  const family = mockFamilies.find(f => f.id === params.id);
-  const variants = mockVariants.filter(v => v.product_family_id === params.id);
-  
-  if (!family) {
-    return <div className="p-10 text-center text-[#9297a0]">Product Family not found.</div>;
+  useEffect(() => {
+    async function fetchProduct() {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from('product_models')
+        .select(`
+          id,
+          name,
+          code,
+          status,
+          brands ( name ),
+          categories ( name, inventory_mode ),
+          product_variants (
+            id,
+            sku,
+            specifications,
+            selling_price,
+            inventory_units ( quantity, condition_grade, rental_price )
+          )
+        `)
+        .eq('id', params.id)
+        .single();
+        
+      if (!error && data) {
+        setProduct(data);
+      }
+      setLoading(false);
+    }
+    
+    if (params.id) {
+      fetchProduct();
+    }
+  }, [params.id]);
+
+  if (loading) {
+    return <div className="p-10 text-center text-[#9297a0]">Loading product details...</div>;
   }
 
-  const stats = getFamilyStats(family.id);
+  if (!product) {
+    return <div className="p-10 text-center text-[#9297a0]">Product not found.</div>;
+  }
+
+  const isSerialized = product.categories?.inventory_mode === 'serialized';
+  const brandName = product.brands?.name || '';
+  const categoryName = product.categories?.name || 'Unknown';
+  const variants = product.product_variants || [];
 
   return (
     <div className="flex flex-col gap-6 max-w-[1600px] mx-auto pb-10">
@@ -45,18 +90,18 @@ export default function ProductFamilyDetailPage() {
       <div className="flex items-center gap-2 text-[14px] font-normal tracking-wide mb-3">
         <span className="text-[#5f6368] hover:text-[#181d26] transition-colors cursor-pointer" onClick={() => router.push('/admin/product')}>Products</span>
         <ChevronRight className="w-3.5 h-3.5 text-[#9297a0]" />
-        <span className="text-[#181d26]">{family.brand} {family.series} {family.model_name}</span>
+        <span className="text-[#181d26]">{brandName} {product.name}</span>
       </div>
 
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-[#181d26] tracking-tight">{family.brand} {family.series} {family.model_name}</h1>
-          <p className="text-sm text-[#9297a0] mt-1">{family.category} • ID: {family.id}</p>
+          <h1 className="text-2xl font-semibold text-[#181d26] tracking-tight">{brandName} {product.name}</h1>
+          <p className="text-sm text-[#9297a0] mt-1">{categoryName} • Code: {product.code}</p>
         </div>
         <div className="flex items-center gap-2">
           <Button variant="outline" className="h-9 px-4 rounded-[6px] border-[#dddddd] text-[#41454d] text-[13px] hover:bg-[#f8fafc] shadow-none flex items-center gap-2">
             <Edit className="w-4 h-4" />
-            Edit Family
+            Edit Product
           </Button>
           <Button onClick={() => router.push('/admin/product/add')} className="h-9 px-4 rounded-[6px] bg-[#181d26] hover:bg-[#0d1218] text-white text-[13px] font-medium shadow-none flex items-center gap-2">
             <Plus className="w-4 h-4" />
@@ -65,42 +110,8 @@ export default function ProductFamilyDetailPage() {
         </div>
       </div>
 
-      {/* Aggregate Stat Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Total Variants</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{stats.totalVariants}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Total Units</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{stats.totalUnits}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Available</span>
-            <span className="text-2xl font-semibold text-[#0d9488] tracking-tight">{stats.availableUnits}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Rented</span>
-            <span className="text-2xl font-semibold text-[#d97706] tracking-tight">{stats.rentedUnits}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Sold</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{stats.soldUnits}</span>
-          </CardContent>
-        </Card>
-      </div>
-
       {/* Main Table Card */}
-      <Card className="border-[#dddddd] shadow-none rounded-[10px] overflow-hidden flex flex-col gap-0 p-0">
+      <Card className="border-[#dddddd] shadow-none rounded-[10px] overflow-hidden flex flex-col gap-0 p-0 mt-2">
         
         {/* Toolbar */}
         <div className="flex flex-col sm:flex-row items-center justify-between p-4 border-b border-[#dddddd] bg-white gap-4">
@@ -108,7 +119,7 @@ export default function ProductFamilyDetailPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9297a0]" />
             <input 
               type="text" 
-              placeholder="Search variants by CPU, RAM..." 
+              placeholder="Search variants..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full h-9 pl-9 pr-4 bg-[#f8fafc] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
@@ -127,48 +138,54 @@ export default function ProductFamilyDetailPage() {
 
         {/* Table Content */}
         <CardContent className="p-0">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto min-h-[550px]">
             <Table>
               <TableHeader className="bg-[#f8fafc] [&_tr]:border-b-[#dddddd]">
                 <TableRow className="hover:bg-transparent">
                   <TableHead className="w-[40px] px-4 py-3"><Checkbox className="border-[#dddddd] data-[state=checked]:bg-[#181d26] data-[state=checked]:border-[#181d26]" /></TableHead>
                   <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Configuration</TableHead>
                   <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Base Price</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Rental/Mo</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Units</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Available</TableHead>
+                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Stock</TableHead>
                   <TableHead className="w-[50px] py-3"></TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {variants.map((variant) => {
-                  const vStats = getVariantStats(variant.id);
+                {variants.length === 0 ? (
+                  <TableRow>
+                    <TableCell colSpan={6} className="h-24 text-center text-[#9297a0]">No variants found for this product.</TableCell>
+                  </TableRow>
+                ) : variants.slice((page - 1) * pageSize, page * pageSize).map((variant: any) => {
+                  
+                  let totalUnits = 0;
+                  if (variant.inventory_units) {
+                    totalUnits = variant.inventory_units.reduce((acc: number, cur: any) => acc + (cur.quantity || 1), 0);
+                  }
+
+                  const attrs = variant.specifications || {};
+                  const attrKeys = Object.keys(attrs);
+
                   return (
-                    <TableRow key={variant.id} className="border-b-[#dddddd] hover:bg-[#f8fafc] cursor-pointer transition-colors group" onClick={() => router.push(`/admin/product/${family.id}/variant/${variant.id}`)}>
+                    <TableRow key={variant.id} className="border-b-[#dddddd] hover:bg-[#f8fafc] cursor-pointer transition-colors group" onClick={() => router.push(`/admin/product/${product.id}/variant/${variant.id}`)}>
                       <TableCell className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
                         <Checkbox className="border-[#dddddd] data-[state=checked]:bg-[#181d26] data-[state=checked]:border-[#181d26]" />
                       </TableCell>
                       <TableCell className="py-3">
                         <div className="flex flex-col gap-1.5">
-                          <span className="font-medium text-[#181d26] text-[14px] group-hover:text-[#1b61c9] transition-colors">{variant.cpu}</span>
+                          <span className="font-medium text-[#181d26] text-[14px] group-hover:text-[#1b61c9] transition-colors">
+                            SKU: {variant.sku}
+                          </span>
                           <div className="flex items-center gap-3 text-[12px] text-[#5f6368]">
-                            <div className="flex items-center gap-1"><MemoryStick className="w-3.5 h-3.5 text-[#9297a0]"/> {variant.ram}</div>
-                            <div className="flex items-center gap-1"><HardDrive className="w-3.5 h-3.5 text-[#9297a0]"/> {variant.ssd}</div>
-                            {variant.touch_screen && <span className="bg-[#e8f0fe] text-[#1b61c9] px-1.5 py-0.5 rounded-[4px] text-[10px] font-medium leading-none">TOUCH</span>}
+                            {attrKeys.map(k => (
+                              <div key={k}>{k}: {attrs[k]}</div>
+                            ))}
                           </div>
                         </div>
                       </TableCell>
                       <TableCell className="py-3 text-right">
-                        <span className="text-[#181d26] text-[13px] font-medium">₹{variant.base_price.toLocaleString()}</span>
+                        <span className="text-[#181d26] text-[13px] font-medium">₹{variant.selling_price?.toLocaleString()}</span>
                       </TableCell>
                       <TableCell className="py-3 text-right">
-                        <span className="text-[#181d26] text-[13px]">₹{variant.rental_price.toLocaleString()}</span>
-                      </TableCell>
-                      <TableCell className="py-3 text-right">
-                        <span className="text-[#181d26] text-[13px]">{vStats.totalUnits}</span>
-                      </TableCell>
-                      <TableCell className="py-3 text-right">
-                        <span className="text-[#0d9488] text-[13px] font-medium">{vStats.availableUnits}</span>
+                        <span className="text-[#181d26] text-[13px]">{totalUnits}</span>
                       </TableCell>
                       <TableCell className="py-3 text-right" onClick={(e) => e.stopPropagation()}>
                         <DropdownMenu>
@@ -178,28 +195,31 @@ export default function ProductFamilyDetailPage() {
                           </DropdownMenuTrigger>
                           <DropdownMenuContent align="end" className="w-[160px] rounded-[8px] border-[#dddddd] shadow-sm">
                             <DropdownMenuLabel className="text-[11px] font-medium text-[#9297a0] uppercase tracking-wider">Actions</DropdownMenuLabel>
-                            <DropdownMenuItem className="text-[13px] text-[#181d26] focus:bg-[#f8fafc] cursor-pointer" onClick={() => router.push(`/admin/product/${family.id}/variant/${variant.id}`)}>View Units</DropdownMenuItem>
+                            <DropdownMenuItem className="text-[13px] text-[#181d26] focus:bg-[#f8fafc] cursor-pointer" onClick={() => router.push(`/admin/product/${product.id}/variant/${variant.id}`)}>View Units</DropdownMenuItem>
                             <DropdownMenuItem className="text-[13px] text-[#181d26] focus:bg-[#f8fafc] cursor-pointer">Edit Variant</DropdownMenuItem>
                             <DropdownMenuSeparator className="bg-[#dddddd]" />
-                            <DropdownMenuItem className="text-[13px] text-[#c5221f] focus:bg-[#fce8e6] focus:text-[#c5221f] cursor-pointer">Delete</DropdownMenuItem>
+                            <DropdownMenuItem className="text-[13px] text-[#c5221f] focus:bg-[#fce8e6] focus:text-[#c5221f] cursor-pointer">Archive</DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
                       </TableCell>
                     </TableRow>
                   );
                 })}
-                {variants.length === 0 && (
-                  <TableRow>
-                    <TableCell colSpan={7} className="text-center py-10 text-[#9297a0] text-[14px]">
-                      No variants found for this product family.
-                    </TableCell>
-                  </TableRow>
-                )}
               </TableBody>
             </Table>
           </div>
         </CardContent>
 
+
+        <div className="border-t border-[#dddddd]">
+          <Pagination 
+            currentPage={page} 
+            totalPages={Math.ceil(variants.length / pageSize)} 
+            onPageChange={setPage}
+            totalItems={variants.length}
+            itemsPerPage={pageSize}
+          />
+        </div>
       </Card>
     </div>
   );

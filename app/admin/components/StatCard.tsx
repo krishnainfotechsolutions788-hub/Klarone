@@ -1,46 +1,55 @@
-import { ArrowUpRight, ArrowDownRight, LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface StatCardProps {
   title: string;
   icon: LucideIcon;
-  value: string;
-  trend: number;
-  trendLabel: string;
-  subtitle?: string;
-  subValue?: string;
+  primaryValue: string | number;
+  primaryLabel: string;
+  secondaryValue?: string | number;
+  secondaryLabel?: string;
+  onClick?: () => void;
 }
 
-export default function StatCard({ title, icon: Icon, value, trend, trendLabel, subtitle, subValue }: StatCardProps) {
-  const isPositive = trend >= 0;
-
+export default function StatCard({ 
+  title, 
+  icon: Icon, 
+  primaryValue, 
+  primaryLabel, 
+  secondaryValue, 
+  secondaryLabel,
+  onClick
+}: StatCardProps) {
   return (
-    <Card className="h-full flex flex-col border-[#dddddd] shadow-none rounded-[10px]">
-      <CardContent className="p-6 flex flex-col justify-between flex-1">
-        <div className="flex items-center gap-2 mb-2">
-          <Icon className="w-[18px] h-[18px] text-[#41454d]" />
-          <span className="text-[12px] font-medium text-[#41454d] tracking-wider uppercase">{title}</span>
+    <Card onClick={onClick} className="h-full flex flex-col border-[#eaeaea] shadow-sm rounded-[12px] bg-white group cursor-pointer transition-all hover:shadow-md">
+      <CardContent className="p-5 flex flex-col justify-between flex-1 gap-4">
+        
+        {/* Header Row */}
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all bg-white border border-[#eaeaea] group-hover:bg-[#1877f2] group-hover:border-[#1877f2] group-hover:shadow-[0_4px_12px_rgba(24,119,242,0.3)]">
+            <Icon className="w-4 h-4 text-[#a0aab4] group-hover:text-white transition-colors" />
+          </div>
+          <span className="font-semibold text-[14px] text-[#111111]">{title}</span>
         </div>
         
-        <div className="flex items-end justify-between mb-2">
-          <div className="text-[32px] font-medium text-[#181d26] leading-none">{value}</div>
-          <ArrowUpRight className="w-5 h-5 text-[#9297a0] mb-1" />
-        </div>
-
-        <div className="flex items-center gap-3 text-[14px]">
-          <div className={`flex items-center gap-1 px-1.5 py-0.5 rounded-[6px] ${isPositive ? 'bg-[#e6f4ea] text-[#137333]' : 'bg-[#fce8e6] text-[#c5221f]'} font-medium`}>
-            {isPositive ? <ArrowUpRight className="w-3 h-3" /> : <ArrowDownRight className="w-3 h-3" />}
-            {Math.abs(trend)}%
+        {/* Divider */}
+        <div className="h-[1px] w-full bg-[#f0f2f5]" />
+        
+        {/* Metrics Row */}
+        <div className="flex items-center">
+          <div className="flex-1 flex flex-col gap-0.5">
+            <span className="text-[20px] font-bold text-[#111111] leading-none">{primaryValue}</span>
+            <span className="text-[12px] text-[#9ca3af] font-medium">{primaryLabel}</span>
           </div>
-          <span className="text-[#41454d]">{trendLabel}</span>
+          
+          {secondaryValue !== undefined && secondaryLabel !== undefined && (
+            <div className="flex-1 flex flex-col gap-0.5 pl-4">
+              <span className="text-[20px] font-bold text-[#111111] leading-none">{secondaryValue}</span>
+              <span className="text-[12px] text-[#9ca3af] font-medium">{secondaryLabel}</span>
+            </div>
+          )}
         </div>
-
-        {subtitle && subValue && (
-          <div className="mt-4 pt-4 border-t border-[#dddddd] flex items-center justify-between text-[14px]">
-            <span className="text-[#41454d]">{subtitle}</span>
-            <span className="font-medium text-[#181d26]">{subValue}</span>
-          </div>
-        )}
+        
       </CardContent>
     </Card>
   );

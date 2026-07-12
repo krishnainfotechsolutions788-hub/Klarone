@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Search, Filter, MoreHorizontal, ChevronDown, CheckCircle2, Clock, XCircle, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,78 +22,56 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
+import { Pagination } from "../components/Pagination";
 
-// --- Mock Data ---
-const mockOrders = [
-  {
-    id: "ORD-9081",
-    customerName: "Alice Freeman",
-    email: "alice.f@example.com",
-    date: "Oct 24, 2025",
-    status: "delivered",
-    total: "₹3,49,900.00",
-    items: 2,
-    paymentMethod: "Credit Card"
-  },
-  {
-    id: "ORD-9082",
-    customerName: "David Chen",
-    email: "david.c@example.com",
-    date: "Nov 02, 2025",
-    status: "processing",
-    total: "₹1,89,990.00",
-    items: 1,
-    paymentMethod: "UPI"
-  },
-  {
-    id: "ORD-9083",
-    customerName: "Sarah Jones",
-    email: "sarah.j@example.com",
-    date: "Nov 05, 2025",
-    status: "shipped",
-    total: "₹1,45,000.00",
-    items: 1,
-    paymentMethod: "Net Banking"
-  },
-  {
-    id: "ORD-9084",
-    customerName: "Michael Ross",
-    email: "m.ross@example.com",
-    date: "Dec 10, 2025",
-    status: "delivered",
-    total: "₹1,65,990.00",
-    items: 3,
-    paymentMethod: "Credit Card"
-  },
-  {
-    id: "ORD-9085",
-    customerName: "Emma Wilson",
-    email: "emma.w@example.com",
-    date: "Jan 05, 2026",
-    status: "cancelled",
-    total: "₹2,89,990.00",
-    items: 1,
-    paymentMethod: "Refunded"
-  }
-];
+import { useEffect } from "react";
+import { fetchAdminOrders } from "./actions";
+
+// --- Types ---
+type OrderData = {
+  id: string;
+  customerName: string;
+  email: string;
+  date: string;
+  status: string;
+  total: string;
+  items: number;
+  paymentMethod: string;
+};
+
 
 export default function AdminOrderPage() {
+  const router = useRouter();
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+  
+  const [orders, setOrders] = useState<OrderData[]>([]);
+  const [totalItems, setTotalItems] = useState(0);
+  const [loading, setLoading] = useState(true);
+
   const [selectedOrders, setSelectedOrders] = useState<string[]>([]);
 
+  useEffect(() => {
+    async function loadOrders() {
+      setLoading(true);
+      try {
+        const data = await fetchAdminOrders(page, pageSize);
+        setOrders(data.orders);
+        setTotalItems(data.totalCount);
+      } catch (error) {
+        console.error("Failed to load orders", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadOrders();
+  }, [page, pageSize]);
+
   const toggleSelectAll = () => {
-    if (selectedOrders.length === mockOrders.length) {
+    if (selectedOrders.length === orders.length && orders.length > 0) {
       setSelectedOrders([]);
     } else {
-      setSelectedOrders(mockOrders.map((o) => o.id));
+      setSelectedOrders(orders.map((o) => o.id));
     }
   };
 
@@ -142,13 +121,13 @@ export default function AdminOrderPage() {
 
         {/* Table Content */}
         <CardContent className="p-0">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto min-h-[550px]">
             <Table>
               <TableHeader className="bg-[#f8fafc] hover:bg-[#f8fafc] border-b border-[#dddddd]">
                 <TableRow className="border-none hover:bg-transparent">
                   <TableHead className="w-[50px] px-6 text-[#41454d]">
                     <Checkbox 
-                      checked={selectedOrders.length === mockOrders.length && mockOrders.length > 0}
+                      checked={selectedOrders.length === orders.length && orders.length > 0}
                       onCheckedChange={toggleSelectAll}
                       className="border-[#9297a0] data-[state=checked]:bg-[#181d26] data-[state=checked]:border-[#181d26] rounded-[4px]"
                     />
@@ -163,8 +142,21 @@ export default function AdminOrderPage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {mockOrders.map((order) => (
-                  <TableRow key={order.id} className="border-b border-[#dddddd] last:border-0 hover:bg-[#f8fafc] transition-colors">
+                {loading ? (
+                  <TableRow>
+                    <TableCell colSpan={8} className="h-64 text-center text-muted-foreground">
+                      Loading orders...
+                    </TableCell>
+                  </TableRow>
+                ) : orders.length === 0 ? (
+                  <TableRow>
+                    <TableCell colSpan={8} className="h-64 text-center text-muted-foreground">
+                      No orders found
+                    </TableCell>
+                  </TableRow>
+                ) : (
+                  orders.map((order) => (
+                  <TableRow key={order.id} className="border-b-[#dddddd] hover:bg-[#f8fafc] cursor-pointer transition-colors group">
                     <TableCell className="px-6 py-4">
                       <Checkbox 
                         checked={selectedOrders.includes(order.id)}
@@ -224,8 +216,14 @@ export default function AdminOrderPage() {
                           <MoreHorizontal className="h-4 w-4" />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end" className="w-[160px] rounded-[10px] border-[#dddddd] shadow-lg bg-[#ffffff] p-1">
-                          <DropdownMenuLabel className="text-[11px] font-medium text-[#9297a0] uppercase tracking-wider px-2 py-1.5">Actions</DropdownMenuLabel>
-                          <DropdownMenuItem className="text-[13px] text-[#181d26] rounded-[6px] focus:bg-[#f8fafc] cursor-pointer">
+                          <div className="text-[11px] font-medium text-[#9297a0] uppercase tracking-wider px-2 py-1.5">Actions</div>
+                          <DropdownMenuItem 
+                            className="text-[13px] text-[#181d26] rounded-[6px] focus:bg-[#f8fafc] cursor-pointer"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              router.push(`/admin/order/${order.id}`);
+                            }}
+                          >
                             View Order
                           </DropdownMenuItem>
                           <DropdownMenuItem className="text-[13px] text-[#181d26] rounded-[6px] focus:bg-[#f8fafc] cursor-pointer">
@@ -239,43 +237,22 @@ export default function AdminOrderPage() {
                       </DropdownMenu>
                     </TableCell>
                   </TableRow>
-                ))}
+                )))}
               </TableBody>
             </Table>
           </div>
           
-          {/* Pagination */}
-          <div className="px-4 py-3 border-t border-[#dddddd] bg-[#ffffff] flex items-center justify-between">
-            <span className="text-[13px] text-[#41454d]">
-              Showing <strong>1</strong> to <strong>5</strong> of <strong>1,248</strong> orders
-            </span>
-            <Pagination className="justify-end w-auto">
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious href="#" className="h-8 text-[13px] rounded-[6px] hover:bg-[#f8fafc] text-[#41454d]" />
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="#" isActive className="h-8 w-8 text-[13px] rounded-[6px] bg-[#f8fafc] border border-[#dddddd] text-[#181d26] font-medium">1</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="#" className="h-8 w-8 text-[13px] rounded-[6px] hover:bg-[#f8fafc] text-[#41454d]">2</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="#" className="h-8 w-8 text-[13px] rounded-[6px] hover:bg-[#f8fafc] text-[#41454d]">3</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationEllipsis className="w-8 h-8 text-[#9297a0]" />
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationNext href="#" className="h-8 text-[13px] rounded-[6px] hover:bg-[#f8fafc] text-[#41454d]" />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
+          <div className="border-t border-[#dddddd]">
+            <Pagination 
+              currentPage={page} 
+              totalPages={Math.ceil(totalItems / pageSize) || 1} 
+              onPageChange={setPage}
+              totalItems={totalItems}
+              itemsPerPage={pageSize}
+            />
           </div>
-
         </CardContent>
       </Card>
-
     </div>
   );
 }

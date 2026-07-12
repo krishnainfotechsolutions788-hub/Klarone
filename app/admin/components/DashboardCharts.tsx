@@ -217,7 +217,8 @@ export function TopProducts() {
 
 export function TotalVisitor() {
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
-  const grid = Array.from({ length: 15 }).map(() => Math.random() > 0.5);
+  // Using a deterministic pattern instead of Math.random() to prevent React Hydration errors
+  const grid = Array.from({ length: 15 }).map((_, i) => (i * 7) % 3 !== 0);
 
   return (
     <Card className="h-full border-[#dddddd] shadow-none rounded-[10px]">

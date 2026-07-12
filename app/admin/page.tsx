@@ -1,41 +1,60 @@
-import { Tag, ShoppingCart, Users, HeadphonesIcon } from "lucide-react";
+import { ReceiptText, Store, Download, Truck } from "lucide-react";
 import StatCard from "./components/StatCard";
 import { ChannelPerformance, AverageSales, TopProducts, TotalVisitor } from "./components/DashboardCharts";
 import RecentActivity from "./components/RecentActivity";
+import { mockCategories, mockProducts, mockVariants, mockUnits, mockInventoryStock } from "@/lib/mock-data";
 
 export default function AdminDashboard() {
+  const totalCategories = mockCategories.length;
+  const totalProducts = mockProducts.length;
+  const totalVariants = mockVariants.length;
+
+  const serializedItemsCount = mockUnits.length;
+  const nonSerializedItemsCount = mockInventoryStock.reduce((acc, stock) => acc + stock.quantity, 0);
+  const totalInventoryItems = serializedItemsCount + nonSerializedItemsCount;
+
+  const inventoryValueSerialized = mockUnits.reduce((acc, unit) => acc + (unit.purchase_price || 0), 0);
+  const inventoryValueNonSerialized = mockInventoryStock.reduce((acc, stock) => acc + ((stock.purchase_price || 0) * stock.quantity), 0);
+  const totalInventoryValue = inventoryValueSerialized + inventoryValueNonSerialized;
+
+  const activeRentals = mockUnits.filter(u => u.status === 'rented').length;
+
   return (
     <div className="flex flex-col gap-4 max-w-[1600px] mx-auto">
       
       {/* Top Stat Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          title="Total Products (Models)"
-          icon={Tag}
-          value="142"
-          trend={2.4}
-          trendLabel="New models added"
+          title="Orders Provided"
+          icon={ReceiptText}
+          primaryValue="210"
+          primaryLabel="Processing"
+          secondaryValue="109"
+          secondaryLabel="Processed"
         />
         <StatCard
-          title="Total Inventory Units"
-          icon={ShoppingCart}
-          value="1,248"
-          trend={12.5}
-          trendLabel="Units in stock"
+          title="Store Product"
+          icon={Store}
+          primaryValue="3.4k"
+          primaryLabel="Total"
+          secondaryValue="352"
+          secondaryLabel="Sold out"
         />
         <StatCard
-          title="Rented Units"
-          icon={Users}
-          value="482"
-          trend={4.2}
-          trendLabel="Active rentals"
+          title="Orders Imported"
+          icon={Download}
+          primaryValue="176"
+          primaryLabel="New"
+          secondaryValue="315"
+          secondaryLabel="Total"
         />
         <StatCard
-          title="Inventory Value"
-          icon={HeadphonesIcon}
-          value="₹84.5M"
-          trend={8.4}
-          trendLabel="Current valuation"
+          title="Orders Dispatched"
+          icon={Truck}
+          primaryValue="256"
+          primaryLabel="Total"
+          secondaryValue="49"
+          secondaryLabel="Return"
         />
       </div>
 

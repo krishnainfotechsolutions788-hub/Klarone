@@ -6,7 +6,7 @@ import Footer from "@/components/shared/Footer";
 export default function FindLaptopPage() {
   return (
     <div className="relative flex min-h-screen flex-col bg-white text-black overflow-hidden">
-      <Header />
+      <Header variant="shop" />
       <main className="flex-1 flex items-center justify-center mt-[120px] pb-[120px]">
         <div className="text-center px-6">
           <h1 className="text-[48px] md:text-[64px] font-medium tracking-tight text-surface-dark mb-4">

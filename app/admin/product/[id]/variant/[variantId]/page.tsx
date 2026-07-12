@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
-import { Search, Filter, MoreHorizontal, ChevronDown, Plus, ChevronRight, Battery, Tag, MemoryStick, HardDrive, CheckCircle2, Users, ShoppingCart, Wrench } from "lucide-react";
+import { Search, Filter, MoreHorizontal, ChevronDown, Plus, ChevronRight, Battery, Tag, MemoryStick, HardDrive, CheckCircle2, Users, ShoppingCart, Wrench, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -22,22 +22,72 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { mockFamilies, mockVariants, mockUnits, getVariantStats } from "@/lib/mock-data";
+import StatCard from "../../../../components/StatCard";
+// import UnitDetailModal from "../../../../components/UnitDetailModal"; // Currently unsupported dynamically
+import { createClient } from "@/lib/supabase/client";
 
 export default function VariantDetailPage() {
   const router = useRouter();
   const params = useParams();
   const [searchQuery, setSearchQuery] = useState("");
-
-  const family = mockFamilies.find(f => f.id === params.id);
-  const variant = mockVariants.find(v => v.id === params.variantId);
-  const units = mockUnits.filter(u => u.variant_id === params.variantId);
+  const [product, setProduct] = useState<any>(null);
+  const [variant, setVariant] = useState<any>(null);
+  const [units, setUnits] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  // const [selectedUnit, setSelectedUnit] = useState<any>(null);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
   
-  if (!family || !variant) {
+  const supabase = createClient();
+
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      
+      const { data: pData } = await supabase
+        .from('product_models')
+        .select('id, name, code, brands(name)')
+        .eq('id', params.id)
+        .single();
+        
+      const { data: vData } = await supabase
+        .from('product_variants')
+        .select('id, sku, specifications, selling_price, inventory_units(*)')
+        .eq('id', params.variantId)
+        .single();
+        
+      if (pData) setProduct(pData);
+      if (vData) {
+        setVariant(vData);
+        setUnits(vData.inventory_units || []);
+      }
+      
+      setLoading(false);
+    }
+    
+    if (params.id && params.variantId) {
+      fetchData();
+    }
+  }, [params.id, params.variantId]);
+
+  if (loading) {
+    return <div className="p-10 text-center text-[#9297a0]">Loading units...</div>;
+  }
+
+  if (!product || !variant) {
     return <div className="p-10 text-center text-[#9297a0]">Product Variant not found.</div>;
   }
 
-  const stats = getVariantStats(variant.id);
+  const brandName = product.brands?.name || '';
+  const attrs = variant.specifications || {};
+  const attrKeys = Object.keys(attrs);
+
+  const stats = {
+    totalUnits: units.length,
+    availableUnits: units.length, // Mocked for now since status isn't in schema
+    rentedUnits: 0,
+    soldUnits: 0,
+    repairUnits: 0
+  };
 
   const getStatusColor = (status: string) => {
     switch(status) {
@@ -49,17 +99,6 @@ export default function VariantDetailPage() {
     }
   };
 
-  const getGradeDisplay = (grade: string) => {
-    switch(grade) {
-      case 'new': return 'New';
-      case 'open_box': return 'Open Box';
-      case 'refurbished_a': return 'Grade A';
-      case 'refurbished_b': return 'Grade B';
-      case 'refurbished_c': return 'Grade C';
-      default: return grade;
-    }
-  };
-
   return (
     <div className="flex flex-col gap-6 max-w-[1600px] mx-auto pb-10">
       
@@ -67,20 +106,23 @@ export default function VariantDetailPage() {
       <div className="flex items-center gap-2 text-[14px] font-normal tracking-wide mb-3">
         <span className="text-[#5f6368] hover:text-[#181d26] transition-colors cursor-pointer" onClick={() => router.push('/admin/product')}>Products</span>
         <ChevronRight className="w-3.5 h-3.5 text-[#9297a0]" />
-        <span className="text-[#5f6368] hover:text-[#181d26] transition-colors cursor-pointer" onClick={() => router.push(`/admin/product/${family.id}`)}>{family.brand} {family.series} {family.model_name}</span>
+        <span className="text-[#5f6368] hover:text-[#181d26] transition-colors cursor-pointer" onClick={() => router.push(`/admin/product/${product.id}`)}>{brandName} {product.name}</span>
         <ChevronRight className="w-3.5 h-3.5 text-[#9297a0]" />
-        <span className="text-[#181d26]">{variant.cpu} • {variant.ram}</span>
+        <span className="text-[#181d26]">Variant Detail</span>
       </div>
 
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-[#181d26] tracking-tight">{family.brand} {family.series} {family.model_name}</h1>
+          <h1 className="text-2xl font-semibold text-[#181d26] tracking-tight">{brandName} {product.name}</h1>
           <div className="flex items-center gap-3 mt-2 text-sm text-[#41454d]">
-            <span className="font-medium">{variant.cpu}</span>
-            <span className="text-[#dddddd]">|</span>
-            <span className="flex items-center gap-1.5"><MemoryStick className="w-4 h-4 text-[#9297a0]" /> {variant.ram}</span>
-            <span className="text-[#dddddd]">|</span>
-            <span className="flex items-center gap-1.5"><HardDrive className="w-4 h-4 text-[#9297a0]" /> {variant.ssd}</span>
+            <span className="font-medium">SKU: {variant.sku}</span>
+            {attrKeys.length > 0 && <span className="text-[#dddddd]">|</span>}
+            {attrKeys.map((k, idx) => (
+              <span key={k} className="flex items-center gap-1.5">
+                {idx > 0 && <span className="text-[#dddddd] mr-2">|</span>}
+                {k}: {attrs[k]}
+              </span>
+            ))}
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -92,37 +134,37 @@ export default function VariantDetailPage() {
       </div>
 
       {/* Aggregate Stat Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Total Units</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{stats.totalUnits}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Available</span>
-            <span className="text-2xl font-semibold text-[#0d9488] tracking-tight">{stats.availableUnits}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Rented</span>
-            <span className="text-2xl font-semibold text-[#d97706] tracking-tight">{stats.rentedUnits}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Sold</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{stats.soldUnits}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">In Repair</span>
-            <span className="text-2xl font-semibold text-[#e11d48] tracking-tight">{stats.repairUnits}</span>
-          </CardContent>
-        </Card>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <StatCard
+          title="Total Units"
+          icon={Database}
+          primaryValue={stats.totalUnits}
+          primaryLabel="Inventory"
+        />
+        <StatCard
+          title="Available"
+          icon={CheckCircle2}
+          primaryValue={stats.availableUnits}
+          primaryLabel="Ready"
+        />
+        <StatCard
+          title="Rented"
+          icon={Users}
+          primaryValue={stats.rentedUnits}
+          primaryLabel="Active"
+        />
+        <StatCard
+          title="Sold"
+          icon={ShoppingCart}
+          primaryValue={stats.soldUnits}
+          primaryLabel="Dispatched"
+        />
+        <StatCard
+          title="In Repair"
+          icon={Wrench}
+          primaryValue={stats.repairUnits}
+          primaryLabel="Maintenance"
+        />
       </div>
 
       {/* Main Table Card */}
@@ -158,7 +200,7 @@ export default function VariantDetailPage() {
               <TableHeader className="bg-[#f8fafc] [&_tr]:border-b-[#dddddd]">
                 <TableRow className="hover:bg-transparent">
                   <TableHead className="w-[40px] px-4 py-3"><Checkbox className="border-[#dddddd] data-[state=checked]:bg-[#181d26] data-[state=checked]:border-[#181d26]" /></TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Inventory Code / SN</TableHead>
+                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Inventory SN</TableHead>
                   <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Condition</TableHead>
                   <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Battery</TableHead>
                   <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Purchase</TableHead>
@@ -176,31 +218,31 @@ export default function VariantDetailPage() {
                       </TableCell>
                       <TableCell className="py-3">
                         <div className="flex flex-col gap-0.5">
-                          <span className="font-medium text-[#181d26] text-[13px]">{unit.inventory_code}</span>
-                          <span className="text-[#9297a0] text-[12px]">SN: {unit.serial_number}</span>
+                          <span className="font-medium text-[#181d26] text-[13px]">{unit.serial_number}</span>
+                          {unit.asset_code && <span className="text-[#9297a0] text-[11px]">Asset: {unit.asset_code}</span>}
                         </div>
                       </TableCell>
                       <TableCell className="py-3">
                         <div className="flex items-center gap-1.5 text-[13px] text-[#41454d]">
                           <Tag className="w-3.5 h-3.5 text-[#9297a0]" />
-                          {getGradeDisplay(unit.condition_grade)}
+                          <span className="uppercase text-[11px]">{unit.condition_grade || 'new'}</span>
                         </div>
                       </TableCell>
                       <TableCell className="py-3">
                         <div className="flex items-center gap-1.5 text-[13px] text-[#41454d]">
                           <Battery className="w-3.5 h-3.5 text-[#9297a0]" />
-                          {unit.battery_health}%
+                          {unit.battery_health ? unit.battery_health + '%' : '-'}
                         </div>
                       </TableCell>
                       <TableCell className="py-3 text-right">
-                        <span className="text-[#9297a0] text-[13px]">₹{unit.purchase_price.toLocaleString()}</span>
+                        <span className="text-[#9297a0] text-[13px]">{unit.purchase_price ? '₹' + unit.purchase_price.toLocaleString() : '-'}</span>
                       </TableCell>
                       <TableCell className="py-3 text-right">
-                        <span className="text-[#181d26] text-[13px] font-medium">₹{unit.selling_price.toLocaleString()}</span>
+                        <span className="text-[#181d26] text-[13px] font-medium">{unit.selling_price_override ? '₹' + unit.selling_price_override.toLocaleString() : (variant.selling_price ? '₹' + variant.selling_price.toLocaleString() : '-')}</span>
                       </TableCell>
                       <TableCell className="py-3 text-center">
-                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium border ${getStatusColor(unit.status)} uppercase tracking-wider`}>
-                          {unit.status.replace('_', ' ')}
+                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium border ${getStatusColor(unit.status || 'available')} uppercase tracking-wider`}>
+                          {unit.status || 'Available'}
                         </span>
                       </TableCell>
                       <TableCell className="py-3 text-right" onClick={(e) => e.stopPropagation()}>

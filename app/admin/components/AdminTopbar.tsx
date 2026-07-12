@@ -1,22 +1,31 @@
 "use client";
 
+import { useState } from "react";
 import { Search, Calendar, Filter, Bell, Download, ChevronDown, Plus } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { GlobalSearch } from "@/components/search/GlobalSearch";
 
 export default function AdminTopbar() {
+  const [searchOpen, setSearchOpen] = useState(false);
+
   return (
     <header className="h-[88px] bg-[#ffffff] border-b border-[#dddddd] flex items-center justify-between px-6 shrink-0">
-      {/* Left: Search */}
+      {/* Left */}
       <div className="flex-1 max-w-md">
-        <div className="bg-[#ffffff] rounded-full py-2.5 px-4 flex items-center gap-3 border border-[#dddddd] w-[280px] transition-all focus-within:border-[#1b61c9] hover:border-[#9297a0]">
-          <Search className="w-[18px] h-[18px] text-[#41454d]" />
-          <input 
-            type="text" 
-            placeholder="Smart Search..." 
-            className="flex-1 bg-transparent border-none outline-none text-[14px] text-[#181d26] placeholder:text-[#41454d]"
-          />
-        </div>
+        <button 
+          onClick={() => setSearchOpen(true)}
+          className="bg-[#ffffff] rounded-full py-2.5 px-4 flex items-center justify-between border border-[#dddddd] w-[280px] transition-all hover:border-[#9297a0] group cursor-text"
+        >
+          <div className="flex items-center gap-3">
+            <Search className="w-[18px] h-[18px] text-[#41454d]" />
+            <span className="text-[14px] text-[#41454d] group-hover:text-[#181d26] transition-colors">Smart Search...</span>
+          </div>
+          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-[#dddddd] bg-[#f8fafc] px-1.5 font-mono text-[10px] font-medium text-[#41454d] opacity-100">
+            <span className="text-xs">⌘</span>K
+          </kbd>
+        </button>
+        <GlobalSearch open={searchOpen} setOpen={setSearchOpen} />
       </div>
 
       {/* Right: Actions */}

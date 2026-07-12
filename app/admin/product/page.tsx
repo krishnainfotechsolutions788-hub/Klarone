@@ -1,10 +1,12 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Search, Filter, MoreHorizontal, ChevronDown, Plus, Laptop, Cpu, MemoryStick, HardDrive, Users } from "lucide-react";
+import { Search, Filter, MoreHorizontal, ChevronDown, ChevronRight, Plus, Laptop, Database, Tag, Users, AlertCircle, Box } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Badge } from "@/components/ui/badge";
 import {
   Table,
   TableBody,
@@ -20,60 +22,111 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
-import { mockFamilies, getFamilyStats } from "@/lib/mock-data";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
+import { getInventoryList, deleteInventoryItem } from "@/app/actions/inventory";
+import { getV2KnowledgeCatalog } from "@/app/actions/knowledge";
+import StatCard from "../components/StatCard";
 
 export default function ProductPage() {
   const router = useRouter();
+  const [items, setItems] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [isImportModalOpen, setIsImportModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [page, setPage] = useState(1);
+  const [totalCount, setTotalCount] = useState(0);
+  const pageSize = 20;
+  const [kcItems, setKcItems] = useState<any[]>([]);
 
-  // Calculate aggregated stats across all families
-  const totalFamilies = mockFamilies.length;
-  let totalVariantsAll = 0;
-  let totalUnitsAll = 0;
-  let rentedUnitsAll = 0;
+  const groupedInventory = React.useMemo(() => {
+    const groups: Record<string, { master: any; items: any[]; totalStock: number }> = {};
+    
+    items.forEach(item => {
+      const master = item.kc_variants?.kc_master_products;
+      if (!master) return;
+      
+      const masterId = master.id;
+      if (!groups[masterId]) {
+        groups[masterId] = {
+          master,
+          items: [],
+          totalStock: 0
+        };
+      }
+      
+      groups[masterId].items.push(item);
+      groups[masterId].totalStock += (item.quantity || 1);
+    });
+    
+    return Object.values(groups);
+  }, [items]);
 
-  mockFamilies.forEach(family => {
-    const stats = getFamilyStats(family.id);
-    totalVariantsAll += stats.totalVariants;
-    totalUnitsAll += stats.totalUnits;
-    rentedUnitsAll += stats.rentedUnits;
-  });
+  useEffect(() => {
+    if (isImportModalOpen && kcItems.length === 0) {
+      getV2KnowledgeCatalog().then(res => {
+        if (res.success && res.data) {
+          setKcItems(res.data);
+        }
+      });
+    }
+  }, [isImportModalOpen]);
+
+  useEffect(() => {
+    async function fetchInventory() {
+      setLoading(true);
+      const res = await getInventoryList(page, pageSize, searchQuery);
+      if (res.success && res.data) {
+        setItems(res.data);
+        setTotalCount(res.count || 0);
+      }
+      setLoading(false);
+    }
+    const timeoutId = setTimeout(() => {
+      fetchInventory();
+    }, 300);
+    return () => clearTimeout(timeoutId);
+  }, [page, searchQuery]);
+
+  const handleDelete = async (id: string) => {
+    if (!confirm("Are you sure you want to delete this inventory item?")) return;
+    const res = await deleteInventoryItem(id);
+    if (res.success) {
+      setItems(prev => prev.filter(item => item.id !== id));
+    } else {
+      alert("Failed to delete item: " + res.error);
+    }
+  };
+
+  const totalUnitsAll = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const lowStockProducts = 0;
 
   return (
     <div className="flex flex-col gap-6 max-w-[1600px] mx-auto pb-10">
       
-      {/* Header Area */}
-      <div>
-        <h1 className="text-2xl font-semibold text-[#181d26] tracking-tight">Product Families</h1>
-        <p className="text-sm text-[#9297a0] mt-1">Manage core laptop models and their inventory.</p>
-      </div>
-
       {/* Aggregate Stat Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Total Families</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{totalFamilies}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Total Variants</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{totalVariantsAll}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Total Inventory Units</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{totalUnitsAll}</span>
-          </CardContent>
-        </Card>
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardContent className="p-5 flex flex-col gap-1">
-            <span className="text-[13px] font-medium text-[#41454d]">Currently Rented</span>
-            <span className="text-2xl font-semibold text-[#181d26] tracking-tight">{rentedUnitsAll}</span>
-          </CardContent>
-        </Card>
+        <StatCard title="Total Inventory" icon={Database} primaryValue={totalUnitsAll} primaryLabel="Physical Stock" />
+        <StatCard title="Active Rentals" icon={Users} primaryValue={0} primaryLabel="Currently Rented" />
+        <StatCard title="Low Stock Alerts" icon={AlertCircle} primaryValue={lowStockProducts} primaryLabel="Needs Reorder" />
+        <StatCard title="Unique Items" icon={Tag} primaryValue={items.length} primaryLabel="Rows" />
       </div>
 
       {/* Main Table Card */}
@@ -85,91 +138,176 @@ export default function ProductPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9297a0]" />
             <input 
               type="text" 
-              placeholder="Search product families..." 
+              placeholder="Search inventory..."
+              value={searchQuery}
+              onChange={(e) => { setSearchQuery(e.target.value); setPage(1); }}
               className="w-full h-9 pl-9 pr-4 bg-[#f8fafc] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
             />
           </div>
           <div className="flex items-center gap-2 w-full sm:w-auto">
-            <Button variant="outline" className="h-9 px-3 rounded-[6px] border-[#dddddd] text-[#181d26] text-[13px] hover:bg-[#f8fafc] shadow-none flex items-center gap-1.5">
-              Bulk Actions <ChevronDown className="w-3.5 h-3.5 text-[#9297a0]" />
-            </Button>
-            <Button variant="outline" className="h-9 px-3 rounded-[6px] border-[#dddddd] text-[#181d26] text-[13px] hover:bg-[#f8fafc] shadow-none flex items-center gap-1.5">
-              <Filter className="w-3.5 h-3.5" />
-              Filters
-            </Button>
-            <Button onClick={() => router.push('/admin/product/add')} className="h-9 px-4 rounded-[6px] bg-[#181d26] hover:bg-[#0d1218] text-white text-[13px] font-medium shadow-none flex items-center gap-1.5">
-              <Plus className="w-3.5 h-3.5" />
-              Add Product
-            </Button>
+            <Dialog open={isImportModalOpen} onOpenChange={setIsImportModalOpen}>
+              <DialogTrigger
+                render={
+                  <Button className="h-9 px-4 rounded-[6px] bg-[#181d26] hover:bg-[#0d1218] text-white text-[13px] font-medium shadow-none flex items-center gap-1.5" />
+                }
+              >
+                <Plus className="w-3.5 h-3.5" />
+                Add Inventory (from Master Catalog)
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-4xl h-[80vh] flex flex-col p-0 gap-0 overflow-hidden bg-white border-[#dddddd] shadow-lg rounded-[12px]">
+                <DialogHeader className="px-6 py-4 border-b border-[#dddddd] bg-[#f8fafc] shrink-0">
+                  <DialogTitle className="text-[16px] font-semibold text-[#181d26]">Select Master Product</DialogTitle>
+                  <p className="text-[13px] text-[#5f6368] mt-1">Choose a product from your knowledge catalog to start adding inventory.</p>
+                  
+                  <div className="relative mt-4">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9297a0]" />
+                    <input 
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Search by brand, model, or series..."
+                      className="w-full h-9 pl-9 pr-4 bg-white border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
+                    />
+                  </div>
+                </DialogHeader>
+
+                <div className="flex-1 overflow-y-auto p-6 bg-white">
+                  <div className="flex flex-col gap-3">
+                    {kcItems.length === 0 ? (
+                      <div className="text-center text-sm text-[#9297a0] py-12 flex flex-col items-center">
+                        <Box className="w-8 h-8 mb-3 opacity-20" />
+                        Loading products...
+                      </div>
+                    ) : (
+                      kcItems
+                        .filter(item => {
+                          const searchStr = `${item.kc_brands?.name || ''} ${item.model} ${item.series || ''}`.toLowerCase();
+                          return searchStr.includes(searchQuery.toLowerCase());
+                        })
+                        .map((item) => (
+                        <div key={item.id} className="flex items-center justify-between p-4 border border-[#dddddd] rounded-[10px] hover:border-[#1b61c9] hover:bg-[#f8fafc] transition-all group gap-6">
+                          <div className="flex items-center gap-4 flex-1 min-w-0">
+                            <div className="w-10 h-10 rounded-[6px] bg-[#f0f2f5] border border-[#dddddd] flex items-center justify-center shrink-0 group-hover:bg-white transition-colors">
+                              <Box className="w-5 h-5 text-[#9297a0]" />
+                            </div>
+                            <div className="flex flex-col min-w-0">
+                              <div className="font-medium text-[14px] text-[#181d26] truncate">{item.kc_brands?.name} {item.model}</div>
+                              <div className="text-[12px] text-[#5f6368] mt-0.5 truncate">{item.series || 'No Series'} • GTIN: {item.gtin || 'N/A'}</div>
+                            </div>
+                          </div>
+                          <Button 
+                            onClick={() => router.push(`/admin/product/add?kc_id=${item.id}`)}
+                            size="sm"
+                            className="bg-[#181d26] hover:bg-[#0d1218] text-white shadow-none h-8 px-4 rounded-[6px] text-[12px] shrink-0"
+                          >
+                            Add Inventory
+                          </Button>
+                        </div>
+                      ))
+                    )}
+                    
+                    {kcItems.length > 0 && kcItems.filter(item => `${item.kc_brands?.name || ''} ${item.model} ${item.series || ''}`.toLowerCase().includes(searchQuery.toLowerCase())).length === 0 && (
+                      <div className="text-center text-sm text-[#9297a0] py-12 flex flex-col items-center">
+                        No products match your search.
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
 
         {/* Table Content */}
         <CardContent className="p-0">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto min-h-[550px]">
             <Table>
               <TableHeader className="bg-[#f8fafc] [&_tr]:border-b-[#dddddd]">
                 <TableRow className="hover:bg-transparent">
-                  <TableHead className="w-[40px] px-4 py-3"><Checkbox className="border-[#dddddd] data-[state=checked]:bg-[#181d26] data-[state=checked]:border-[#181d26]" /></TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Product Family</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Category</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Variants</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Total Units</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Available</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Rented</TableHead>
-                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Sold</TableHead>
-                  <TableHead className="w-[50px] py-3"></TableHead>
+                  <TableHead className="w-[40px] px-4 py-3"></TableHead>
+                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Product / Variant</TableHead>
+                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3">Stock / ID</TableHead>
+                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-right">Price</TableHead>
+                  <TableHead className="font-medium text-[#41454d] text-[12px] uppercase tracking-wider py-3 text-center">Status</TableHead>
+                  <TableHead className="w-[80px] py-3 text-right text-[12px] font-medium text-[#41454d] uppercase tracking-wider">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {mockFamilies.map((family) => {
-                  const stats = getFamilyStats(family.id);
+                {loading ? (
+                  <TableRow>
+                    <TableCell colSpan={6} className="h-24 text-center text-[#9297a0]">Loading inventory...</TableCell>
+                  </TableRow>
+                ) : groupedInventory.length === 0 ? (
+                  <TableRow>
+                    <TableCell colSpan={6} className="h-24 text-center text-[#9297a0]">No inventory items found.</TableCell>
+                  </TableRow>
+                ) : groupedInventory.map((group) => {
+                  const master = group.master;
+                  const brandName = master?.kc_brands?.name || '';
+                  const modelName = master?.model || 'Unknown';
+                  
+                  // Calculate master row aggregates
+                  const minPrice = Math.min(...group.items.map(i => i.selling_price || 0));
+                  const maxPrice = Math.max(...group.items.map(i => i.selling_price || 0));
+                  const priceStr = minPrice === maxPrice 
+                    ? `₹${minPrice}` 
+                    : `₹${minPrice} - ₹${maxPrice}`;
+                  const hasStock = group.totalStock > 0;
+                  
                   return (
-                    <TableRow key={family.id} className="border-b-[#dddddd] hover:bg-[#f8fafc] cursor-pointer transition-colors group" onClick={() => router.push(`/admin/product/${family.id}`)}>
-                      <TableCell className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
-                        <Checkbox className="border-[#dddddd] data-[state=checked]:bg-[#181d26] data-[state=checked]:border-[#181d26]" />
+                    <TableRow 
+                      key={master.id}
+                      className="border-b-[#dddddd] transition-colors group hover:bg-[#f8fafc]"
+                    >
+                      <TableCell className="px-4 py-3">
+                        <Checkbox className="border-[#dddddd] data-[state=checked]:bg-[#181d26]" />
                       </TableCell>
                       <TableCell className="py-3">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-[6px] bg-[#f0f2f5] border border-[#dddddd] flex items-center justify-center shrink-0">
-                            <Laptop className="w-5 h-5 text-[#9297a0]" />
+                            <Box className="w-5 h-5 text-[#9297a0]" />
                           </div>
-                          <div className="flex flex-col">
-                            <span className="font-medium text-[#181d26] text-[14px] group-hover:text-[#1b61c9] transition-colors">{family.brand} {family.series} {family.model_name}</span>
-                            <span className="text-[#9297a0] text-[12px]">ID: {family.id}</span>
+                          <div className="flex flex-col min-w-0 max-w-[250px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px]">
+                            <span className="font-medium text-[#181d26] text-[14px] truncate" title={`${brandName} ${modelName}`}>
+                              {brandName} {modelName}
+                            </span>
+                            <span className="text-[#9297a0] text-[12px] truncate" title={`${group.items.length} Variant(s)`}>
+                              {group.items.length} Variant(s) Included
+                            </span>
                           </div>
                         </div>
                       </TableCell>
                       <TableCell className="py-3">
-                        <span className="text-[#41454d] text-[13px]">{family.category}</span>
+                        <span className="text-[#181d26] text-[13px] font-medium block">Total Stock: {group.totalStock}</span>
                       </TableCell>
                       <TableCell className="py-3 text-right">
-                        <span className="text-[#181d26] text-[13px] font-medium">{stats.totalVariants}</span>
+                        <span className="text-[#181d26] text-[13px] font-medium">{priceStr}</span>
+                      </TableCell>
+                      <TableCell className="py-3 text-center">
+                        <Badge variant="outline" className={`text-[11px] ${hasStock ? 'bg-[#ecfdf5] text-[#047857] border-[#a7f3d0]' : 'bg-[#fef2f2] text-[#ef4444] border-[#fecaca]'}`}>
+                          {hasStock ? 'In Stock' : 'Out of Stock'}
+                        </Badge>
                       </TableCell>
                       <TableCell className="py-3 text-right">
-                        <span className="text-[#181d26] text-[13px]">{stats.totalUnits}</span>
-                      </TableCell>
-                      <TableCell className="py-3 text-right">
-                        <span className="text-[#0d9488] text-[13px] font-medium">{stats.availableUnits}</span>
-                      </TableCell>
-                      <TableCell className="py-3 text-right">
-                        <span className="text-[#d97706] text-[13px] font-medium">{stats.rentedUnits}</span>
-                      </TableCell>
-                      <TableCell className="py-3 text-right">
-                        <span className="text-[#41454d] text-[13px]">{stats.soldUnits}</span>
-                      </TableCell>
-                      <TableCell className="py-3 text-right" onClick={(e) => e.stopPropagation()}>
                         <DropdownMenu>
-                          <DropdownMenuTrigger className="inline-flex items-center justify-center rounded-[6px] h-8 w-8 p-0 text-[#9297a0] hover:text-[#181d26] hover:bg-[#f0f2f5] outline-none transition-colors">
-                            <span className="sr-only">Open menu</span>
+                          <DropdownMenuTrigger className="inline-flex items-center justify-center rounded-[6px] h-8 w-8 p-0 text-[#9297a0] hover:text-[#181d26] hover:bg-[#f0f2f5] outline-none">
                             <MoreHorizontal className="h-4 w-4" />
                           </DropdownMenuTrigger>
-                          <DropdownMenuContent align="end" className="w-[160px] rounded-[8px] border-[#dddddd] shadow-sm">
-                            <DropdownMenuLabel className="text-[11px] font-medium text-[#9297a0] uppercase tracking-wider">Actions</DropdownMenuLabel>
-                            <DropdownMenuItem className="text-[13px] text-[#181d26] focus:bg-[#f8fafc] cursor-pointer" onClick={() => router.push(`/admin/product/${family.id}`)}>View Variants</DropdownMenuItem>
-                            <DropdownMenuItem className="text-[13px] text-[#181d26] focus:bg-[#f8fafc] cursor-pointer">Edit Family Info</DropdownMenuItem>
-                            <DropdownMenuSeparator className="bg-[#dddddd]" />
-                            <DropdownMenuItem className="text-[13px] text-[#c5221f] focus:bg-[#fce8e6] focus:text-[#c5221f] cursor-pointer">Archive</DropdownMenuItem>
+                          <DropdownMenuContent align="end" className="w-[180px] rounded-[8px] border-[#dddddd] shadow-sm">
+                            <DropdownMenuItem 
+                              className="text-[13px] text-[#181d26] cursor-pointer"
+                              onClick={(e) => { e.stopPropagation(); router.push(`/admin/product/${master.id}/view`); }}
+                            >
+                              <Box className="w-4 h-4 mr-2 text-[#5f6368]" />
+                              View Details
+                            </DropdownMenuItem>
+                            <DropdownMenuItem 
+                              className="text-[13px] text-[#181d26] cursor-pointer"
+                              onClick={(e) => { e.stopPropagation(); router.push(`/admin/product/add?kc_id=${master.id}`); }}
+                            >
+                              <Plus className="w-4 h-4 mr-2 text-[#5f6368]" />
+                              Add More Inventory
+                            </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
                       </TableCell>
@@ -179,17 +317,69 @@ export default function ProductPage() {
               </TableBody>
             </Table>
           </div>
+          {/* Pagination */}
+          {/* Pagination */}
+          {totalCount > pageSize && (() => {
+            const totalPages = Math.ceil(totalCount / pageSize);
+            const getPageNumbers = () => {
+              const pages = [];
+              if (totalPages <= 5) {
+                for (let i = 1; i <= totalPages; i++) pages.push(i);
+              } else {
+                if (page <= 3) {
+                  pages.push(1, 2, 3, 4, '...', totalPages);
+                } else if (page >= totalPages - 2) {
+                  pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+                } else {
+                  pages.push(1, '...', page - 1, page, page + 1, '...', totalPages);
+                }
+              }
+              return pages;
+            };
+            const pageNumbers = getPageNumbers();
+
+            return (
+              <div className="flex items-center justify-between p-4 border-t border-[#dddddd]">
+                <div className="text-[13px] text-[#5f6368]">
+                  Showing {(page - 1) * pageSize + 1} to {Math.min(page * pageSize, totalCount)} of {totalCount} entries
+                </div>
+                <Pagination className="w-auto mx-0">
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious 
+                        onClick={() => setPage(p => Math.max(1, p - 1))} 
+                        className={page === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"} 
+                      />
+                    </PaginationItem>
+                    
+                    {pageNumbers.map((num, i) => (
+                      <PaginationItem key={i}>
+                        {num === '...' ? (
+                          <PaginationEllipsis />
+                        ) : (
+                          <PaginationLink
+                            isActive={page === num}
+                            onClick={() => setPage(num as number)}
+                            className="cursor-pointer"
+                          >
+                            {num}
+                          </PaginationLink>
+                        )}
+                      </PaginationItem>
+                    ))}
+
+                    <PaginationItem>
+                      <PaginationNext 
+                        onClick={() => setPage(p => (p * pageSize < totalCount ? p + 1 : p))} 
+                        className={page * pageSize >= totalCount ? "pointer-events-none opacity-50" : "cursor-pointer"} 
+                      />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
+              </div>
+            );
+          })()}
         </CardContent>
-
-        {/* Pagination */}
-        <div className="flex items-center justify-between p-4 border-t border-[#dddddd] bg-[#f8fafc] text-[13px] text-[#9297a0]">
-          <div>Showing {mockFamilies.length} product families</div>
-          <div className="flex gap-1">
-            <Button variant="outline" disabled className="h-8 px-3 rounded-[6px] border-[#dddddd] bg-white text-[#9297a0] shadow-none">Previous</Button>
-            <Button variant="outline" disabled className="h-8 px-3 rounded-[6px] border-[#dddddd] bg-white text-[#9297a0] shadow-none">Next</Button>
-          </div>
-        </div>
-
       </Card>
     </div>
   );

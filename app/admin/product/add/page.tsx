@@ -1,358 +1,282 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { Save, X, Info, ChevronRight, Copy, Trash2, Plus } from "lucide-react";
+import React, { useState, useEffect, Suspense } from 'react';
+import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Save, Loader2, Package } from "lucide-react";
+import { getV2KnowledgeMaster } from '@/app/actions/knowledge';
+import { addInventoryItem } from '@/app/actions/inventory';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ArrowLeft, Tag, Layers, CheckCircle2 } from "lucide-react";
 
-interface UnitForm {
-  id: string;
-  serial: string;
-  condition: string;
-  status: string;
-  battery: string;
-  color: string;
-  purchasePrice: string;
-  sellingPrice: string;
-  notes: string;
-}
-
-const generateId = () => Math.random().toString(36).substr(2, 9);
-
-const defaultUnit: UnitForm = {
-  id: generateId(),
-  serial: "",
-  condition: "refurbished_a",
-  status: "available",
-  battery: "",
-  color: "",
-  purchasePrice: "",
-  sellingPrice: "",
-  notes: ""
-};
-
-export default function AddInventoryPage() {
+function AddInventoryForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const kc_id = searchParams.get('kc_id');
+  const [isClient, setIsClient] = useState(false);
+  const [isPublishing, setIsPublishing] = useState(false);
   
-  // State for multiple physical units
-  const [units, setUnits] = useState<UnitForm[]>([{ ...defaultUnit }]);
+  const [masterData, setMasterData] = useState<any>(null);
+  const [variants, setVariants] = useState<any[]>([]);
+  
+  const [formData, setFormData] = useState({
+    variantId: '',
+    inventoryMode: 'serialized',
+    serialNumber: '',
+    quantity: 1,
+    condition: 'New',
+    purchasePrice: '',
+    sellingPrice: ''
+  });
 
-  const addUnit = () => {
-    setUnits([...units, { ...defaultUnit, id: generateId() }]);
-  };
+  useEffect(() => {
+    setIsClient(true);
+    if (kc_id) {
+      getV2KnowledgeMaster(kc_id).then(res => {
+        if (res.success && res.data) {
+          setMasterData(res.data.master);
+          const variantList = res.data.variants || (res.data.variant ? [res.data.variant] : []);
+          setVariants(variantList);
+          if (variantList.length > 0) {
+             setFormData(prev => ({ ...prev, variantId: variantList[0].id }));
+          }
+        } else {
+          alert("Knowledge product not found");
+          router.push('/admin/product');
+        }
+      });
+    } else {
+       router.push('/admin/product');
+    }
+  }, [kc_id, router]);
 
-  const duplicateUnit = (unitToCopy: UnitForm) => {
-    setUnits([...units, { ...unitToCopy, id: generateId(), serial: "" }]);
-  };
+  const handleSave = async () => {
+    if (!formData.variantId) {
+      alert("Please select a variant.");
+      return;
+    }
+    
+    try {
+      setIsPublishing(true);
+      const res = await addInventoryItem({
+        variantId: formData.variantId,
+        inventoryMode: formData.inventoryMode,
+        serialNumber: formData.serialNumber,
+        quantity: formData.inventoryMode === 'quantity' ? Number(formData.quantity) : 1,
+        condition: formData.condition,
+        purchasePrice: Number(formData.purchasePrice),
+        sellingPrice: Number(formData.sellingPrice)
+      });
 
-  const removeUnit = (idToRemove: string) => {
-    if (units.length > 1) {
-      setUnits(units.filter(unit => unit.id !== idToRemove));
+      if (!res.success) throw new Error(res.error);
+
+      alert("Inventory Added Successfully!");
+      router.push('/admin/product');
+    } catch (e: any) {
+      console.error(e);
+      alert("Error adding inventory: " + e.message);
+    } finally {
+      setIsPublishing(false);
     }
   };
 
-  const updateUnit = (id: string, field: keyof UnitForm, value: string) => {
-    setUnits(units.map(unit => unit.id === id ? { ...unit, [field]: value } : unit));
-  };
-
-  const handleSave = (e: React.FormEvent) => {
-    e.preventDefault();
-    router.push('/admin/product');
-  };
+  if (!isClient || !masterData) return (
+    <div className="p-8 flex justify-center"><Loader2 className="w-8 h-8 animate-spin text-slate-400" /></div>
+  );
 
   return (
-    <div className="flex flex-col gap-6 max-w-[1400px] mx-auto pb-12">
+    <div className="w-full space-y-6 pb-24 mt-6">
       
-      {/* Header Area */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-[14px] font-normal tracking-wide">
-          <span className="text-[#5f6368] hover:text-[#181d26] transition-colors cursor-pointer" onClick={() => router.push('/admin/product')}>Products</span>
-          <ChevronRight className="w-3.5 h-3.5 text-[#9297a0]" />
-          <span className="text-[#181d26]">Add Inventory</span>
+      {/* Page Header */}
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between border-b border-[#dddddd] pb-6 gap-4">
+        <div>
+          <button 
+            onClick={() => router.push('/admin/product')}
+            className="flex items-center text-[13px] text-[#5f6368] hover:text-[#181d26] transition-colors mb-3 font-medium"
+          >
+            <ArrowLeft className="w-3.5 h-3.5 mr-1.5" />
+            Back to Inventory
+          </button>
+          <h1 className="text-[24px] font-bold font-sora text-[#181d26] tracking-tight">Add Physical Stock</h1>
+          <p className="text-[#5f6368] text-[14px] mt-1.5 max-w-2xl leading-relaxed">
+            Configure and stock inventory for <span className="font-semibold text-[#181d26]">{masterData.kc_brands?.name} {masterData.model}</span>
+          </p>
         </div>
-        
-        {/* Top Action Footer */}
-        <div className="flex items-center gap-3">
-          <Button type="button" variant="outline" onClick={() => router.back()} className="h-9 px-4 rounded-[6px] border-[#dddddd] text-[#41454d] text-[13px] hover:bg-[#f8fafc] shadow-none flex items-center gap-2">
+        <div className="flex items-center gap-3 shrink-0">
+          <Button variant="outline" onClick={() => router.push('/admin/product')} className="border-[#dddddd] text-[#181d26] hover:bg-[#f8fafc] shadow-none">
             Cancel
           </Button>
-          <Button onClick={handleSave} className="h-9 px-5 rounded-[6px] bg-[#181d26] hover:bg-[#0d1218] text-white text-[13px] font-medium shadow-none flex items-center gap-2">
-            <Save className="w-4 h-4" />
-            Save Inventory
+          <Button onClick={handleSave} disabled={isPublishing} className="bg-[#181d26] hover:bg-[#0d1218] text-white shadow-none px-6">
+            {isPublishing ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Save className="w-4 h-4 mr-2"/>} 
+            Save to Inventory
           </Button>
         </div>
       </div>
 
-      <form id="inventory-form" onSubmit={handleSave} className="flex flex-col gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        {/* Step 1 - Product Family */}
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardHeader className="border-b border-[#dddddd] pb-4 bg-[#f8fafc] rounded-t-[10px]">
-            <CardTitle className="text-[16px] font-medium text-[#181d26]">1. Product Family</CardTitle>
-            <p className="text-[13px] text-[#9297a0] mt-1">Define the core laptop model (e.g. ThinkPad T480). If it already exists, units will be added to it.</p>
-          </CardHeader>
-          <CardContent className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">Brand</label>
-                <select className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors">
-                  <option value="">Select a brand...</option>
-                  <option value="lenovo">Lenovo</option>
-                  <option value="dell">Dell</option>
-                  <option value="hp">HP</option>
-                  <option value="apple">Apple</option>
-                </select>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">Series</label>
-                <input 
-                  type="text" 
-                  placeholder="e.g. ThinkPad, Latitude" 
-                  className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                  required
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">Model Name</label>
-                <input 
-                  type="text" 
-                  placeholder="e.g. T480" 
-                  className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                  required
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">Category</label>
-                <select className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors">
-                  <option value="business">Business Laptop</option>
-                  <option value="gaming">Gaming Laptop</option>
-                  <option value="ultrabook">Ultrabook</option>
-                  <option value="student">Student Laptop</option>
-                </select>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Step 2 - Product Variant */}
-        <Card className="border-[#dddddd] shadow-none rounded-[10px]">
-          <CardHeader className="border-b border-[#dddddd] pb-4 bg-[#f8fafc] rounded-t-[10px]">
-            <CardTitle className="text-[16px] font-medium text-[#181d26]">2. Product Variant</CardTitle>
-            <p className="text-[13px] text-[#9297a0] mt-1">Specify the exact hardware configuration and baseline pricing. If this variant exists, units will be added to it.</p>
-          </CardHeader>
-          <CardContent className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-5">
-              <div className="flex flex-col gap-2 lg:col-span-2">
-                <label className="text-[13px] font-medium text-[#181d26]">CPU / Processor</label>
-                <input 
-                  type="text" 
-                  placeholder="e.g. Intel Core i5 8th Gen" 
-                  className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                  required
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">RAM</label>
-                <select className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors">
-                  <option value="">Select...</option>
-                  <option value="8gb">8GB</option>
-                  <option value="16gb">16GB</option>
-                  <option value="32gb">32GB</option>
-                </select>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">Storage (SSD)</label>
-                <select className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors">
-                  <option value="">Select...</option>
-                  <option value="256gb">256GB SSD</option>
-                  <option value="512gb">512GB SSD</option>
-                  <option value="1tb">1TB SSD</option>
-                </select>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">Base Price (₹)</label>
-                <input 
-                  type="number" 
-                  placeholder="0" 
-                  className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                  required
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-[13px] font-medium text-[#181d26]">Rental Price/Mo (₹)</label>
-                <input 
-                  type="number" 
-                  placeholder="0" 
-                  className="w-full h-10 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[14px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                />
-              </div>
-            </div>
-            
-            <div className="bg-[#e8f0fe] rounded-[6px] p-3 flex items-start gap-2 mt-6 inline-flex">
-              <Info className="w-4 h-4 text-[#1b61c9] mt-0.5 shrink-0" />
-              <p className="text-[12.5px] text-[#1b61c9] leading-tight">
-                All physical units added below will be strictly tied to this configuration. Base prices defined here are displayed on the shop frontend.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Step 3 - Physical Units List */}
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h2 className="text-[16px] font-medium text-[#181d26]">3. Inventory Units</h2>
-              <p className="text-[13px] text-[#9297a0] mt-1">Add actual physical laptops. Duplicate rows to copy condition and override prices.</p>
-            </div>
-            <Button 
-              type="button" 
-              onClick={addUnit}
-              className="h-9 px-4 rounded-[6px] bg-[#f8fafc] border border-[#dddddd] hover:bg-[#e0e2e6] text-[#181d26] text-[13px] font-medium shadow-none flex items-center gap-1.5"
-            >
-              <Plus className="w-3.5 h-3.5" />
-              Add Blank Unit
-            </Button>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            {units.map((unit, index) => (
-              <Card key={unit.id} className="border-[#dddddd] shadow-none rounded-[10px] overflow-visible">
-                <div className="flex items-center justify-between p-3 border-b border-[#dddddd] bg-[#f8fafc] rounded-t-[10px]">
-                  <span className="text-[13px] font-medium text-[#41454d]">Unit #{index + 1}</span>
-                  <div className="flex items-center gap-1">
-                    <Button 
-                      type="button" 
-                      variant="ghost" 
-                      size="sm"
-                      onClick={() => duplicateUnit(unit)}
-                      className="h-7 px-2.5 text-[#1b61c9] hover:text-[#1b61c9] hover:bg-[#e8f0fe] text-[12px] flex items-center gap-1.5 rounded-[4px]"
+        {/* Left Column: Form Sections */}
+        <div className="md:col-span-2 space-y-6">
+          
+          <Card className="border-[#dddddd] shadow-none rounded-[10px] overflow-hidden">
+            <CardHeader className="bg-[#f8fafc] border-b border-[#dddddd] py-4 px-5">
+              <CardTitle className="text-[14px] font-semibold text-[#181d26] flex items-center gap-2">
+                <Layers className="w-4 h-4 text-[#5f6368]" />
+                1. Select Configuration
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-5">
+              <div className="space-y-3">
+                <Label className="text-[13px] text-[#5f6368]">Which variant are you stocking?</Label>
+                <div className="grid grid-cols-1 gap-3">
+                  {variants.map(v => (
+                    <div 
+                      key={v.id} 
+                      className={`relative p-4 border rounded-[8px] cursor-pointer transition-all ${
+                        formData.variantId === v.id 
+                          ? 'border-[#1b61c9] bg-[#f0f6ff] ring-1 ring-[#1b61c9]' 
+                          : 'border-[#dddddd] hover:border-[#9297a0] hover:bg-[#f8fafc]'
+                      }`}
+                      onClick={() => setFormData(prev => ({ ...prev, variantId: v.id }))}
                     >
-                      <Copy className="w-3.5 h-3.5" />
-                      Duplicate
-                    </Button>
-                    {units.length > 1 && (
-                      <Button 
-                        type="button" 
-                        variant="ghost" 
-                        size="icon"
-                        onClick={() => removeUnit(unit.id)}
-                        className="h-7 w-7 text-[#9297a0] hover:text-[#c5221f] hover:bg-[#fce8e6] rounded-[4px]"
-                      >
-                        <Trash2 className="w-3.5 h-3.5" />
-                      </Button>
-                    )}
-                  </div>
-                </div>
-                
-                <CardContent className="p-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-x-4 gap-y-5">
-                    
-                    <div className="flex flex-col gap-2 xl:col-span-2">
-                      <label className="text-[12px] font-medium text-[#41454d]">Serial Number <span className="text-[#c5221f]">*</span></label>
-                      <input 
-                        type="text" 
-                        value={unit.serial}
-                        onChange={(e) => updateUnit(unit.id, 'serial', e.target.value)}
-                        placeholder="e.g. GV0Y063" 
-                        className="w-full h-9 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                        required
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-2 xl:col-span-2">
-                      <label className="text-[12px] font-medium text-[#41454d]">Condition Grade</label>
-                      <select 
-                        value={unit.condition}
-                        onChange={(e) => updateUnit(unit.id, 'condition', e.target.value)}
-                        className="w-full h-9 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors"
-                      >
-                        <option value="new">New</option>
-                        <option value="open_box">Open Box</option>
-                        <option value="refurbished_a">Refurbished A</option>
-                        <option value="refurbished_b">Refurbished B</option>
-                        <option value="refurbished_c">Refurbished C</option>
-                      </select>
-                    </div>
-
-                    <div className="flex flex-col gap-2 xl:col-span-2">
-                      <label className="text-[12px] font-medium text-[#41454d]">Status</label>
-                      <select 
-                        value={unit.status}
-                        onChange={(e) => updateUnit(unit.id, 'status', e.target.value)}
-                        className="w-full h-9 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors"
-                      >
-                        <option value="available">Available</option>
-                        <option value="reserved">Reserved</option>
-                        <option value="under_inspection">Under Inspection</option>
-                        <option value="repair">Repair</option>
-                      </select>
-                    </div>
-
-                    <div className="flex flex-col gap-2 xl:col-span-1">
-                      <label className="text-[12px] font-medium text-[#41454d]">Battery %</label>
-                      <input 
-                        type="number" 
-                        min="0" max="100"
-                        value={unit.battery}
-                        onChange={(e) => updateUnit(unit.id, 'battery', e.target.value)}
-                        placeholder="92" 
-                        className="w-full h-9 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-2 xl:col-span-1">
-                      <label className="text-[12px] font-medium text-[#41454d]">Color</label>
-                      <input 
-                        type="text" 
-                        value={unit.color}
-                        onChange={(e) => updateUnit(unit.id, 'color', e.target.value)}
-                        placeholder="Silver" 
-                        className="w-full h-9 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-2 xl:col-span-2">
-                      <label className="text-[12px] font-medium text-[#41454d]">Override Sell Price</label>
-                      <div className="relative">
-                        <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[#9297a0] text-[13px]">₹</span>
-                        <input 
-                          type="number" 
-                          value={unit.sellingPrice}
-                          onChange={(e) => updateUnit(unit.id, 'sellingPrice', e.target.value)}
-                          placeholder="Uses Variant Price" 
-                          className="w-full h-9 pl-6 pr-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                        />
+                      {formData.variantId === v.id && (
+                        <CheckCircle2 className="absolute top-4 right-4 w-5 h-5 text-[#1b61c9]" />
+                      )}
+                      <div className="flex items-center gap-4 pr-8">
+                        <div className={`w-10 h-10 rounded-[6px] flex items-center justify-center shrink-0 ${
+                          formData.variantId === v.id ? 'bg-[#1b61c9]/10 text-[#1b61c9]' : 'bg-[#f0f2f5] text-[#9297a0]'
+                        }`}>
+                          <Package className="w-5 h-5" />
+                        </div>
+                        <div className="flex flex-col">
+                          <div className={`font-medium text-[14px] ${formData.variantId === v.id ? 'text-[#1b61c9]' : 'text-[#181d26]'}`}>
+                            {v.cpu || v.ram || v.storage 
+                              ? [v.cpu, v.ram, v.storage].filter(Boolean).join(' • ')
+                              : (v.sku ? `SKU: ${v.sku}` : 'Default Configuration')
+                            }
+                          </div>
+                          <div className="text-[12px] text-[#5f6368] mt-0.5">
+                            Standard MSRP: ₹{v.selling_price || masterData?.msrp || 0}
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  ))}
+                  {variants.length === 0 && <div className="text-[13px] text-[#d92d20] p-4 bg-[#fdf2f2] rounded-[6px] border border-[#fecdca]">No variants found for this product. You must add variants in the Master Catalog first.</div>}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-                    <div className="flex flex-col gap-2 xl:col-span-6">
-                      <label className="text-[12px] font-medium text-[#41454d]">Internal Notes</label>
-                      <input 
-                        type="text"
-                        value={unit.notes}
-                        onChange={(e) => updateUnit(unit.id, 'notes', e.target.value)}
-                        placeholder="Optional remarks regarding scratches, accessories..." 
-                        className="w-full h-9 px-3 bg-[#ffffff] border border-[#dddddd] rounded-[6px] text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors placeholder:text-[#9297a0]"
-                      />
-                    </div>
+          <Card className="border-[#dddddd] shadow-none rounded-[10px] overflow-hidden">
+            <CardHeader className="bg-[#f8fafc] border-b border-[#dddddd] py-4 px-5">
+              <CardTitle className="text-[14px] font-semibold text-[#181d26] flex items-center gap-2">
+                <Tag className="w-4 h-4 text-[#5f6368]" />
+                2. Physical Stock Details
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-5">
+              <div className="grid grid-cols-2 gap-5">
+                <div className="space-y-2 col-span-2 sm:col-span-1">
+                  <Label className="text-[13px] font-medium text-[#41454d]">Inventory Mode <span className="text-[#d92d20]">*</span></Label>
+                  <select 
+                    className="w-full h-10 px-3 rounded-[6px] border border-[#dddddd] bg-white text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors"
+                    value={formData.inventoryMode}
+                    onChange={e => setFormData(prev => ({ ...prev, inventoryMode: e.target.value }))}
+                  >
+                    <option value="serialized">Serialized (Unique Item)</option>
+                    <option value="quantity">Bulk Quantity</option>
+                  </select>
+                </div>
+                
+                <div className="space-y-2 col-span-2 sm:col-span-1">
+                  <Label className="text-[13px] font-medium text-[#41454d]">Item Condition <span className="text-[#d92d20]">*</span></Label>
+                  <select 
+                    className="w-full h-10 px-3 rounded-[6px] border border-[#dddddd] bg-white text-[13px] text-[#181d26] outline-none focus:border-[#1b61c9] transition-colors"
+                    value={formData.condition}
+                    onChange={e => setFormData(prev => ({ ...prev, condition: e.target.value }))}
+                  >
+                    <option value="New">New</option>
+                    <option value="Refurbished">Refurbished</option>
+                    <option value="Used">Used</option>
+                  </select>
+                </div>
 
+                {formData.inventoryMode === 'serialized' ? (
+                  <div className="space-y-2 col-span-2">
+                    <Label className="text-[13px] font-medium text-[#41454d]">Serial Number / Asset Tag <span className="text-[#d92d20]">*</span></Label>
+                    <Input 
+                      value={formData.serialNumber} 
+                      onChange={e => setFormData(prev => ({ ...prev, serialNumber: e.target.value }))} 
+                      placeholder="e.g. PF34B7XX"
+                      className="border-[#dddddd] h-10 rounded-[6px] text-[13px] focus-visible:ring-[#1b61c9]"
+                    />
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                ) : (
+                  <div className="space-y-2 col-span-2">
+                    <Label className="text-[13px] font-medium text-[#41454d]">Quantity to Add <span className="text-[#d92d20]">*</span></Label>
+                    <Input 
+                      type="number"
+                      min={1}
+                      value={formData.quantity} 
+                      onChange={e => setFormData(prev => ({ ...prev, quantity: Number(e.target.value) }))} 
+                      className="border-[#dddddd] h-10 rounded-[6px] text-[13px] focus-visible:ring-[#1b61c9]"
+                    />
+                  </div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
-      </form>
+        {/* Right Column: Pricing & Summary */}
+        <div className="md:col-span-1 space-y-6">
+          <Card className="border-[#dddddd] shadow-none rounded-[10px] overflow-hidden">
+            <CardHeader className="bg-[#f8fafc] border-b border-[#dddddd] py-4 px-5">
+              <CardTitle className="text-[14px] font-semibold text-[#181d26]">Pricing Configuration</CardTitle>
+            </CardHeader>
+            <CardContent className="p-5 space-y-5">
+              <div className="space-y-2">
+                <Label className="text-[13px] font-medium text-[#41454d]">Purchase Price (₹) <span className="text-[#d92d20]">*</span></Label>
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9297a0] text-[13px]">₹</span>
+                  <Input 
+                    type="number" 
+                    value={formData.purchasePrice} 
+                    onChange={e => setFormData(prev => ({ ...prev, purchasePrice: e.target.value }))} 
+                    className="pl-7 border-[#dddddd] h-10 rounded-[6px] text-[13px] focus-visible:ring-[#1b61c9]"
+                    placeholder="0.00"
+                  />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label className="text-[13px] font-medium text-[#41454d]">Selling Price (₹) <span className="text-[#d92d20]">*</span></Label>
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9297a0] text-[13px]">₹</span>
+                  <Input 
+                    type="number" 
+                    value={formData.sellingPrice} 
+                    onChange={e => setFormData(prev => ({ ...prev, sellingPrice: e.target.value }))} 
+                    className="pl-7 border-[#dddddd] h-10 rounded-[6px] text-[13px] focus-visible:ring-[#1b61c9]"
+                    placeholder="0.00"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
+      </div>
     </div>
+  );
+}
+
+export default function AddInventorySinglePage() {
+  return (
+    <Suspense fallback={<div className="p-8 flex justify-center"><Loader2 className="w-8 h-8 animate-spin text-slate-400" /></div>}>
+      <AddInventoryForm />
+    </Suspense>
   );
 }

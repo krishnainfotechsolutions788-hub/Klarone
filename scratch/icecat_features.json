@@ -1,0 +1,3743 @@
+[
+  {
+    "ID": 10674,
+    "SortNo": "1000",
+    "FeatureGroup": {
+      "ID": "148",
+      "Name": {
+        "Value": "Design",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395762,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "Notebook",
+        "CategoryFeatureId": "101037",
+        "CategoryFeatureGroupID": "10674",
+        "SortNo": "100",
+        "PresentationValue": "Laptop",
+        "RawValue": "Notebook",
+        "LocalValue": "Laptop",
+        "Description": "The sub-category of the product.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "14052",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Product type",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395763,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "Silver",
+        "CategoryFeatureId": "29776",
+        "CategoryFeatureGroupID": "10674",
+        "SortNo": "21",
+        "PresentationValue": "Silver",
+        "RawValue": "Silver",
+        "LocalValue": "Silver",
+        "Description": "The colour e.g. red, blue, green, black, white.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1766",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Product colour",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395764,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "Clamshell",
+        "CategoryFeatureId": "4692",
+        "CategoryFeatureGroupID": "10674",
+        "SortNo": "18",
+        "PresentationValue": "Clamshell",
+        "RawValue": "Clamshell",
+        "LocalValue": "Clamshell",
+        "Description": "The shape or design of the product.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "771",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Form factor",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 349021531,
+        "LocalID": 0,
+        "Type": "multi_dropdown",
+        "Value": "China",
+        "CategoryFeatureId": "293168",
+        "CategoryFeatureGroupID": "10674",
+        "SortNo": "-100",
+        "PresentationValue": "China",
+        "RawValue": "China",
+        "LocalValue": "China",
+        "Description": "Country where the device is made. Aka Country of manufacture (COM).",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3294",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Country of origin",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 33,
+    "SortNo": "300",
+    "FeatureGroup": {
+      "ID": "5",
+      "Name": {
+        "Value": "Display",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395789,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "15.6",
+        "CategoryFeatureId": "2787",
+        "CategoryFeatureGroupID": "33",
+        "SortNo": "85",
+        "PresentationValue": "39.6 cm (15.6\")",
+        "RawValue": "15.6",
+        "LocalValue": "39.6",
+        "Description": "Size of the display for this product, measured diagonally, usually in inches.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "944",
+          "Sign": "",
+          "Measure": {
+            "ID": "16",
+            "Sign": "",
+            "Signs": {
+              "ID": "11",
+              "_": "\"",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Display diagonal",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395790,
+        "LocalID": 0,
+        "Type": "2d",
+        "Value": "1366 x 768",
+        "CategoryFeatureId": "9350",
+        "CategoryFeatureGroupID": "33",
+        "SortNo": "84",
+        "PresentationValue": "1366 x 768 pixels",
+        "RawValue": "1366 x 768",
+        "LocalValue": "1366 x 768",
+        "Description": "The number of distinct pixels in each dimension that can be displayed. It is usually quoted as width × height, with the units in pixels: for example, \"1024 × 768\" means the width is 1024 pixels and the height is 768 pixels. The higher the number of pixels, the sharper the image.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1585",
+          "Sign": "",
+          "Measure": {
+            "ID": "39",
+            "Sign": "",
+            "Signs": {
+              "ID": "23",
+              "_": "pixels",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Display resolution",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395791,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "36303",
+        "CategoryFeatureGroupID": "33",
+        "SortNo": "83",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "A screen of a laptop, smartphone, etc., that responds to touch so you can control the interface using your fingers.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "4963",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Touchscreen",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395793,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "HD",
+        "CategoryFeatureId": "149038",
+        "CategoryFeatureGroupID": "33",
+        "SortNo": "81",
+        "PresentationValue": "HD",
+        "RawValue": "HD",
+        "LocalValue": "HD",
+        "Description": "Type of supported High Definition (e.g. Full HD, 4K Ultra HD).",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "11424",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "HD type",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395792,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "36493",
+        "CategoryFeatureGroupID": "33",
+        "SortNo": "41",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "A backlight is a form of illumination used in liquid crystal displays (LCDs). One type of backlight is made by LEDs, which can be either white or RGB (red green blue). White LEDs are used most often in notebooks and desktop screens, and in virtually all mobile LCD screens. RGB LEDs for backlighting are found in high-end color proofing displays such as HP DreamColor LP2480zx monitor or selected HP EliteBook notebooks, as well as newer consumer grade displays such as Dell's Studio series laptops which have an optional RGB LED display.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "6784",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "LED backlight",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 239314413,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "16:9",
+        "CategoryFeatureId": "684414",
+        "CategoryFeatureGroupID": "33",
+        "SortNo": "41",
+        "PresentationValue": "16:9",
+        "RawValue": "16:9",
+        "LocalValue": "16:9",
+        "Description": "The aspect ratio is the ratio of the width of an image to its height. The native aspect ratio is the one which the projector/display is particularly designed for. Images shown in native aspect ratio will utilize the entire resolution of the display and achieve maximum brightness. Images shown in other than native aspect ratio will always have less resolution and less brightness than images shown in native aspect ratio.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "11417",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Native aspect ratio",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395794,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "Gloss",
+        "CategoryFeatureId": "99902",
+        "CategoryFeatureGroupID": "33",
+        "SortNo": "40",
+        "PresentationValue": "Gloss",
+        "RawValue": "Gloss",
+        "LocalValue": "Gloss",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "17029",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Display surface",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 35,
+    "SortNo": "200",
+    "FeatureGroup": {
+      "ID": "1",
+      "Name": {
+        "Value": "Processor",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 358146740,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "AMD",
+        "CategoryFeatureId": "2721",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "100002050",
+        "PresentationValue": "AMD",
+        "RawValue": "AMD",
+        "LocalValue": "AMD",
+        "Description": "The manufacturer that produced the processor.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1013",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor manufacturer",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395766,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "AMD A6",
+        "CategoryFeatureId": "11560",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "2040",
+        "PresentationValue": "AMD A6",
+        "RawValue": "AMD A6",
+        "LocalValue": "AMD A6",
+        "Description": "A family of processors is a group of processors produced by one company over a short period of time e.g. Intel Pentium processors.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2196",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor family",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395767,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "A6-5200",
+        "CategoryFeatureId": "49",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "2020",
+        "PresentationValue": "A6-5200",
+        "RawValue": "A6-5200",
+        "LocalValue": "A6-5200",
+        "Description": "The model number for the processor in a computer.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "47",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor model",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395768,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "4",
+        "CategoryFeatureId": "57809",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "98",
+        "PresentationValue": "4",
+        "RawValue": "4",
+        "LocalValue": "4",
+        "Description": "The number of central processing units ('cores') in a processor. Some processors have 1 core, others have 2 (e.g. Intel Core Duo) or more (e.g. the Intel Xeon E7-2850 has 10 cores).",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "6089",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor cores",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395769,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "4",
+        "CategoryFeatureId": "71259",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "97",
+        "PresentationValue": "4",
+        "RawValue": "4",
+        "LocalValue": "4",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "7337",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor threads",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395765,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "2",
+        "CategoryFeatureId": "73715",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "95",
+        "PresentationValue": "2 GHz",
+        "RawValue": "2",
+        "LocalValue": "2",
+        "Description": "The speed that the microprocessor executes each instruction or each vibration of the clock. The CPU requires a fixed number of clock ticks, or cycles, to execute each instruction. The faster the clocks rate, the faster the CPU, or the faster it can execute instructions. Clock Speeds are usually determined in MHz, 1 MHz representing 1 million cycles per second, or in GHz, 1 GHz representing 1 thousand million cycles per second. The higher the CPU speed, the better a computer will perform.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "11379",
+          "Sign": "",
+          "Measure": {
+            "ID": "37",
+            "Sign": "",
+            "Signs": {
+              "ID": "21",
+              "_": "GHz",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor frequency",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395770,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "2",
+        "CategoryFeatureId": "95853",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "37",
+        "PresentationValue": "2 MB",
+        "RawValue": "2",
+        "LocalValue": "2",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "10041",
+          "Sign": "",
+          "Measure": {
+            "ID": "19",
+            "Sign": "",
+            "Signs": {
+              "ID": "15506",
+              "_": "MB",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor cache",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395771,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "L2",
+        "CategoryFeatureId": "135207",
+        "CategoryFeatureGroupID": "35",
+        "SortNo": "36",
+        "PresentationValue": "L2",
+        "RawValue": "L2",
+        "LocalValue": "L2",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "21716",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Processor cache type",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 106,
+    "SortNo": "190",
+    "FeatureGroup": {
+      "ID": "3",
+      "Name": {
+        "Value": "Memory",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395773,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "6",
+        "CategoryFeatureId": "73753",
+        "CategoryFeatureGroupID": "106",
+        "SortNo": "77",
+        "PresentationValue": "6 GB",
+        "RawValue": "6",
+        "LocalValue": "6",
+        "Description": "A computer's memory which is directly accessible to the CPU.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "11381",
+          "Sign": "",
+          "Measure": {
+            "ID": "20",
+            "Sign": "",
+            "Signs": {
+              "ID": "7",
+              "_": "GB",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Internal memory",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395774,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "DDR3L-SDRAM",
+        "CategoryFeatureId": "12693",
+        "CategoryFeatureGroupID": "106",
+        "SortNo": "76",
+        "PresentationValue": "DDR3L-SDRAM",
+        "RawValue": "DDR3L-SDRAM",
+        "LocalValue": "DDR3L-SDRAM",
+        "Description": "The type of internal memory such as RAM, GDDR5.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "427",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Internal memory type",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395775,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "1600",
+        "CategoryFeatureId": "25759",
+        "CategoryFeatureGroupID": "106",
+        "SortNo": "46",
+        "PresentationValue": "1600 MHz",
+        "RawValue": "1600",
+        "LocalValue": "1600",
+        "Description": "The frequency at which the memory (e.g. RAM) runs.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2900",
+          "Sign": "",
+          "Measure": {
+            "ID": "18",
+            "Sign": "",
+            "Signs": {
+              "ID": "9",
+              "_": "MHz",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Memory clock speed",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395780,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "SO-DIMM",
+        "CategoryFeatureId": "76682",
+        "CategoryFeatureGroupID": "106",
+        "SortNo": "46",
+        "PresentationValue": "SO-DIMM",
+        "RawValue": "SO-DIMM",
+        "LocalValue": "SO-DIMM",
+        "Description": "Design of the memory e.g. 240-pin DIMM, SO-DIMM.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "7696",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Memory form factor",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395776,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "1 x 2 + 1 x 4",
+        "CategoryFeatureId": "73736",
+        "CategoryFeatureGroupID": "106",
+        "SortNo": "40",
+        "PresentationValue": "1 x 2 + 1 x 4 GB",
+        "RawValue": "1 x 2 + 1 x 4",
+        "LocalValue": "1 x 2 + 1 x 4",
+        "Description": "The slots and size of the memory for the CPU.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "11380",
+          "Sign": "",
+          "Measure": {
+            "ID": "20",
+            "Sign": "",
+            "Signs": {
+              "ID": "7",
+              "_": "GB",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Memory layout (slots x size)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395777,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "2x SO-DIMM",
+        "CategoryFeatureId": "2549",
+        "CategoryFeatureGroupID": "106",
+        "SortNo": "38",
+        "PresentationValue": "2x SO-DIMM",
+        "RawValue": "2x SO-DIMM",
+        "LocalValue": "2x SO-DIMM",
+        "Description": "Number and type of memory expansion slots, including connector and memory module descriptions.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "672",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Memory slots",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 4124,
+    "SortNo": "178",
+    "FeatureGroup": {
+      "ID": "47",
+      "Name": {
+        "Value": "Storage",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395781,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "750",
+        "CategoryFeatureId": "30921",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "74",
+        "PresentationValue": "750 GB",
+        "RawValue": "750",
+        "LocalValue": "750",
+        "Description": "The total amount of data that can be stored on the device.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3318",
+          "Sign": "",
+          "Measure": {
+            "ID": "20",
+            "Sign": "",
+            "Signs": {
+              "ID": "7",
+              "_": "GB",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Total storage capacity",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395782,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "HDD",
+        "CategoryFeatureId": "74320",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "73",
+        "PresentationValue": "HDD",
+        "RawValue": "HDD",
+        "LocalValue": "HDD",
+        "Description": "Used for the storage of data e.g. HDD (hard disk drive), SSD (solid-state drive).",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "11441",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Storage media",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395783,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "1",
+        "CategoryFeatureId": "30920",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "40",
+        "PresentationValue": "1",
+        "RawValue": "1",
+        "LocalValue": "1",
+        "Description": "The number of hard drives built into the device.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3319",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Number of HDDs installed",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395784,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "750",
+        "CategoryFeatureId": "33265",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "38",
+        "PresentationValue": "750 GB",
+        "RawValue": "750",
+        "LocalValue": "750",
+        "Description": "The maximum storage capacity of the hard disk, usually measured in bytes e.g. GB.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "7",
+          "Sign": "",
+          "Measure": {
+            "ID": "20",
+            "Sign": "",
+            "Signs": {
+              "ID": "7",
+              "_": "GB",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "HDD capacity",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395785,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "SATA",
+        "CategoryFeatureId": "2705",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "36",
+        "PresentationValue": "SATA",
+        "RawValue": "SATA",
+        "LocalValue": "SATA",
+        "Description": "The way that a hard disk drive (HDD) is connected to the rest of the computer through a 'bus' such as ATA or SCSI.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "982",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "HDD interface",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395786,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "5400",
+        "CategoryFeatureId": "1198",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "34",
+        "PresentationValue": "5400 RPM",
+        "RawValue": "5400",
+        "LocalValue": "5400",
+        "Description": "The rotational speed of a hard disk expressed in rotations per minute. The faster the better.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "430",
+          "Sign": "",
+          "Measure": {
+            "ID": "28",
+            "Sign": "",
+            "Signs": {
+              "ID": "12",
+              "_": "RPM",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "HDD speed",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395799,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "DVD Super Multi",
+        "CategoryFeatureId": "2828",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "2",
+        "PresentationValue": "DVD Super Multi",
+        "RawValue": "DVD Super Multi",
+        "LocalValue": "DVD Super Multi",
+        "Description": "An optical drive uses laser to read optical discs such as CDs, DVDs and Blu-Ray. Some types of optical drive are: CD ROM drive, CR-RW (CD writer) drive, DVD-ROM.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1120",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Optical drive type",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395787,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "19149",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "1",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "A card reader is a device that enables reading and, in some cases, writing data to and from a memory card.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3374",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Card reader integrated",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395788,
+        "LocalID": 0,
+        "Type": "multi_dropdown",
+        "Value": "SD",
+        "CategoryFeatureId": "9470",
+        "CategoryFeatureGroupID": "4124",
+        "SortNo": "0",
+        "PresentationValue": "SD",
+        "RawValue": "SD",
+        "LocalValue": "SD",
+        "Description": "Types of memory cards which can be used with this product.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "730",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Compatible memory cards",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 8602,
+    "SortNo": "150",
+    "FeatureGroup": {
+      "ID": "163",
+      "Name": {
+        "Value": "Graphics",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395796,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "AMD Radeon HD 8670M",
+        "CategoryFeatureId": "53948",
+        "CategoryFeatureGroupID": "8602",
+        "SortNo": "51",
+        "PresentationValue": "AMD Radeon HD 8670M",
+        "RawValue": "AMD Radeon HD 8670M",
+        "LocalValue": "AMD Radeon HD 8670M",
+        "Description": "A graphics adapter (often known as a video card) generates images for a display. A discrete graphics adapter plugs into the motherboard, and usually produces much better graphics than an integrated graphics adapter. There are various models of discrete graphics adapters.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "9018",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Discrete graphics card model",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395798,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "GDDR3",
+        "CategoryFeatureId": "53951",
+        "CategoryFeatureGroupID": "8602",
+        "SortNo": "49",
+        "PresentationValue": "GDDR3",
+        "RawValue": "GDDR3",
+        "LocalValue": "GDDR3",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "9020",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Discrete graphics memory type",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 226154150,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "74327",
+        "CategoryFeatureGroupID": "8602",
+        "SortNo": "45",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "Graphics hardware which is built into the motherboard or CPU, as opposed to a separate graphics adapter (video card). On-board graphics uses CPU and RAM for graphics processing.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "9997",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "On-board graphics card",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 226437844,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "178874",
+        "CategoryFeatureGroupID": "8602",
+        "SortNo": "44",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "27905",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Discrete graphics card",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 234075023,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "AMD Radeon HD 8000",
+        "CategoryFeatureId": "192527",
+        "CategoryFeatureGroupID": "8602",
+        "SortNo": "44",
+        "PresentationValue": "AMD Radeon HD 8000",
+        "RawValue": "AMD Radeon HD 8000",
+        "LocalValue": "AMD Radeon HD 8000",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "29455",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "On-board graphics card family",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395795,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "AMD Radeon HD 8400",
+        "CategoryFeatureId": "53952",
+        "CategoryFeatureGroupID": "8602",
+        "SortNo": "43",
+        "PresentationValue": "AMD Radeon HD 8400",
+        "RawValue": "AMD Radeon HD 8400",
+        "LocalValue": "AMD Radeon HD 8400",
+        "Description": "\"Graphic adapter\" is the hardware that produces images on a display. \"On-board\" means that the graphics adapter is intergrated inside the motherboard.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "9016",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "On-board graphics card model",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 110,
+    "SortNo": "140",
+    "FeatureGroup": {
+      "ID": "9",
+      "Name": {
+        "Value": "Audio",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395801,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "DTS Sound+",
+        "CategoryFeatureId": "1195",
+        "CategoryFeatureGroupID": "110",
+        "SortNo": "45",
+        "PresentationValue": "DTS Sound+",
+        "RawValue": "DTS Sound+",
+        "LocalValue": "DTS Sound+",
+        "Description": "System used to play music or speech.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "442",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Audio system",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395802,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "2",
+        "CategoryFeatureId": "12917",
+        "CategoryFeatureGroupID": "110",
+        "SortNo": "36",
+        "PresentationValue": "2",
+        "RawValue": "2",
+        "LocalValue": "2",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1851",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Number of built-in speakers",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395803,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "2731",
+        "CategoryFeatureGroupID": "110",
+        "SortNo": "2",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "Microphone that is found inside the product.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1025",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Built-in microphone",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 3024,
+    "SortNo": "130",
+    "FeatureGroup": {
+      "ID": "95",
+      "Name": {
+        "Value": "Camera",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395804,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "91102",
+        "CategoryFeatureGroupID": "3024",
+        "SortNo": "24",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "Camera at the front of the product.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "12436",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Front camera",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 32,
+    "SortNo": "125",
+    "FeatureGroup": {
+      "ID": "4",
+      "Name": {
+        "Value": "Optical drive",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395800,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "12480",
+        "CategoryFeatureGroupID": "32",
+        "SortNo": "95",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Optical disc recording technology, created by Hewlett-Packard (HP), that uses specially coated recordable CD and DVD media to produce laser-etched labels with text or graphics, as opposed to stick-on labels and printable discs.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "2262",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "LightScribe",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 1711,
+    "SortNo": "120",
+    "FeatureGroup": {
+      "ID": "35",
+      "Name": {
+        "Value": "Network",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395808,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "41678",
+        "CategoryFeatureGroupID": "1711",
+        "SortNo": "10000040",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "Popular technology that allows an electronic device to exchange data or connect to the internet wirelessly using radio waves.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "3239",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Wi-Fi",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395809,
+        "LocalID": 0,
+        "Type": "multi_dropdown",
+        "Value": "802.11b,802.11g,Wi-Fi 4 (802.11n)",
+        "CategoryFeatureId": "1193",
+        "CategoryFeatureGroupID": "1711",
+        "SortNo": "49",
+        "PresentationValue": "802.11b, 802.11g, Wi-Fi 4 (802.11n)",
+        "RawValue": "802.11b,802.11g,Wi-Fi 4 (802.11n)",
+        "LocalValue": "802.11b, 802.11g, Wi-Fi 4 (802.11n)",
+        "Description": "The type of wireless local area network (LAN). It can be ad-hoc, where units in a network communicate peer-to-peer, or Infrastructure, where units communicate with each other via an access point  A LAN interconnects computers in a small area e.g. home, school or office.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "432",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Wi-Fi standards",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395810,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "43547",
+        "CategoryFeatureGroupID": "1711",
+        "SortNo": "46",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "An Ethernet LAN (Local Area Network) interface is present, for a wired conection via a cable.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1347",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Ethernet LAN",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395811,
+        "LocalID": 0,
+        "Type": "multi_dropdown",
+        "Value": "10,100",
+        "CategoryFeatureId": "57701",
+        "CategoryFeatureGroupID": "1711",
+        "SortNo": "45",
+        "PresentationValue": "10,100 Mbit/s",
+        "RawValue": "10,100",
+        "LocalValue": "10,100",
+        "Description": "The different speed levels of the Ethernet LAN connection.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3768",
+          "Sign": "",
+          "Measure": {
+            "ID": "23",
+            "Sign": "",
+            "Signs": {
+              "ID": "4",
+              "_": "Mbit/s",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Ethernet LAN data rates",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395805,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "18579",
+        "CategoryFeatureGroupID": "1711",
+        "SortNo": "42",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Bluetooth is a low-power radio technology developed to replace the cables and wires currently used to link or connect electronic devices such as personal computers, printers, and a wide variety of handheld devices including mobile phones. Because it uses radio-wave connectivity, a Bluetooth-enabled device has a constant, established connection to whatever browser it uses. This saves the user the trouble of logging on to check for emails or news updates, for example.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2183",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Bluetooth",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 36,
+    "SortNo": "110",
+    "FeatureGroup": {
+      "ID": "12",
+      "Name": {
+        "Value": "Ports & interfaces",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395812,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "1",
+        "CategoryFeatureId": "12819",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "150",
+        "PresentationValue": "1",
+        "RawValue": "1",
+        "LocalValue": "1",
+        "Description": "Number of USB 2.0 ports (connecting interfaces) in the device. USB 2.0 was released in April 2000 (now called \"Hi-Speed\"), adding higher maximum signaling rate of 480 Mbit/s (effective throughput up to 35 MB/s or 280 Mbit/s), USB 2.0 ports are usually black.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2308",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "USB 2.0 ports quantity",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395813,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "2",
+        "CategoryFeatureId": "138249",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "130",
+        "PresentationValue": "2",
+        "RawValue": "2",
+        "LocalValue": "2",
+        "Description": "",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "22701",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "USB 3.2 Gen 1 (3.1 Gen 1) Type-A ports quantity",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395818,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "1",
+        "CategoryFeatureId": "12827",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "89",
+        "PresentationValue": "1",
+        "RawValue": "1",
+        "LocalValue": "1",
+        "Description": "Number of Ethernet LAN (RJ-45) ports (connecting interfaces) in the device.  Ethernet LAN (RJ-45) ports allow a computer to connect to the ethernet.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2312",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Ethernet LAN (RJ-45) ports",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395815,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "1",
+        "CategoryFeatureId": "26456",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "78",
+        "PresentationValue": "1",
+        "RawValue": "1",
+        "LocalValue": "1",
+        "Description": "The number of sockets (ports) for HDMI connections. HDMI (High-Definition Multimedia Interface) is a compact audio/video interface for transferring uncompressed video data and compressed/uncompressed digital audio data from a HDMI-compliant device (\"the source device\") to a compatible computer monitor, video projector, digital television, or digital audio device. HDMI is a digital replacement for existing analog video standards.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3566",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "HDMI ports quantity",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395817,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "12837",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "74",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Digital Visual Interface (DVI) is a video display interface to connect a video source to a display device, such as a computer monitor.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "2319",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "DVI port",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395822,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "12830",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "59",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "S/PDIF (Sony/Philips Digital Interconnect Format) is a digital audio interconnect used in consumer audio equipment over relatively short distances. The signal is transmitted over either a coaxial cable with RCA connectors or a fibre optic cable with TOSLINK connectors.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "2315",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "S/PDIF out port",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395821,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "12829",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "58",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "The socket where a microphone is connected to the device.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2314",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Microphone in",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395823,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "59774",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "58",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "9858",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Combo headphone/mic port",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395824,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "42480",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "51",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Connector used to attach a mobile electronic device simultaneously to multiple external resources. The dock connector will typically carry a variety of signals and power, through a single connector, to simplify the process of docking the mobile device. A dock connector may be embedded in a mechanical fixture used to support or align the mobile device or may be at the end of a cable.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "4143",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Docking connector",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395826,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "20422",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "30",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Port for an ExpressCard, which contain electronic circuitry and connectors to which external devices (peripherals) can be connected. The ExpressCard standard has replaced the PC Card (also known as PCMCIA) standard and has been used since 2006.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3548",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "ExpressCard slot",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395828,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "N",
+        "CategoryFeatureId": "12846",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "28",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "The type of slots for CardBus PCMCIA.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "2321",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "CardBus PCMCIA slot type",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395829,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "12840",
+        "CategoryFeatureGroupID": "36",
+        "SortNo": "27",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "A smart card, chip card, or integrated circuit card (ICC) is any pocket-sized card with embedded integrated circuits. Smart cards can provide identification, authentication, data storage and application processing. Smart card slots can be found in various electronic devices e.g. thin clients.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2322",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "SmartCard slot",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 10675,
+    "SortNo": "100",
+    "FeatureGroup": {
+      "ID": "184",
+      "Name": {
+        "Value": "Performance",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395830,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "69770",
+        "CategoryFeatureGroupID": "10675",
+        "SortNo": "0",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "9731",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Accelerometer",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 762,
+    "SortNo": "90",
+    "FeatureGroup": {
+      "ID": "31",
+      "Name": {
+        "Value": "Keyboard",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395831,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "Touchpad",
+        "CategoryFeatureId": "1201",
+        "CategoryFeatureGroupID": "762",
+        "SortNo": "100",
+        "PresentationValue": "Touchpad",
+        "RawValue": "Touchpad",
+        "LocalValue": "Touchpad",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "440",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Pointing device",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395833,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "2718",
+        "CategoryFeatureGroupID": "762",
+        "SortNo": "76",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "Small, palm-sized, seventeen key section of a computer keyboard, usually on the very far right. The numeric keypad features digits 0 to 9, addition (+), subtraction (-), multiplication (*) and division (/) symbols, a decimal point (.) and Num Lock and Enter keys. Laptop keyboards often do not have a numpad, but may provide numpad input by holding a modifier key (typically labelled \"Fn\") and operating keys on the standard keyboard.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1006",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Numeric keypad",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395835,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "72363",
+        "CategoryFeatureGroupID": "762",
+        "SortNo": "70",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "11271",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Island-style keyboard",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395834,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "46052",
+        "CategoryFeatureGroupID": "762",
+        "SortNo": "65",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "7772",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Full-size keyboard",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 2933,
+    "SortNo": "80",
+    "FeatureGroup": {
+      "ID": "90",
+      "Name": {
+        "Value": "Software",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395837,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "64-bit",
+        "CategoryFeatureId": "45085",
+        "CategoryFeatureGroupID": "2933",
+        "SortNo": "3000",
+        "PresentationValue": "64-bit",
+        "RawValue": "64-bit",
+        "LocalValue": "64-bit",
+        "Description": "The way in which the operating system of a computer/smartphone (32-bit/64-bit) is set up.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "7563",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Operating system architecture",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395836,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "Windows 8.1",
+        "CategoryFeatureId": "12350",
+        "CategoryFeatureGroupID": "2933",
+        "SortNo": "49",
+        "PresentationValue": "Windows 8.1",
+        "RawValue": "Windows 8.1",
+        "LocalValue": "Windows 8.1",
+        "Description": "Type of operating system on a device e.g. IOS on Apple devices, Android for mobile devices.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "3233",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Operating system installed",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 10385,
+    "SortNo": "65",
+    "FeatureGroup": {
+      "ID": "183",
+      "Name": {
+        "Value": "Processor special features",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395838,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "74045",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "10",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Connect to TV Wirelessly</b>\r\nWith a few clicks, Intel® Wireless Display expands your screen’s potential, linking mobile devices and laptops to TV screens wirelessly. Stream family favorites and view personal experiences while turning your device’s small screen into a superior, sharable experience.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10111",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Wireless Display (Intel® WiDi)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395839,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "56925",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Intel® My WiFi Technology (Intel® MWT) uses an extensible software architecture that allows the operating system to think the notebook has two Wi-Fi radios performing similar, but different, functions. Each virtual Wi-Fi radio is assigned a TCP/IP stack.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9664",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® My WiFi Technology (Intel® MWT)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395840,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "56926",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Intel Smart Connect Technology continually and automatically updates your e-mail, applications, and social networks, even when the system is asleep.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9669",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel Smart Connect Technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395841,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "56927",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Disable access to missing laptops</b>\r\nGiving users access to corporate data and application through remote laptops boosts productivity, but it can also leave IT vulnerable to hackers and misplaced laptops. Intel® Anti-Theft Technology is built into the laptop hardware, helping IT administrators outwit thieves, even when they attempt to reimage the OS, change the boot order, or install a new hard drive.  When laptops with Intel® Anti-Theft Technology (Intel® AT) become lost or stolen, they can be remotely disabled. If the laptop is recovered, it can be quickly reactivated to normal operation.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9666",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Anti-Theft Technology (Intel® AT)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395842,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "56928",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Get Up and Running in Seconds</b>\r\nStop waiting for your PC to wake up, and get a computing experience that is instantly on and ready to go with Intel® Rapid Start Technology. This technology saves a snapshot of your activity on the SSD, preparing the system with previously saved active memory pages so that you can resume your work, Internet activity, or paused movie right where you left off.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9667",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Rapid Start Technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395843,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "56929",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Fast Access to Frequently Used Applications</b>\r\nIntel® Smart Response Technology enables a high-performance, cost-effective storage solution using either a dual solid-state and hard drive or a solid state hybrid drive (SSHD). By recognizing which data and applications are used most, Intel Smart Response Technology boosts hard drive performance so that you can create, work, and play faster than ever.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9668",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Smart Response Technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395844,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "56930",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Protect Your Identity and Business</b>\r\nIntel® Identity Protection Technology (Intel® IPT) protects enterprises from being penetrated by stolen credentials and online user account access with an added layer of hardware-based security and authentication as well as a multifactor authentication framework to manage different authentication methods.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9665",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Identity Protection Technology (Intel® IPT)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395847,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "56933",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Improved Performance for Threaded Software</b>\r\nIntel® Hyper-Threading Technology (Intel® HT Technology) makes efficient use of processor resources, enabling multiple threads to run on each core and increasing processor throughput. Available on Intel® Core™ and Intel® Xeon® processors, Intel HT Technology helps run demanding applications simultaneously, protect and manage systems, and provide headroom for business growth.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9672",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Hyper Threading Technology (Intel® HT Technology)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395848,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "N",
+        "CategoryFeatureId": "57383",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Higher Performance When You Need It Most</b>\r\nIntel® Turbo Boost Technology 2.0 accelerates processor and graphics performance by increasing the operating frequency when operating below specification limits. The maximum frequency varies depending on workload, hardware, software, and overall system configuration.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "9733",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Turbo Boost Technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395849,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "79279",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Solutions to Help You Focus on Your Small Business</b>\r\nIntel® Small Business Advantage (Intel® SBA) helps small businesses without a managed network manage security and productivity issues. This solution helps maintain and protect PCs automatically so that you can focus on running your business.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "11779",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Small Business Advantage (Intel® SBA)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395850,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "90912",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>New Levels of Hard Disk Drive Performance and Reliability</b>\r\nWith Intel® Matrix Storage Technology (Intel® MST) on the latest Intel® chipsets, Intel is making RAID and advanced Serial ATA capabilities an affordable reality for desktop platforms. Intel MST uses the latest Serial ATA disk interfaces for increased performance headroom, with advanced features such as native command queuing to increase storage performance and optimize the order of commands.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10272",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Matrix Storage Technology (Intel® MST)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395851,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "90915",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Integrated Audio for Today and Tomorrow</b>\r\nA new specification for integrated audio, Intel® High Definition Audio (Intel® HD Audio) delivers the features and high-end performance of an add-in audio card while playing back more channels with improved quality. Intel HD Audio provides high-quality multi-channel audio experiences with new encoding and decoding algorithms to enhance the listening experience.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10321",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® High Definition Audio (Intel® HD Audio)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395852,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "90918",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Remotely and Automatically Increase Efficiency and Effectiveness</b>\r\nUsing integrated platform capabilities and third-party management applications, Intel® Active Management Technology (Intel® AMT) allows IT or managed service providers to remotely monitor networked assets. Even when powered off, devices can be diagnosed and repaired with built-in manageability, receive software and virus updates, or store data for off-hours retrieval, lowering IT support costs.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10260",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Active Management Technology (Intel® AMT)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 208811888,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "130273",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>See the World More Vividly</b>\r\nIntel® Clear Video HD Technology delivers cleaner, sharper images, more natural, accurate, and vivid colors. View images as they were meant to be seen on devices featuring Intel® Core™ processors with Intel® Graphics Technology.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10113",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Clear Video HD Technology (Intel® CVT HD)",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 208818139,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "130274",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "21539",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel Clear Video Technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 208824548,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "130275",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Add a new dimension to your viewing experience. Now you can play games and watch your favorite 3D movies with Blu-ray Stereo 3D playback using passive or active shutter 3D glasses. InTru™ 3D technology by Intel in association with Dreamworks delivers it all in 1080p full high-definition resolution on your TV over HDMI 1.4.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10109",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® InTru™ 3D Technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 208837612,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "130276",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "Experience a whole new level of premium HD entertainment with Intel® Insider™—available exclusively with 5th generation Intel® Core™ processors.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10187",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Insider™",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 208843880,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "130284",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "<b>Create, Edit, and Share Video in a Flash</b>\r\nIntel® Quick Sync Video uses the dedicated media processing capabilities of Intel® Graphics Technology to make video encoding tasks—such as creating DVDs or Blu-ray discs, creating and editing 3D videos, converting 2D video files into 3D, and converting video for portable media players and social networking sites—faster and easier.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10108",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Quick Sync Video Technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 208830872,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "N",
+        "CategoryFeatureId": "132852",
+        "CategoryFeatureGroupID": "10385",
+        "SortNo": "0",
+        "PresentationValue": "No",
+        "RawValue": "N",
+        "LocalValue": "No",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "10277",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Intel® Clear Video Technology for Mobile Internet Devices (Intel CVT for MID)",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 7946,
+    "SortNo": "60",
+    "FeatureGroup": {
+      "ID": "143",
+      "Name": {
+        "Value": "Battery",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395853,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "Lithium-Ion (Li-Ion)",
+        "CategoryFeatureId": "1187",
+        "CategoryFeatureGroupID": "7946",
+        "SortNo": "100",
+        "PresentationValue": "Lithium-Ion (Li-Ion)",
+        "RawValue": "Lithium-Ion (Li-Ion)",
+        "LocalValue": "Lithium-Ion (Li-Ion)",
+        "Description": "The type of battery in the device, e.g. nickel–cadmium (NiCd).",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "434",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Battery technology",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395854,
+        "LocalID": 0,
+        "Type": "dropdown",
+        "Value": "4",
+        "CategoryFeatureId": "16197",
+        "CategoryFeatureGroupID": "7946",
+        "SortNo": "98",
+        "PresentationValue": "4",
+        "RawValue": "4",
+        "LocalValue": "4",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1226",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Number of battery cells",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395856,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "41",
+        "CategoryFeatureId": "50479",
+        "CategoryFeatureGroupID": "7946",
+        "SortNo": "97",
+        "PresentationValue": "41 Wh",
+        "RawValue": "41",
+        "LocalValue": "41",
+        "Description": "A measure of the charge stored by the battery. Determined by the mass of active material contained in the battery.",
+        "Mandatory": "1",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "8519",
+          "Sign": "",
+          "Measure": {
+            "ID": "211",
+            "Sign": "",
+            "Signs": {
+              "ID": "10077",
+              "_": "Wh",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Battery capacity",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 109,
+    "SortNo": "55",
+    "FeatureGroup": {
+      "ID": "27",
+      "Name": {
+        "Value": "Power",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395857,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "90",
+        "CategoryFeatureId": "2652",
+        "CategoryFeatureGroupID": "109",
+        "SortNo": "55",
+        "PresentationValue": "90 W",
+        "RawValue": "90",
+        "LocalValue": "90",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "906",
+          "Sign": "",
+          "Measure": {
+            "ID": "44",
+            "Sign": "",
+            "Signs": {
+              "ID": "28",
+              "_": "W",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "AC adapter power",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 730717315,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "1083464",
+        "CategoryFeatureGroupID": "109",
+        "SortNo": "6",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "The socket/plug where the DC electricity supply connects to the device.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "2316",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "DC-in jack",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 2686,
+    "SortNo": "50",
+    "FeatureGroup": {
+      "ID": "75",
+      "Name": {
+        "Value": "Security",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395858,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "16306",
+        "CategoryFeatureGroupID": "2686",
+        "SortNo": "50",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "Holes on the edge of devices through which a cable lock can be passed, so the device can be locked to a desk etc.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1352",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Cable lock slot",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395859,
+        "LocalID": 0,
+        "Type": "multi_dropdown",
+        "Value": "Kensington",
+        "CategoryFeatureId": "93106",
+        "CategoryFeatureGroupID": "2686",
+        "SortNo": "45",
+        "PresentationValue": "Kensington",
+        "RawValue": "Kensington",
+        "LocalValue": "Kensington",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "14097",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Cable lock slot type",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395860,
+        "LocalID": 0,
+        "Type": "multi_dropdown",
+        "Value": "Power on",
+        "CategoryFeatureId": "44805",
+        "CategoryFeatureGroupID": "2686",
+        "SortNo": "15",
+        "PresentationValue": "Power on",
+        "RawValue": "Power on",
+        "LocalValue": "Power on",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "6224",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Password protection type",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 72246,
+    "SortNo": "31",
+    "FeatureGroup": {
+      "ID": "279",
+      "Name": {
+        "Value": "Sustainability",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395867,
+        "LocalID": 0,
+        "Type": "multi_dropdown",
+        "Value": "EPEAT Silver,ENERGY STAR",
+        "CategoryFeatureId": "603194",
+        "CategoryFeatureGroupID": "72246",
+        "SortNo": "0",
+        "PresentationValue": "EPEAT Silver, ENERGY STAR",
+        "RawValue": "EPEAT Silver,ENERGY STAR",
+        "LocalValue": "EPEAT Silver, ENERGY STAR",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "42513",
+          "Sign": "",
+          "Measure": {
+            "ID": "29",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Sustainability certificates",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 108,
+    "SortNo": "30",
+    "FeatureGroup": {
+      "ID": "14",
+      "Name": {
+        "Value": "Weight & dimensions",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395862,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "385.6",
+        "CategoryFeatureId": "6240",
+        "CategoryFeatureGroupID": "108",
+        "SortNo": "20",
+        "PresentationValue": "385.6 mm",
+        "RawValue": "385.6",
+        "LocalValue": "385.6",
+        "Description": "The measurement or extent of something from side to side.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1649",
+          "Sign": "",
+          "Measure": {
+            "ID": "24",
+            "Sign": "",
+            "Signs": {
+              "ID": "3",
+              "_": "mm",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Width",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395863,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "258",
+        "CategoryFeatureId": "6237",
+        "CategoryFeatureGroupID": "108",
+        "SortNo": "19",
+        "PresentationValue": "258 mm",
+        "RawValue": "258",
+        "LocalValue": "258",
+        "Description": "The distance from the front to the back of something.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1650",
+          "Sign": "",
+          "Measure": {
+            "ID": "24",
+            "Sign": "",
+            "Signs": {
+              "ID": "3",
+              "_": "mm",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Depth",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395864,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "22.6",
+        "CategoryFeatureId": "6239",
+        "CategoryFeatureGroupID": "108",
+        "SortNo": "18",
+        "PresentationValue": "22.6 mm",
+        "RawValue": "22.6",
+        "LocalValue": "22.6",
+        "Description": "The measurement of the product from head to foot or from base to top.",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "0",
+        "Feature": {
+          "ID": "1464",
+          "Sign": "",
+          "Measure": {
+            "ID": "24",
+            "Sign": "",
+            "Signs": {
+              "ID": "3",
+              "_": "mm",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Height",
+            "Language": "EN"
+          }
+        }
+      },
+      {
+        "Localized": 0,
+        "ID": 162395861,
+        "LocalID": 0,
+        "Type": "numerical",
+        "Value": "2300",
+        "CategoryFeatureId": "4922",
+        "CategoryFeatureGroupID": "108",
+        "SortNo": "0",
+        "PresentationValue": "2.3 kg",
+        "RawValue": "2300",
+        "LocalValue": "2.3",
+        "Description": "Weight of the product without packaging (net weight). If possible, the net weight is given including standard accessories and supplies. Please note that sometimes the manufacturer leaves out the weight of accessories and/or supplies.",
+        "Mandatory": "1",
+        "Searchable": "1",
+        "Optional": "0",
+        "Feature": {
+          "ID": "94",
+          "Sign": "",
+          "Measure": {
+            "ID": "38",
+            "Sign": "",
+            "Signs": {
+              "ID": "22",
+              "_": "g",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Weight",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ID": 26489,
+    "SortNo": "-5",
+    "FeatureGroup": {
+      "ID": "116",
+      "Name": {
+        "Value": "Packaging content",
+        "Language": "EN"
+      }
+    },
+    "Features": [
+      {
+        "Localized": 0,
+        "ID": 162395865,
+        "LocalID": 0,
+        "Type": "y_n",
+        "Value": "Y",
+        "CategoryFeatureId": "59776",
+        "CategoryFeatureGroupID": "26489",
+        "SortNo": "0",
+        "PresentationValue": "Yes",
+        "RawValue": "Y",
+        "LocalValue": "Yes",
+        "Description": "",
+        "Mandatory": "0",
+        "Searchable": "0",
+        "Optional": "1",
+        "Feature": {
+          "ID": "4023",
+          "Sign": "",
+          "Measure": {
+            "ID": "26",
+            "Sign": "",
+            "Signs": {
+              "ID": "",
+              "_": "",
+              "Language": "EN"
+            }
+          },
+          "Name": {
+            "Value": "Warranty card",
+            "Language": "EN"
+          }
+        }
+      }
+    ]
+  }
+]

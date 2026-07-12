@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="lg:col-span-2 flex flex-col items-start">
             <Link href="/" className="flex items-center group mb-6">
               <div className="flex items-center justify-center">
-                <Image src="/logo.webp" alt="Klarone Logo" width={140} height={40} className="object-contain h-10 w-auto" style={{ width: 'auto' }} />
+                <Image src="/logo.webp" alt="Klarone Logo" width={140} height={40} className="object-contain h-10 w-auto" style={{ width: 'auto', height: 'auto' }} />
               </div>
             </Link>
             <p className="text-[15px] text-[#666666] leading-relaxed max-w-sm mb-8">

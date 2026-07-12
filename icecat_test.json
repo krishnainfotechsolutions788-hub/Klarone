@@ -1,0 +1,6525 @@
+{
+  "GeneralInfo": {
+    "IcecatId": 131555566,
+    "ReleaseDate": "05-04-2021",
+    "EndOfLifeDate": "31-01-2025",
+    "Title": "HP M24fw FHD Monitor",
+    "TitleInfo": {
+      "GeneratedIntTitle": "HP M24fw FHD Monitor computer monitor",
+      "GeneratedLocalTitle": {
+        "Value": "HP M24fw FHD Monitor computer monitor 60.5 cm (23.8\") 1920 x 1080 pixels Full HD LCD Silver",
+        "Language": "EN"
+      },
+      "BrandLocalTitle": {
+        "Value": "HP M24fw FHD Monitor",
+        "Language": "EN"
+      }
+    },
+    "Brand": "HP",
+    "BrandID": "1",
+    "BrandLogo": "https://images.icecat.biz/img/brand/thumb/1_d30fcedad0114a21995254ed83bd0a5e.jpg",
+    "BrandInfo": {
+      "BrandName": "HP",
+      "BrandLocalName": "",
+      "BrandLogo": "https://images.icecat.biz/img/brand/thumb/1_d30fcedad0114a21995254ed83bd0a5e.jpg"
+    },
+    "ProductName": "M24fw FHD Monitor",
+    "ProductNameInfo": {
+      "ProductIntName": "M24fw FHD Monitor",
+      "ProductLocalName": {
+        "Value": "M24fw FHD Monitor",
+        "Language": "EN"
+      }
+    },
+    "BrandPartCode": "2D9K1AA#ABA",
+    "GTIN": [
+      "0195161272561",
+      "195161272561"
+    ],
+    "Category": {
+      "CategoryID": "222",
+      "Name": {
+        "Value": "Computer Monitors",
+        "Language": "EN"
+      }
+    },
+    "ProductFamily": {},
+    "ProductSeries": {
+      "SeriesID": "0"
+    },
+    "Description": {
+      "ID": "103878918",
+      "LongDesc": "The highest definition of comfort and design.<br>Lose yourself in the picture-perfect immersion of this massive canvas, designed to redefine comfort, wellness, and sustainability<sup>[1]</sup>. Play, work, or simply stare into the new definition of high definition.",
+      "LongProductName": " M24fw FHD Monitor",
+      "MiddleDesc": "Designed to redefine comfort, wellness, and sustainability<sup>[1]</sup>, play or work on the screen that redefines high definition.",
+      "Disclaimer": "<sup>[1]</sup> Based on HP's internal analysis. Display’s 85% post-consumer recycled plastic content consists of 5% ocean bound plastic materials by weight. 100% outer box/corrugate cushion packaging made from sustainably sourced certified and recycled fibers. Fiber cushions made from 100% recycled wood fiber and organic material. Excludes plastic bags and plastic foam sheeting.<br><sup>[2]</sup> All performance specifications represent the typical specifications provided by HP's component manufacturers; actual performance may vary either higher or lower.<br>Technical specification disclaimers<br>All specifications represent the typical specifications provided by HP's component manufacturers; actual performance may vary either higher or lower.<br>Lock sold separately.<br>Based on US EPEAT® registration according to IEEE 1680.1-2018 EPEAT®. EPEAT® status varies by country. Visit www.epeat.net for more information.<br>Included cables may vary by country.<br>Monitors produced before June 1st 2024 comply with China regulation GB 21520-2015.<br>A product carbon footprint is defined as the total amount of greenhouse gases emitted directly and indirectly by a product over its lifetime. Greenhouse gas emissions are reported as global warming potential for 100-year time horizon (GWP-100) in units of CO2 equivalence. Calculations are done in accordance with ISO 14040 & ISO 14044. Individual values may not sum to total due to rounding.",
+      "ManualPDFURL": "",
+      "ManualPDFSize": "0",
+      "LeafletPDFURL": "",
+      "PDFSize": "0",
+      "URL": "https://www8.hp.com",
+      "WarrantyInfo": "1 year limited warranty.",
+      "Updated": "2025-08-28 10:19:18",
+      "Language": "EN"
+    },
+    "SEOs": {
+      "Title": "",
+      "Description": "",
+      "Keywords": ""
+    },
+    "SummaryDescription": {
+      "ShortSummaryDescription": "HP M24fw FHD Monitor, 60.5 cm (23.8\"), 1920 x 1080 pixels, Full HD, LCD, 5 ms, Silver",
+      "LongSummaryDescription": "HP M24fw FHD Monitor. Display diagonal: 60.5 cm (23.8\"), Display resolution: 1920 x 1080 pixels, HD type: Full HD, Display technology: LCD, Display surface: Matt, Response time: 5 ms, Native aspect ratio: 16:9, Viewing angle, horizontal: 178°, Viewing angle, vertical: 178°. Product colour: Silver"
+    },
+    "BulletPoints": {
+      "BulletPointsId": "13557060",
+      "Language": "EN",
+      "Values": [
+        "FHD display with IPS technology, 99% sRGB color gamut and Freesync.",
+        "Slim profile, innovative cable containment, and seamless design for side-by-side screens.",
+        "Hardware-integrated low blue light technology that doesn't sacrifice color quality. Monitor designed with 85% recycled materials and sustainably packaged<sup>[1]</sup>."
+      ],
+      "Updated": "2025-08-28 10:19:17"
+    },
+    "GeneratedBulletPoints": {
+      "Language": "EN",
+      "Values": [
+        "60.5 cm (23.8\") Silver",
+        "HDMI HDMI version: 1.4",
+        "Screen shape: Flat",
+        "Maximum refresh rate: 75 Hz Response time: 5 ms Response time measurement type: GTG (Gray to Gray)",
+        "1920 x 1080 pixels Full HD Panel type: IPS",
+        "Energy efficiency class (SDR): E ENERGY STAR BIS, BSMI, CB, CCC, CE, CEL, EAC, Federal Communications Commission (FCC), ICES, KCC, Norma Oficial Mexicana (NOM), VCCI, WEEE, cTUVus"
+      ]
+    },
+    "GTINs": [
+      {
+        "GTIN": "0195161272561",
+        "IsApproved": true
+      },
+      {
+        "GTIN": "195161272561",
+        "IsApproved": true
+      }
+    ]
+  },
+  "Image": {
+    "HighPic": "https://images.icecat.biz/img/gallery/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+    "HighPicSize": "4485927",
+    "HighPicHeight": "2230",
+    "HighPicWidth": "3008",
+    "LowPic": "https://images.icecat.biz/img/gallery_lows/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+    "LowPicSize": "37725",
+    "LowPicHeight": "148",
+    "LowPicWidth": "200",
+    "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+    "Pic500x500Size": "203579",
+    "Pic500x500Height": "371",
+    "Pic500x500Width": "500",
+    "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+    "ThumbPicSize": "7436"
+  },
+  "Multimedia": [
+    {
+      "ID": "A6BE0581-B9A2-4ACB-BEE7-C58A29F809C2",
+      "URL": "https://objects.icecat.biz/objects/mmo_131555566_1756369125_9435_3270938.pdf?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Type": "EU Product Fiche",
+      "ContentType": "application/pdf",
+      "KeepAsUrl": "0",
+      "Description": "EU Product Fiche",
+      "Size": "57703",
+      "IsPrivate": "0",
+      "Updated": "2025-08-28 10:18:45",
+      "Language": "EN",
+      "IsVideo": 0
+    },
+    {
+      "ID": "AFD0CC72-CA30-49BA-91E7-E958AEAABFE7",
+      "URL": "https://objects.icecat.biz/objects/mmo_131555566_1756369125_8979_3270938.png?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Type": "EU Energy Label",
+      "ContentType": "image/png",
+      "KeepAsUrl": "0",
+      "Description": "EU Energy Label",
+      "Size": "27697",
+      "IsPrivate": "0",
+      "Updated": "2025-08-28 10:18:46",
+      "Language": "",
+      "IsVideo": 0,
+      "EprelLink": "https://eprel.ec.europa.eu/qr/436600?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LabelType": "rescaled",
+      "ConvertedURL": "https://objects.icecat.biz/objects/131555566_69016273.pdf?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ConvertedContentType": "application/pdf",
+      "ConvertedSize": 29187,
+      "EprelId": 436600
+    },
+    {
+      "ID": "00000000-0000-0000-0000-000000000000",
+      "URL": "https://icecat.biz/rest/product-pdf?productId=131555566&lang=en",
+      "Type": "leaflet",
+      "ContentType": "application/pdf",
+      "KeepAsUrl": "0",
+      "Description": "Brochure HP 2D9K1AA#ABA",
+      "Size": "0",
+      "IsPrivate": "0",
+      "Updated": "2025-08-28 10:19:17",
+      "Language": "EN",
+      "IsVideo": 0
+    }
+  ],
+  "Gallery": [
+    {
+      "ID": "115656148",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "37725",
+      "LowHeight": "148",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "7436",
+      "Pic": "https://images.icecat.biz/img/gallery/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "4485927",
+      "PicHeight": "2230",
+      "PicWidth": "3008",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/87962635_7885467535.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "203579",
+      "Pic500x500Height": "371",
+      "Pic500x500Width": "500",
+      "No": "1",
+      "IsMain": "Y",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageFront-Center",
+      "Attributes": {
+        "OriginalFileName": "center_facing"
+      }
+    },
+    {
+      "ID": "115656149",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/92647676_1085785899.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "42526",
+      "LowHeight": "187",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/92647676_1085785899.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "7908",
+      "Pic": "https://images.icecat.biz/img/gallery/92647676_1085785899.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "6366038",
+      "PicHeight": "2807",
+      "PicWidth": "3001",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/92647676_1085785899.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "228703",
+      "Pic500x500Height": "468",
+      "Pic500x500Width": "500",
+      "No": "2",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageFront-Right",
+      "Attributes": {
+        "OriginalFileName": "right_facing"
+      }
+    },
+    {
+      "ID": "115656150",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/92647676_6148988072.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "40033",
+      "LowHeight": "187",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/92647676_6148988072.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "7566",
+      "Pic": "https://images.icecat.biz/img/gallery/92647676_6148988072.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "5993984",
+      "PicHeight": "2807",
+      "PicWidth": "3000",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/92647676_6148988072.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "211627",
+      "Pic500x500Height": "468",
+      "Pic500x500Width": "500",
+      "No": "3",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageFront-Left",
+      "Attributes": {
+        "OriginalFileName": "left_facing"
+      }
+    },
+    {
+      "ID": "115656151",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/87962636_4402162549.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "2602",
+      "LowHeight": "49",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/87962636_4402162549.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "1030",
+      "Pic": "https://images.icecat.biz/img/gallery/87962636_4402162549.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "154142",
+      "PicHeight": "589",
+      "PicWidth": "2398",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/87962636_4402162549.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "9664",
+      "Pic500x500Height": "123",
+      "Pic500x500Width": "500",
+      "No": "4",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageTop",
+      "Attributes": {
+        "OriginalFileName": "top_view_closed"
+      }
+    },
+    {
+      "ID": "115656152",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/87962284_2832212840.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "6691",
+      "LowHeight": "157",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/87962284_2832212840.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "2108",
+      "Pic": "https://images.icecat.biz/img/gallery/87962284_2832212840.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "1363696",
+      "PicHeight": "2359",
+      "PicWidth": "3005",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/87962284_2832212840.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "30659",
+      "Pic500x500Height": "393",
+      "Pic500x500Width": "500",
+      "No": "5",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageRear",
+      "Attributes": {
+        "OriginalFileName": "rear_facing"
+      }
+    },
+    {
+      "ID": "115656153",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/87962636_9001903973.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "3438",
+      "LowHeight": "200",
+      "LowWidth": "79",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/87962636_9001903973.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "1278",
+      "Pic": "https://images.icecat.biz/img/gallery/87962636_9001903973.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "337459",
+      "PicHeight": "3008",
+      "PicWidth": "1184",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/87962636_9001903973.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "13781",
+      "Pic500x500Height": "500",
+      "Pic500x500Width": "197",
+      "No": "6",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageLeft",
+      "Attributes": {
+        "OriginalFileName": "left_profile_closed"
+      }
+    },
+    {
+      "ID": "115656170",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/87962635_2703347572.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "26618",
+      "LowHeight": "200",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/87962635_2703347572.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "5835",
+      "Pic": "https://images.icecat.biz/img/gallery/87962635_2703347572.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "1019786",
+      "PicHeight": "2000",
+      "PicWidth": "2000",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/87962635_2703347572.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "113182",
+      "Pic500x500Height": "500",
+      "Pic500x500Width": "500",
+      "No": "17",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageAnnotated",
+      "Attributes": {
+        "OriginalFileName": ""
+      }
+    },
+    {
+      "ID": "115656171",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/87962635_8258517567.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "25412",
+      "LowHeight": "200",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/87962635_8258517567.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "5956",
+      "Pic": "https://images.icecat.biz/img/gallery/87962635_8258517567.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "995815",
+      "PicHeight": "2000",
+      "PicWidth": "2000",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/87962635_8258517567.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "115577",
+      "Pic500x500Height": "500",
+      "Pic500x500Width": "500",
+      "No": "18",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageAnnotated",
+      "Attributes": {
+        "OriginalFileName": ""
+      }
+    },
+    {
+      "ID": "115656172",
+      "LowPic": "https://images.icecat.biz/img/gallery_lows/59bc9118c3f7482e048b444e23d6c078.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "LowSize": "31470",
+      "LowHeight": "200",
+      "LowWidth": "200",
+      "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/59bc9118c3f7482e048b444e23d6c078.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "ThumbPicSize": "7699",
+      "Pic": "https://images.icecat.biz/img/gallery/59bc9118c3f7482e048b444e23d6c078.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Size": "1013037",
+      "PicHeight": "2000",
+      "PicWidth": "2000",
+      "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/59bc9118c3f7482e048b444e23d6c078.jpg?content_token=ae3e1df0-7dbd-40c4-83b3-8004b78ac28b",
+      "Pic500x500Size": "130587",
+      "Pic500x500Height": "500",
+      "Pic500x500Width": "500",
+      "No": "19",
+      "IsMain": "N",
+      "Updated": "2025-08-28 10:18:43",
+      "IsPrivate": "0",
+      "Type": "ProductImageAnnotated",
+      "Attributes": {
+        "OriginalFileName": ""
+      }
+    }
+  ],
+  "FeaturesGroups": [
+    {
+      "ID": 100,
+      "SortNo": "50",
+      "FeatureGroup": {
+        "ID": "5",
+        "Name": {
+          "Value": "Display",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210337,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "23.8",
+          "CategoryFeatureId": "11608",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "1000",
+          "PresentationValue": "60.5 cm (23.8\")",
+          "RawValue": "23.8",
+          "LocalValue": "60.5",
+          "Description": "Size of the display for this product, measured diagonally, usually in inches.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "944",
+            "Sign": "",
+            "Measure": {
+              "ID": "16",
+              "Sign": "",
+              "Signs": {
+                "ID": "11",
+                "_": "\"",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Display diagonal",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210344,
+          "LocalID": 0,
+          "Type": "2d",
+          "Value": "1920 x 1080",
+          "CategoryFeatureId": "9316",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "990",
+          "PresentationValue": "1920 x 1080 pixels",
+          "RawValue": "1920 x 1080",
+          "LocalValue": "1920 x 1080",
+          "Description": "The number of distinct pixels in each dimension that can be displayed. It is usually quoted as width × height, with the units in pixels: for example, \"1024 × 768\" means the width is 1024 pixels and the height is 768 pixels. The higher the number of pixels, the sharper the image.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1585",
+            "Sign": "",
+            "Measure": {
+              "ID": "39",
+              "Sign": "",
+              "Signs": {
+                "ID": "23",
+                "_": "pixels",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Display resolution",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210387,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Full HD",
+          "CategoryFeatureId": "74099",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "980",
+          "PresentationValue": "Full HD",
+          "RawValue": "Full HD",
+          "LocalValue": "Full HD",
+          "Description": "Type of supported High Definition (e.g. Full HD, 4K Ultra HD).",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "11424",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "HD type",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210386,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "16:9",
+          "CategoryFeatureId": "155124",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "970",
+          "PresentationValue": "16:9",
+          "RawValue": "16:9",
+          "LocalValue": "16:9",
+          "Description": "The aspect ratio is the ratio of the width of an image to its height. The native aspect ratio is the one which the projector/display is particularly designed for. Images shown in native aspect ratio will utilize the entire resolution of the display and achieve maximum brightness. Images shown in other than native aspect ratio will always have less resolution and less brightness than images shown in native aspect ratio.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "11417",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Native aspect ratio",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210382,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "LCD",
+          "CategoryFeatureId": "57158",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "960",
+          "PresentationValue": "LCD",
+          "RawValue": "LCD",
+          "LocalValue": "LCD",
+          "Description": "The technology used in the display e.g. plasma, LED.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "9713",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Display technology",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210394,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "IPS",
+          "CategoryFeatureId": "255240",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "950",
+          "PresentationValue": "IPS",
+          "RawValue": "IPS",
+          "LocalValue": "IPS",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "15285",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Panel type",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210370,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "243713",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "930",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "A screen of a laptop, smartphone, etc., that responds to touch so you can control the interface using your fingers.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "4963",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Touchscreen",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210408,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "300",
+          "CategoryFeatureId": "255214",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "880",
+          "PresentationValue": "300 cd/m²",
+          "RawValue": "300",
+          "LocalValue": "300",
+          "Description": "Display brightness, measured by its Luminance, presented as a figure in nits. Typical brightness ratings for monitors range from 250 to 350 nits with a target value of between 80 to 120 nits being suitable for most displays in a normal viewing environment.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "36441",
+            "Sign": "",
+            "Measure": {
+              "ID": "43",
+              "Sign": "",
+              "Signs": {
+                "ID": "27",
+                "_": "cd/m²",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Display brightness (typical)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210342,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "5",
+          "CategoryFeatureId": "5285",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "870",
+          "PresentationValue": "5 ms",
+          "RawValue": "5",
+          "LocalValue": "5",
+          "Description": "The response time is the time difference between the moment that a source (for example a video card) sends a signal and that equipment (for example a monitor) receives or display the signal. (Used abbreviations: R/F = Rise and Fall.)",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1516",
+            "Sign": "",
+            "Measure": {
+              "ID": "27",
+              "Sign": "",
+              "Signs": {
+                "ID": "1",
+                "_": "ms",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Response time",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210422,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "GTG (Gray to Gray)",
+          "CategoryFeatureId": "961497",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "869",
+          "PresentationValue": "GTG (Gray to Gray)",
+          "RawValue": "GTG (Gray to Gray)",
+          "LocalValue": "GTG (Gray to Gray)",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "48292",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Response time measurement type",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210396,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Matt",
+          "CategoryFeatureId": "96492",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "860",
+          "PresentationValue": "Matt",
+          "RawValue": "Matt",
+          "LocalValue": "Matt",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "17029",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Display surface",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210384,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "594924",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "850",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "Always gives an optimal view, even in direct sunlight.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "10443",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Anti-glare screen",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210397,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Flat screen",
+          "CategoryFeatureId": "133269",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "840",
+          "PresentationValue": "Flat",
+          "RawValue": "Flat screen",
+          "LocalValue": "Flat",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "17554",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Screen shape",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210369,
+          "LocalID": 0,
+          "Type": "multi_dropdown",
+          "Value": "1024 x 768 (XGA),1280 x 1024 (SXGA),1280 x 720 (HD 720),1280 x 800,1440 x 900 (WXGA+),1600 x 900,1680 x 1050 (WSXGA+),1920 x 1080 (HD 1080),640 x 480 (VGA),720 x 400,800 x 600 (SVGA)",
+          "CategoryFeatureId": "22829",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "820",
+          "PresentationValue": "1024 x 768 (XGA), 1280 x 1024 (SXGA), 1280 x 720 (HD 720), 1280 x 800, 1440 x 900 (WXGA+), 1600 x 900, 1680 x 1050 (WSXGA+), 1920 x 1080 (HD 1080), 640 x 480 (VGA), 720 x 400, 800 x 600 (SVGA)",
+          "RawValue": "1024 x 768 (XGA),1280 x 1024 (SXGA),1280 x 720 (HD 720),1280 x 800,1440 x 900 (WXGA+),1600 x 900,1680 x 1050 (WSXGA+),1920 x 1080 (HD 1080),640 x 480 (VGA),720 x 400,800 x 600 (SVGA)",
+          "LocalValue": "1024 x 768 (XGA), 1280 x 1024 (SXGA), 1280 x 720 (HD 720), 1280 x 800, 1440 x 900 (WXGA+), 1600 x 900, 1680 x 1050 (WSXGA+), 1920 x 1080 (HD 1080), 640 x 480 (VGA), 720 x 400, 800 x 600 (SVGA)",
+          "Description": "The graphic resolutions that can be displayed by the device. The graphic resolution describes the width and height dimensions of a display, such as a computer monitor, measured in pixels.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "4850",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Supported graphics resolutions",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210327,
+          "LocalID": 0,
+          "Type": "multi_dropdown",
+          "Value": "16:9",
+          "CategoryFeatureId": "12695",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "800",
+          "PresentationValue": "16:9",
+          "RawValue": "16:9",
+          "LocalValue": "16:9",
+          "Description": "The aspect ratio is the ratio of the width of a shape to its height. For example, 4:3 is common for standard displays and 16:9 is the ratio for Widescreen TV.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "39",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Aspect ratio",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210323,
+          "LocalID": 0,
+          "Type": "contrast ratio",
+          "Value": "1000:1",
+          "CategoryFeatureId": "4943",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "790",
+          "PresentationValue": "1000:1",
+          "RawValue": "1000:1",
+          "LocalValue": "1000:1",
+          "Description": "The difference in light intensity between the brightest white and the darkest black.",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "34",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Contrast ratio (typical)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210374,
+          "LocalID": 0,
+          "Type": "contrast ratio",
+          "Value": "10000000:1",
+          "CategoryFeatureId": "31337",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "780",
+          "PresentationValue": "10000000:1",
+          "RawValue": "10000000:1",
+          "LocalValue": "10000000:1",
+          "Description": "A property of a display system, defined as the ratio of the luminance of the brightest color (white) to that of the darkest color (black) that the system is capable of producing.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "6087",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Contrast ratio (dynamic)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210375,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "75",
+          "CategoryFeatureId": "183826",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "760",
+          "PresentationValue": "75 Hz",
+          "RawValue": "75",
+          "LocalValue": "75",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "7450",
+            "Sign": "",
+            "Measure": {
+              "ID": "36",
+              "Sign": "",
+              "Signs": {
+                "ID": "20",
+                "_": "Hz",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Maximum refresh rate",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210325,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "178",
+          "CategoryFeatureId": "4940",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "750",
+          "PresentationValue": "178°",
+          "RawValue": "178",
+          "LocalValue": "178",
+          "Description": "Maximum horizontal angle at which a display can be viewed with acceptable visual performance.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "37",
+            "Sign": "",
+            "Measure": {
+              "ID": "32",
+              "Sign": "",
+              "Signs": {
+                "ID": "16",
+                "_": "°",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Viewing angle, horizontal",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210326,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "178",
+          "CategoryFeatureId": "4941",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "740",
+          "PresentationValue": "178°",
+          "RawValue": "178",
+          "LocalValue": "178",
+          "Description": "Maximum vertical angle at which a display can be viewed with acceptable visual performance.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "38",
+            "Sign": "",
+            "Measure": {
+              "ID": "32",
+              "Sign": "",
+              "Signs": {
+                "ID": "16",
+                "_": "°",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Viewing angle, vertical",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210322,
+          "LocalID": 0,
+          "Type": "2d",
+          "Value": "0.275 x 0.275",
+          "CategoryFeatureId": "1992",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "700",
+          "PresentationValue": "0.275 x 0.275 mm",
+          "RawValue": "0.275 x 0.275",
+          "LocalValue": "0.275 x 0.275",
+          "Description": "This is the parameter of a picture tube, which specifies the shortest distance between two dots of the same colour. The principle is: the smaller the dot pitch, the better sharpness of image.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "32",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Pixel pitch",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210392,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "93",
+          "CategoryFeatureId": "103245",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "690",
+          "PresentationValue": "93 ppi",
+          "RawValue": "93",
+          "LocalValue": "93",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "13246",
+            "Sign": "",
+            "Measure": {
+              "ID": "243",
+              "Sign": "",
+              "Signs": {
+                "ID": "14247",
+                "_": "ppi",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Pixel density",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210324,
+          "LocalID": 0,
+          "Type": "range",
+          "Value": "30 - 86",
+          "CategoryFeatureId": "2548",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "680",
+          "PresentationValue": "30 - 86 kHz",
+          "RawValue": "30 - 86",
+          "LocalValue": "30 - 86",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "35",
+            "Sign": "",
+            "Measure": {
+              "ID": "31",
+              "Sign": "",
+              "Signs": {
+                "ID": "15",
+                "_": "kHz",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Horizontal scan range",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210328,
+          "LocalID": 0,
+          "Type": "range",
+          "Value": "48 - 75",
+          "CategoryFeatureId": "4931",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "670",
+          "PresentationValue": "48 - 75 Hz",
+          "RawValue": "48 - 75",
+          "LocalValue": "48 - 75",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "90",
+            "Sign": "",
+            "Measure": {
+              "ID": "36",
+              "Sign": "",
+              "Signs": {
+                "ID": "20",
+                "_": "Hz",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Vertical scan range",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210329,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "527",
+          "CategoryFeatureId": "4938",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "660",
+          "PresentationValue": "52.7 cm",
+          "RawValue": "527",
+          "LocalValue": "52.7",
+          "Description": "The viewable size is often somewhat smaller than the actual size of a monitor, because there is a border around the image.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "91",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Viewable size, horizontal",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210330,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "296.5",
+          "CategoryFeatureId": "4939",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "650",
+          "PresentationValue": "29.6 cm",
+          "RawValue": "296.5",
+          "LocalValue": "29.6",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "92",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Viewable size, vertical",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210358,
+          "LocalID": 0,
+          "Type": "range",
+          "Value": "48 - 75",
+          "CategoryFeatureId": "16523",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "630",
+          "PresentationValue": "48 - 75 kHz",
+          "RawValue": "48 - 75",
+          "LocalValue": "48 - 75",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "2833",
+            "Sign": "",
+            "Measure": {
+              "ID": "31",
+              "Sign": "",
+              "Signs": {
+                "ID": "15",
+                "_": "kHz",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Digital horizontal frequency",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210365,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "60.5",
+          "CategoryFeatureId": "683430",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "600",
+          "PresentationValue": "60.5 cm",
+          "RawValue": "60.5",
+          "LocalValue": "60.5",
+          "Description": "This is the size of the display screen, measured diagonally.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "4174",
+            "Sign": "",
+            "Measure": {
+              "ID": "34",
+              "Sign": "",
+              "Signs": {
+                "ID": "18",
+                "_": "cm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Display diagonal (metric)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210403,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "3H",
+          "CategoryFeatureId": "163809",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "530",
+          "PresentationValue": "3H",
+          "RawValue": "3H",
+          "LocalValue": "3H",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "26001",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Surface hardness",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210343,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "8",
+          "CategoryFeatureId": "258725",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "520",
+          "PresentationValue": "8 bit",
+          "RawValue": "8",
+          "LocalValue": "8",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1550",
+            "Sign": "",
+            "Measure": {
+              "ID": "50",
+              "Sign": "",
+              "Signs": {
+                "ID": "34",
+                "_": "bit",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Colour depth",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210419,
+          "LocalID": 0,
+          "Type": "multi_dropdown",
+          "Value": "sRGB",
+          "CategoryFeatureId": "938962",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "491",
+          "PresentationValue": "sRGB",
+          "RawValue": "sRGB",
+          "LocalValue": "sRGB",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "46927",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Colour gamut standard",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210393,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "99",
+          "CategoryFeatureId": "103146",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "490",
+          "PresentationValue": "99%",
+          "RawValue": "99",
+          "LocalValue": "99",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "14575",
+            "Sign": "",
+            "Measure": {
+              "ID": "64",
+              "Sign": "",
+              "Signs": {
+                "ID": "47",
+                "_": "%",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Colour gamut",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210404,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "99",
+          "CategoryFeatureId": "185014",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "470",
+          "PresentationValue": "99%",
+          "RawValue": "99",
+          "LocalValue": "99",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "28703",
+            "Sign": "",
+            "Measure": {
+              "ID": "64",
+              "Sign": "",
+              "Signs": {
+                "ID": "47",
+                "_": "%",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "sRGB coverage (typical)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210406,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Micro-Edge",
+          "CategoryFeatureId": "253279",
+          "CategoryFeatureGroupID": "100",
+          "SortNo": "148",
+          "PresentationValue": "Micro-Edge",
+          "RawValue": "Micro-Edge",
+          "LocalValue": "Micro-Edge",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "34718",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Display bezel technology",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 10681,
+      "SortNo": "45",
+      "FeatureGroup": {
+        "ID": "184",
+        "Name": {
+          "Value": "Performance",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210399,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "123176",
+          "CategoryFeatureGroupID": "10681",
+          "SortNo": "1000",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "20783",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "NVIDIA G-SYNC",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210405,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "193707",
+          "CategoryFeatureGroupID": "10681",
+          "SortNo": "980",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "The product includes AMD Freesync Technology for the dynamic synchronization of the graphic card and the monitor in order to avoid screen tearing.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "29607",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "AMD FreeSync",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210412,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "FreeSync",
+          "CategoryFeatureId": "595237",
+          "CategoryFeatureGroupID": "10681",
+          "SortNo": "970",
+          "PresentationValue": "FreeSync",
+          "RawValue": "FreeSync",
+          "LocalValue": "FreeSync",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "42449",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "AMD FreeSync type",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210409,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "258742",
+          "CategoryFeatureGroupID": "10681",
+          "SortNo": "900",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "36840",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Flicker-free technology",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210410,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "258745",
+          "CategoryFeatureGroupID": "10681",
+          "SortNo": "890",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "36843",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Low Blue Light technology",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210407,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Home",
+          "CategoryFeatureId": "337133",
+          "CategoryFeatureGroupID": "10681",
+          "SortNo": "600",
+          "PresentationValue": "Home",
+          "RawValue": "Home",
+          "LocalValue": "Home",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "35183",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "HP segment",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 10887,
+      "SortNo": "40",
+      "FeatureGroup": {
+        "ID": "186",
+        "Name": {
+          "Value": "Multimedia",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210356,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "31341",
+          "CategoryFeatureGroupID": "10887",
+          "SortNo": "700",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "The device contains speaker(s) to produce sound.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "2433",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Built-in speaker(s)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210376,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "67278",
+          "CategoryFeatureGroupID": "10887",
+          "SortNo": "590",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "The product has an integrated camera.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "8074",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Built-in camera",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 10677,
+      "SortNo": "35",
+      "FeatureGroup": {
+        "ID": "148",
+        "Name": {
+          "Value": "Design",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210380,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Home",
+          "CategoryFeatureId": "245761",
+          "CategoryFeatureGroupID": "10677",
+          "SortNo": "800",
+          "PresentationValue": "Home",
+          "RawValue": "Home",
+          "LocalValue": "Home",
+          "Description": "Under which category can the device be positioned in the market, e.g. camera phone.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "9021",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Market positioning",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210347,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Silver",
+          "CategoryFeatureId": "11218",
+          "CategoryFeatureGroupID": "10677",
+          "SortNo": "790",
+          "PresentationValue": "Silver",
+          "RawValue": "Silver",
+          "LocalValue": "Silver",
+          "Description": "The colour e.g. red, blue, green, black, white.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1766",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Product colour",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210381,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "258739",
+          "CategoryFeatureGroupID": "10677",
+          "SortNo": "730",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "9305",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Detachable stand",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210383,
+          "LocalID": 0,
+          "Type": "multi_dropdown",
+          "Value": "Silver",
+          "CategoryFeatureId": "84492",
+          "CategoryFeatureGroupID": "10677",
+          "SortNo": "700",
+          "PresentationValue": "Silver",
+          "RawValue": "Silver",
+          "LocalValue": "Silver",
+          "Description": "The colour of the feet, which are the projecting part on which a device/piece of furniture, or each of its legs, stands.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "10232",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Feet colour",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 1742,
+      "SortNo": "30",
+      "FeatureGroup": {
+        "ID": "12",
+        "Name": {
+          "Value": "Ports & interfaces",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210400,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "139339",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "900",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "Whether or not the device features a USB hub to connect more than one other device via USB.",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "22838",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Built-in USB hub",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210355,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "1",
+          "CategoryFeatureId": "17095",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "780",
+          "PresentationValue": "1",
+          "RawValue": "1",
+          "LocalValue": "1",
+          "Description": "Number of VGA (D-Sub) ports (connecting interfaces) in the device. The VGA (D-Sub) connector is a 15 pin connector between a computer and a monitor. It was first introduced in 1987 by IBM.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "2323",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "VGA (D-Sub) ports quantity",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210354,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "86530",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "770",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "Digital Visual Interface (DVI) is a video display interface to connect a video source to a display device, such as a computer monitor.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "2319",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "DVI port",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210372,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "37850",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "740",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "HDMI (High-Definition Multimedia Interface) is a compact audio/video interface for transferring uncompressed video data and compressed/uncompressed digital audio data from a HDMI-compliant device (\"the source device\") to a compatible computer monitor, video projector, digital television, or digital audio device. HDMI is a digital replacement for existing analog video standards.",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "5620",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "HDMI",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210360,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "1",
+          "CategoryFeatureId": "20882",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "730",
+          "PresentationValue": "1",
+          "RawValue": "1",
+          "LocalValue": "1",
+          "Description": "The number of sockets (ports) for HDMI connections. HDMI (High-Definition Multimedia Interface) is a compact audio/video interface for transferring uncompressed video data and compressed/uncompressed digital audio data from a HDMI-compliant device (\"the source device\") to a compatible computer monitor, video projector, digital television, or digital audio device. HDMI is a digital replacement for existing analog video standards.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "3566",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "HDMI ports quantity",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210371,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "1.4",
+          "CategoryFeatureId": "270899",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "720",
+          "PresentationValue": "1.4",
+          "RawValue": "1.4",
+          "LocalValue": "1.4",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "5452",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "HDMI version",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210348,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "N",
+          "CategoryFeatureId": "17098",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "630",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "The type of audio input that the device requires, and the connection needed.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1785",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Audio input",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210388,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "96400",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "610",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "The socket for connecting headphones to the device.",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "12195",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Headphone out",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210373,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "26708",
+          "CategoryFeatureGroupID": "1742",
+          "SortNo": "530",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "High-bandwidth Digital Content Protection (HDCP) is a form of digital copy protection to prevent copying of digital audio and video content as it travels across connections.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "5636",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "HDCP",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 3070,
+      "SortNo": "25",
+      "FeatureGroup": {
+        "ID": "96",
+        "Name": {
+          "Value": "Ergonomics",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210395,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "109688",
+          "CategoryFeatureGroupID": "3070",
+          "SortNo": "400",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "1",
+          "Optional": "0",
+          "Feature": {
+            "ID": "16767",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "VESA mounting",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210339,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "14296",
+          "CategoryFeatureGroupID": "3070",
+          "SortNo": "360",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "Holes on the edge of devices through which a cable lock can be passed, so the device can be locked to a desk etc.",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1352",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Cable lock slot",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210350,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "N",
+          "CategoryFeatureId": "68504",
+          "CategoryFeatureGroupID": "3070",
+          "SortNo": "340",
+          "PresentationValue": "No",
+          "RawValue": "N",
+          "LocalValue": "No",
+          "Description": "The part of the device that can be adjusted to change the height.",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1954",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Height adjustment",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210377,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "930782",
+          "CategoryFeatureGroupID": "3070",
+          "SortNo": "271",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "The tilt, which means the angle at which the device is pointing (up or down), can be changed.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "8302",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Tilt adjustment",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210353,
+          "LocalID": 0,
+          "Type": "range",
+          "Value": "-5 - 25",
+          "CategoryFeatureId": "18150",
+          "CategoryFeatureGroupID": "3070",
+          "SortNo": "270",
+          "PresentationValue": "-5 - 25°",
+          "RawValue": "-5 - 25",
+          "LocalValue": "-5 - 25",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "2077",
+            "Sign": "",
+            "Measure": {
+              "ID": "32",
+              "Sign": "",
+              "Signs": {
+                "ID": "16",
+                "_": "°",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Tilt angle range",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210359,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "47992",
+          "CategoryFeatureGroupID": "3070",
+          "SortNo": "250",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "3064",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "On Screen Display (OSD)",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 99,
+      "SortNo": "24",
+      "FeatureGroup": {
+        "ID": "27",
+        "Name": {
+          "Value": "Power",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210415,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "E",
+          "CategoryFeatureId": "708167",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "300",
+          "PresentationValue": "E",
+          "RawValue": "E",
+          "LocalValue": "E",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "42856",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Energy efficiency class (SDR)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210416,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "E",
+          "CategoryFeatureId": "708168",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "290",
+          "PresentationValue": "E",
+          "RawValue": "E",
+          "LocalValue": "E",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "42857",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Energy efficiency class (HDR)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210417,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "15",
+          "CategoryFeatureId": "708169",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "280",
+          "PresentationValue": "15 kWh",
+          "RawValue": "15",
+          "LocalValue": "15",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "42858",
+            "Sign": "",
+            "Measure": {
+              "ID": "103",
+              "Sign": "",
+              "Signs": {
+                "ID": "85",
+                "_": "kWh",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Energy consumption (SDR) per 1000 hours",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210418,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "15",
+          "CategoryFeatureId": "708170",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "270",
+          "PresentationValue": "15 kWh",
+          "RawValue": "15",
+          "LocalValue": "15",
+          "Description": "",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "42859",
+            "Sign": "",
+            "Measure": {
+              "ID": "103",
+              "Sign": "",
+              "Signs": {
+                "ID": "85",
+                "_": "kWh",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Energy consumption (HDR) per 1000 hours",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210333,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "20",
+          "CategoryFeatureId": "9931",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "260",
+          "PresentationValue": "20 W",
+          "RawValue": "20",
+          "LocalValue": "20",
+          "Description": "Amount of power consumed by this model, often expressed in watts (W). Typical values that manufacturers give are power consumption when off, standby/suspended mode, typical use, maximum usage.",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "445",
+            "Sign": "",
+            "Measure": {
+              "ID": "44",
+              "Sign": "",
+              "Signs": {
+                "ID": "28",
+                "_": "W",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Power consumption (typical)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210352,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "0.5",
+          "CategoryFeatureId": "9930",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "250",
+          "PresentationValue": "0.5 W",
+          "RawValue": "0.5",
+          "LocalValue": "0.5",
+          "Description": "The amount of electricity that is consumed when the product is on standby.",
+          "Mandatory": "1",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "2036",
+            "Sign": "",
+            "Measure": {
+              "ID": "44",
+              "Sign": "",
+              "Signs": {
+                "ID": "28",
+                "_": "W",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Power consumption (standby)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210351,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "0.3",
+          "CategoryFeatureId": "18691",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "220",
+          "PresentationValue": "0.3 W",
+          "RawValue": "0.3",
+          "LocalValue": "0.3",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "2034",
+            "Sign": "",
+            "Measure": {
+              "ID": "44",
+              "Sign": "",
+              "Signs": {
+                "ID": "28",
+                "_": "W",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Power consumption (off)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210379,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "100 - 240",
+          "CategoryFeatureId": "122959",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "200",
+          "PresentationValue": "100 - 240 V",
+          "RawValue": "100 - 240",
+          "LocalValue": "100 - 240",
+          "Description": "The voltage of the AC electricity that is inputted into the product.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "8491",
+            "Sign": "",
+            "Measure": {
+              "ID": "42",
+              "Sign": "",
+              "Signs": {
+                "ID": "26",
+                "_": "V",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "AC input voltage",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210378,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "50/60",
+          "CategoryFeatureId": "122960",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "190",
+          "PresentationValue": "50/60 Hz",
+          "RawValue": "50/60",
+          "LocalValue": "50/60",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "8484",
+            "Sign": "",
+            "Measure": {
+              "ID": "36",
+              "Sign": "",
+              "Signs": {
+                "ID": "20",
+                "_": "Hz",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "AC input frequency",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210334,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "External",
+          "CategoryFeatureId": "120833",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "160",
+          "PresentationValue": "External",
+          "RawValue": "External",
+          "LocalValue": "External",
+          "Description": "The type of power supply which this product uses.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "514",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Power supply type",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210411,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "A to G",
+          "CategoryFeatureId": "313577",
+          "CategoryFeatureGroupID": "99",
+          "SortNo": "150",
+          "PresentationValue": "A to G",
+          "RawValue": "A to G",
+          "LocalValue": "A to G",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "39201",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Energy efficiency scale",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 1205,
+      "SortNo": "23",
+      "FeatureGroup": {
+        "ID": "28",
+        "Name": {
+          "Value": "Operational conditions",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210338,
+          "LocalID": 0,
+          "Type": "range",
+          "Value": "5 - 35",
+          "CategoryFeatureId": "5557",
+          "CategoryFeatureGroupID": "1205",
+          "SortNo": "200",
+          "PresentationValue": "5 - 35 °C",
+          "RawValue": "5 - 35",
+          "LocalValue": "5 - 35",
+          "Description": "The minimum and maximum temperatures at which the product can be safely operated.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1112",
+            "Sign": "",
+            "Measure": {
+              "ID": "65",
+              "Sign": "",
+              "Signs": {
+                "ID": "48",
+                "_": "°C",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Operating temperature (T-T)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210335,
+          "LocalID": 0,
+          "Type": "range",
+          "Value": "5 - 95",
+          "CategoryFeatureId": "4997",
+          "CategoryFeatureGroupID": "1205",
+          "SortNo": "180",
+          "PresentationValue": "5 - 95%",
+          "RawValue": "5 - 95",
+          "LocalValue": "5 - 95",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "703",
+            "Sign": "",
+            "Measure": {
+              "ID": "64",
+              "Sign": "",
+              "Signs": {
+                "ID": "47",
+                "_": "%",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Operating relative humidity (H-H)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210340,
+          "LocalID": 0,
+          "Type": "range",
+          "Value": "20 - 80",
+          "CategoryFeatureId": "12139",
+          "CategoryFeatureGroupID": "1205",
+          "SortNo": "170",
+          "PresentationValue": "20 - 80%",
+          "RawValue": "20 - 80",
+          "LocalValue": "20 - 80",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1383",
+            "Sign": "",
+            "Measure": {
+              "ID": "64",
+              "Sign": "",
+              "Signs": {
+                "ID": "47",
+                "_": "%",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Storage relative humidity (H-H)",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 98,
+      "SortNo": "21",
+      "FeatureGroup": {
+        "ID": "14",
+        "Name": {
+          "Value": "Weight & dimensions",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210364,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "535.8",
+          "CategoryFeatureId": "22203",
+          "CategoryFeatureGroupID": "98",
+          "SortNo": "400",
+          "PresentationValue": "535.8 mm",
+          "RawValue": "535.8",
+          "LocalValue": "535.8",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "4156",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Width (with stand)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210367,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "177.2",
+          "CategoryFeatureId": "22162",
+          "CategoryFeatureGroupID": "98",
+          "SortNo": "390",
+          "PresentationValue": "177.2 mm",
+          "RawValue": "177.2",
+          "LocalValue": "177.2",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "4179",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Depth (with stand)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210366,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "396.8",
+          "CategoryFeatureId": "22171",
+          "CategoryFeatureGroupID": "98",
+          "SortNo": "380",
+          "PresentationValue": "396.8 mm",
+          "RawValue": "396.8",
+          "LocalValue": "396.8",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "4178",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Height (with stand)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210398,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "2500",
+          "CategoryFeatureId": "112042",
+          "CategoryFeatureGroupID": "98",
+          "SortNo": "370",
+          "PresentationValue": "2.5 kg",
+          "RawValue": "2500",
+          "LocalValue": "2.5",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "19017",
+            "Sign": "",
+            "Measure": {
+              "ID": "38",
+              "Sign": "",
+              "Signs": {
+                "ID": "22",
+                "_": "g",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Weight (with stand)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210390,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "535.8",
+          "CategoryFeatureId": "91400",
+          "CategoryFeatureGroupID": "98",
+          "SortNo": "360",
+          "PresentationValue": "535.8 mm",
+          "RawValue": "535.8",
+          "LocalValue": "535.8",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "12576",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Width (without stand)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210391,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "34",
+          "CategoryFeatureId": "91489",
+          "CategoryFeatureGroupID": "98",
+          "SortNo": "350",
+          "PresentationValue": "34 mm",
+          "RawValue": "34",
+          "LocalValue": "34",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "12577",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Depth (without stand)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210389,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "315.6",
+          "CategoryFeatureId": "91538",
+          "CategoryFeatureGroupID": "98",
+          "SortNo": "340",
+          "PresentationValue": "315.6 mm",
+          "RawValue": "315.6",
+          "LocalValue": "315.6",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "12574",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Height (without stand)",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 23760,
+      "SortNo": "20",
+      "FeatureGroup": {
+        "ID": "67",
+        "Name": {
+          "Value": "Packaging data",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210363,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "610",
+          "CategoryFeatureId": "22179",
+          "CategoryFeatureGroupID": "23760",
+          "SortNo": "360",
+          "PresentationValue": "610 mm",
+          "RawValue": "610",
+          "LocalValue": "610",
+          "Description": "The distance from one side of the packaging to the other.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "3808",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Package width",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210361,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "121",
+          "CategoryFeatureId": "22177",
+          "CategoryFeatureGroupID": "23760",
+          "SortNo": "350",
+          "PresentationValue": "121 mm",
+          "RawValue": "121",
+          "LocalValue": "121",
+          "Description": "The distance from the front to the back of the packaging.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "3806",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Package depth",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210362,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "399",
+          "CategoryFeatureId": "22178",
+          "CategoryFeatureGroupID": "23760",
+          "SortNo": "340",
+          "PresentationValue": "399 mm",
+          "RawValue": "399",
+          "LocalValue": "399",
+          "Description": "The distance from the top to the bottom of the packaging.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "3807",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Package height",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210336,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "4700",
+          "CategoryFeatureId": "5000",
+          "CategoryFeatureGroupID": "23760",
+          "SortNo": "330",
+          "PresentationValue": "4.7 kg",
+          "RawValue": "4700",
+          "LocalValue": "4.7",
+          "Description": "Weight of the packaged product.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "762",
+            "Sign": "",
+            "Measure": {
+              "ID": "38",
+              "Sign": "",
+              "Signs": {
+                "ID": "22",
+                "_": "g",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Package weight",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210368,
+          "LocalID": 0,
+          "Type": "dropdown",
+          "Value": "Box",
+          "CategoryFeatureId": "63814",
+          "CategoryFeatureGroupID": "23760",
+          "SortNo": "320",
+          "PresentationValue": "Box",
+          "RawValue": "Box",
+          "LocalValue": "Box",
+          "Description": "The type of product package e.g. box.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "4463",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Package type",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 49260,
+      "SortNo": "19",
+      "FeatureGroup": {
+        "ID": "116",
+        "Name": {
+          "Value": "Packaging content",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210385,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "123142",
+          "CategoryFeatureGroupID": "49260",
+          "SortNo": "500",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "10505",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Stand included",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210349,
+          "LocalID": 0,
+          "Type": "multi_dropdown",
+          "Value": "AC,HDMI",
+          "CategoryFeatureId": "16133",
+          "CategoryFeatureGroupID": "49260",
+          "SortNo": "490",
+          "PresentationValue": "AC, HDMI",
+          "RawValue": "AC,HDMI",
+          "LocalValue": "AC, HDMI",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "1830",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Cables included",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703336,
+          "Type": "textarea",
+          "Value": "",
+          "CategoryFeatureId": "4935",
+          "CategoryFeatureGroupID": "49260",
+          "SortNo": "310",
+          "PresentationValue": "HP Display Center",
+          "RawValue": "",
+          "LocalValue": "HP Display Center",
+          "Description": "Software distributed with another product such as a piece of computer hardware or other electronic device, or a group of software packages which are sold together. A software suite is an example of bundled software, as is software which is pre-installed on a new computer.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "251",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Bundled software",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 72250,
+      "SortNo": "5",
+      "FeatureGroup": {
+        "ID": "279",
+        "Name": {
+          "Value": "Sustainability",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210413,
+          "LocalID": 0,
+          "Type": "y_n",
+          "Value": "Y",
+          "CategoryFeatureId": "596953",
+          "CategoryFeatureGroupID": "72250",
+          "SortNo": "50",
+          "PresentationValue": "Yes",
+          "RawValue": "Y",
+          "LocalValue": "Yes",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "42512",
+            "Sign": "",
+            "Measure": {
+              "ID": "26",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Sustainability compliance",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210414,
+          "LocalID": 0,
+          "Type": "multi_dropdown",
+          "Value": "ENERGY STAR",
+          "CategoryFeatureId": "603799",
+          "CategoryFeatureGroupID": "72250",
+          "SortNo": "40",
+          "PresentationValue": "ENERGY STAR",
+          "RawValue": "ENERGY STAR",
+          "LocalValue": "ENERGY STAR",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "42513",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Sustainability certificates",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 77987,
+      "SortNo": "4",
+      "FeatureGroup": {
+        "ID": "305",
+        "Name": {
+          "Value": "Carbon footprint",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703352,
+          "Type": "text",
+          "Value": "",
+          "CategoryFeatureId": "907124",
+          "CategoryFeatureGroupID": "77987",
+          "SortNo": "0",
+          "PresentationValue": "240",
+          "RawValue": "",
+          "LocalValue": "240",
+          "Description": "The total mean carbon footprint value generated across various lifecycle stages (manufacturing, transportation / logistics, use and end of life) per unit (for one single product) i.e., measured in kilograms CO2e.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "45795",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Total carbon footprint (kg of CO2e)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703384,
+          "Type": "text",
+          "Value": "",
+          "CategoryFeatureId": "944090",
+          "CategoryFeatureGroupID": "77987",
+          "SortNo": "0",
+          "PresentationValue": "154",
+          "RawValue": "",
+          "LocalValue": "154",
+          "Description": "The mean carbon emissions during the Manufacturing stage (i.e., emissions during raw material extraction and manufacturing of components (e.g., drives, graphics cards, memory, CPU, mainboards, etc.) or assembling of the product.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "47441",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Carbon emissions, manufacturing (kg of CO2e)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703400,
+          "Type": "text",
+          "Value": "",
+          "CategoryFeatureId": "944091",
+          "CategoryFeatureGroupID": "77987",
+          "SortNo": "0",
+          "PresentationValue": "3",
+          "RawValue": "",
+          "LocalValue": "3",
+          "Description": "The mean carbon emissions during the transportation of the product.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "47442",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Carbon emissions, logistics (kg of CO2e)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703416,
+          "Type": "text",
+          "Value": "",
+          "CategoryFeatureId": "944093",
+          "CategoryFeatureGroupID": "77987",
+          "SortNo": "0",
+          "PresentationValue": "3",
+          "RawValue": "",
+          "LocalValue": "3",
+          "Description": "The mean carbon emissions related to the End-of-Life processing of products.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "47444",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Carbon emissions, end-of-life (kg of CO2e)",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703432,
+          "Type": "text",
+          "Value": "",
+          "CategoryFeatureId": "944094",
+          "CategoryFeatureGroupID": "77987",
+          "SortNo": "0",
+          "PresentationValue": "84",
+          "RawValue": "",
+          "LocalValue": "84",
+          "Description": "This is the total Carbon emissions minus the Use of product related emissions i.e., emissions across Manufacturing, Transportation and EOL only.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "47445",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Total carbon emissions, w/o use phase (kg of CO2e)",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 8454,
+      "SortNo": "-2",
+      "FeatureGroup": {
+        "ID": "146",
+        "Name": {
+          "Value": "Other features",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210331,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "2500",
+          "CategoryFeatureId": "855754",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "0",
+          "PresentationValue": "2.5 kg",
+          "RawValue": "2500",
+          "LocalValue": "2.5",
+          "Description": "Weight of the product without packaging (net weight). If possible, the net weight is given including standard accessories and supplies. Please note that sometimes the manufacturer leaves out the weight of accessories and/or supplies.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "94",
+            "Sign": "",
+            "Measure": {
+              "ID": "38",
+              "Sign": "",
+              "Signs": {
+                "ID": "22",
+                "_": "g",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Weight",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210357,
+          "LocalID": 0,
+          "Type": "alphanumeric",
+          "Value": "43211902",
+          "CategoryFeatureId": "31575",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "0",
+          "PresentationValue": "43211902",
+          "RawValue": "43211902",
+          "LocalValue": "43211902",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "2505",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "UNSPSC-code",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210341,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "315.6",
+          "CategoryFeatureId": "855755",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "0",
+          "PresentationValue": "315.6 mm",
+          "RawValue": "315.6",
+          "LocalValue": "315.6",
+          "Description": "The measurement of the product from head to foot or from base to top.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "1464",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Height",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210345,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "535.8",
+          "CategoryFeatureId": "855756",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "0",
+          "PresentationValue": "535.8 mm",
+          "RawValue": "535.8",
+          "LocalValue": "535.8",
+          "Description": "The measurement or extent of something from side to side.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "1649",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Width",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210346,
+          "LocalID": 0,
+          "Type": "numerical",
+          "Value": "34",
+          "CategoryFeatureId": "855757",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "0",
+          "PresentationValue": "34 mm",
+          "RawValue": "34",
+          "LocalValue": "34",
+          "Description": "The distance from the front to the back of something.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "1650",
+            "Sign": "",
+            "Measure": {
+              "ID": "24",
+              "Sign": "",
+              "Signs": {
+                "ID": "3",
+                "_": "mm",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Depth",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210421,
+          "LocalID": 0,
+          "Type": "multi_dropdown",
+          "Value": "BIS,BSMI,CB,CCC,CE,CEL,EAC,Federal Communications Commission (FCC),ICES,KCC,Norma Oficial Mexicana (NOM),VCCI,WEEE,cTUVus",
+          "CategoryFeatureId": "953263",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "0",
+          "PresentationValue": "BIS, BSMI, CB, CCC, CE, CEL, EAC, Federal Communications Commission (FCC), ICES, KCC, Norma Oficial Mexicana (NOM), VCCI, WEEE, cTUVus",
+          "RawValue": "BIS,BSMI,CB,CCC,CE,CEL,EAC,Federal Communications Commission (FCC),ICES,KCC,Norma Oficial Mexicana (NOM),VCCI,WEEE,cTUVus",
+          "LocalValue": "BIS, BSMI, CB, CCC, CE, CEL, EAC, Federal Communications Commission (FCC), ICES, KCC, Norma Oficial Mexicana (NOM), VCCI, WEEE, cTUVus",
+          "Description": "Indicates which regulatory, safety, and environmental standards the product complies with, as verified by recognized authorities or certification bodies.",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "48024",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Compliance certificates",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703368,
+          "Type": "dropdown",
+          "Value": "",
+          "CategoryFeatureId": "1116271",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "-500",
+          "PresentationValue": "195161272578",
+          "RawValue": "",
+          "LocalValue": "195161272578",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "15799",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Supplied AC adapter type",
+              "Language": "EN"
+            }
+          }
+        },
+        {
+          "Localized": 0,
+          "ID": 833210332,
+          "LocalID": 553703320,
+          "Type": "textarea",
+          "Value": "IS; BSMI; CB; CCC; CE; CECP; CELL",
+          "CategoryFeatureId": "4937",
+          "CategoryFeatureGroupID": "8454",
+          "SortNo": "-600",
+          "PresentationValue": "Australian-New Zealand MEPS; BIS; BSMI; CB; CCC; CE; CEL; CEL Grade 1; cTUVus; EAC; EUP Lot-5; EUP Lot-6; FCC; ICES; ISO 9241-307; KC/KCC; NOM; VCCI; Vietnam MEPS; WEEE; Low blue light; EUP Lot-26; California Energy Commission (CEC); South Africa Energy; eStandby; WW application; UAE; Ukraine certificates; NRCS of South Africa",
+          "RawValue": "IS; BSMI; CB; CCC; CE; CECP; CELL",
+          "LocalValue": "Australian-New Zealand MEPS; BIS; BSMI; CB; CCC; CE; CEL; CEL Grade 1; cTUVus; EAC; EUP Lot-5; EUP Lot-6; FCC; ICES; ISO 9241-307; KC/KCC; NOM; VCCI; Vietnam MEPS; WEEE; Low blue light; EUP Lot-26; California Energy Commission (CEC); South Africa Energy; eStandby; WW application; UAE; Ukraine certificates; NRCS of South Africa",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "249",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Certification",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 32003,
+      "SortNo": "-10",
+      "FeatureGroup": {
+        "ID": "0",
+        "Name": {
+          "Value": "Technical details",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 1,
+          "ID": 0,
+          "LocalID": 553703448,
+          "Type": "text",
+          "Value": "",
+          "CategoryFeatureId": "974239",
+          "CategoryFeatureGroupID": "32003",
+          "SortNo": "0",
+          "PresentationValue": "https://support.hp.com/us-en/document/ish_6126692-6126777-16?openCLC=true",
+          "RawValue": "",
+          "LocalValue": "https://support.hp.com/us-en/document/ish_6126692-6126777-16?openCLC=true",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "0",
+          "Feature": {
+            "ID": "48462",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "General Product Safety Regulation (GPSR) URL",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ID": 27535,
+      "SortNo": "-40",
+      "FeatureGroup": {
+        "ID": "198",
+        "Name": {
+          "Value": "Logistics data",
+          "Language": "EN"
+        }
+      },
+      "Features": [
+        {
+          "Localized": 0,
+          "ID": 833210401,
+          "LocalID": 0,
+          "Type": "text",
+          "Value": "85285210",
+          "CategoryFeatureId": "711548",
+          "CategoryFeatureGroupID": "27535",
+          "SortNo": "-580",
+          "PresentationValue": "85285210",
+          "RawValue": "85285210",
+          "LocalValue": "85285210",
+          "Description": "",
+          "Mandatory": "0",
+          "Searchable": "0",
+          "Optional": "1",
+          "Feature": {
+            "ID": "23731",
+            "Sign": "",
+            "Measure": {
+              "ID": "29",
+              "Sign": "",
+              "Signs": {
+                "ID": "",
+                "_": "",
+                "Language": "EN"
+              }
+            },
+            "Name": {
+              "Value": "Harmonized System (HS) code",
+              "Language": "EN"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "FeatureLogos": [
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/4-8210.png",
+      "Width": "195",
+      "Height": "200",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/4-8210.png",
+      "FeatureID": "42513",
+      "Value": "ENERGY STAR",
+      "KeyLogo": 0,
+      "Description": {
+        "Value": "ENERGY STAR® is the government-backed symbol for energy efficiency, providing simple, credible, and unbiased information that consumers and businesses rely on to make well-informed decisions. ENERGY STAR is the simple choice for energy efficiency, making it easy for consumers and businesses to purchase products that save them money and protect the environment.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/193-1847.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/193-1847.png",
+      "FeatureID": "37",
+      "Value": "178",
+      "KeyLogo": 1,
+      "Description": {
+        "Value": "Vibrant detail from practically any position with consistent color and image clarity maintained across an ultra-wide 178° horizontal and vertical viewing angles.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/193-1847.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/193-1847.png",
+      "FeatureID": "38",
+      "Value": "178",
+      "KeyLogo": 1,
+      "Description": {
+        "Value": "Vibrant detail from practically any position with consistent color and image clarity maintained across an ultra-wide 178° horizontal and vertical viewing angles.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/195-7239.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/195-7239.png",
+      "FeatureID": "1585",
+      "Value": "1920 x 1080",
+      "KeyLogo": 2,
+      "Description": {
+        "Value": "Be prepared for brilliant visuals and crisp images with the unforgettable quality of this stunning FHD display.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/195-7239.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/195-7239.png",
+      "FeatureID": "11424",
+      "Value": "Full HD",
+      "KeyLogo": 2,
+      "Description": {
+        "Value": "Be prepared for brilliant visuals and crisp images with the unforgettable quality of this stunning FHD display.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/213-4565.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/213-4565.png",
+      "FeatureID": "8302",
+      "Value": "Y",
+      "KeyLogo": 3,
+      "Description": {
+        "Value": "Adjust the screen to your personal preference with a 5° forward or 23° backward tilt.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/216-4160.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/216-4160.png",
+      "FeatureID": "1516",
+      "Value": "5",
+      "KeyLogo": 4,
+      "Description": {
+        "Value": "Videos and games come to life with less stutter or blur for more realistic play with smooth 5 milisecond gray-to-gray response time.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/232-5951.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/232-5951.png",
+      "FeatureID": "36843",
+      "Value": "Y",
+      "KeyLogo": 5,
+      "Description": {
+        "Value": "Using the Low Blue Light mode subtly shifts your display’s colors to a warmer spectrum, while making whites more natural and putting less strain on your eyes.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/599-337.png",
+      "Width": "300",
+      "Height": "234",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/599-337.png",
+      "FeatureID": "48024",
+      "Value": "CE",
+      "KeyLogo": 6,
+      "Description": {
+        "Value": "The letters ‘CE’ appear on many products traded on the extended Single Market in the European Economic Area (EEA). They signify that products sold in the EEA have been assessed to meet high safety, health, and environmental protection requirements. When you buy a new phone, a teddy bear, or a TV within the EEA, you can find the CE mark on them. CE marking also supports fair competition by holding all companies accountable to the same rules. CE marking is a part of the EU’s harmonisation legislation, which is mainly managed by Directorate-General for Internal market, Industry, Entrepreneurship and SMEs. The CE marking for Restriction of Hazardous Substances is managed by Directorate-General for Environment. Comprehensive guidance on the implementation of EU product rules can be found in the so-called Blue Guide.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/979-9412.png",
+      "Width": "300",
+      "Height": "165",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/979-9412.png",
+      "FeatureID": "42856",
+      "Value": "E",
+      "KeyLogo": 7,
+      "Description": {
+        "Value": "E means that the product is rated in its category in terms of energy efficiency. The Energy Labeling system is based on EU Regulation 2017/1369/EU.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/1122-7473.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/1122-7473.png",
+      "FeatureID": "34718",
+      "Value": "Micro-Edge",
+      "KeyLogo": 8,
+      "Description": {
+        "Value": "3 sided micro edge",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/1126-4845.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/1126-4845.png",
+      "FeatureID": "10443",
+      "Value": "Y",
+      "KeyLogo": 9,
+      "Description": {
+        "Value": "Anti glare black",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/1154-2153.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/1154-2153.png",
+      "FeatureID": "15285",
+      "Value": "ips",
+      "KeyLogo": 10,
+      "Description": {
+        "Value": "No matter where you stand, this screen delivers clear, vivid images with 178º wide-viewing angles, so everyone can get a great view.",
+        "Language": "EN"
+      }
+    },
+    {
+      "LogoPic": "https://images.icecat.biz/img/feature_logo/1184-4926.png",
+      "Width": "300",
+      "Height": "300",
+      "Size": "0",
+      "ThumbPic": "https://images.icecat.biz/img/feature_logo_thumbs/1184-4926.png",
+      "FeatureID": "3566",
+      "Value": "1",
+      "KeyLogo": 11,
+      "Description": {
+        "Value": "HDMI",
+        "Language": "EN"
+      }
+    }
+  ],
+  "ReasonsToBuy": [
+    {
+      "ReasonToBuyID": "92541114",
+      "Value": "This FHD monitor feels as good as it looks, packing IPS technology for 178 degrees ultra-wide viewing angles, 99% sRGB color gamut for color accuracy, and Freesync to keep your eyes up to speed with your imagination<sup>[2]</sup>.",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "1",
+      "Title": "The New Definition of High Definition",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541115",
+      "Value": "Streamline your setup with its slim profile, innovative cable containment, and seamless design for side-by-side screens.",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "3",
+      "Title": "Streamlined & Seamless",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541116",
+      "Value": "Customize your display with easy, intuitive HP Display Center software that lets you tailor your settings, partition screens, and even dim the screen.",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "103",
+      "Title": "Easily personalize and adjust your display.",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541117",
+      "Value": "An always-on blue light filter that keeps your eyes comfortable with zero impact on color accuracy.",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "104",
+      "Title": "HP Eye Ease with Eyesafe® Certification",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541118",
+      "Value": "IPS technology brings you clear views from almost any angle. Every seat is the best seat in the house.",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "105",
+      "Title": "Step up to the best",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541119",
+      "Value": "Cord and wire pass-through located on the display stand reduces cord-clutter and helps keep your workspace clean and organized.",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "107",
+      "Title": "Cable management",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541120",
+      "Value": "Brilliant visuals and unforgettable quality from a stunning FHD display. <sup>[3]</sup>",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "108",
+      "Title": "FHD display / 1080p display",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541121",
+      "Value": "99% sRGB color space for ideal color reproduction. <sup>[2]</sup>",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "109",
+      "Title": "Highly accurate color",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    },
+    {
+      "ReasonToBuyID": "92541122",
+      "Value": "Designed with sustainability in mind, the plastic enclosures are made with 85% recycled materials and 5% recycled ocean bound plastics. <sup>[1]</sup>",
+      "HighPic": "",
+      "HighPicSize": "0",
+      "No": "110",
+      "Title": "Sustainable design",
+      "Language": "EN",
+      "Updated": "2025-08-28 10:18:46",
+      "Origin": "RTB",
+      "IsPrivate": "0"
+    }
+  ],
+  "Reviews": [],
+  "ProductRelated": [
+    {
+      "ID": 384845214,
+      "CategoryID": 977,
+      "Preferred": 0,
+      "IcecatID": 57430581,
+      "ProductCode": "3XJ17AA",
+      "ThumbPic": "",
+      "ProductName": "Business PC Security Lock v3 Kit",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "accessory"
+    },
+    {
+      "ID": 384845218,
+      "CategoryID": 788,
+      "Preferred": 0,
+      "IcecatID": 97384241,
+      "ProductCode": "U42V2PE",
+      "ThumbPic": "",
+      "ProductName": "1 year Post Warranty Pickup and Return Monitor Hardware Support",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "service"
+    },
+    {
+      "ID": 384845208,
+      "CategoryID": 788,
+      "Preferred": 0,
+      "IcecatID": 830988,
+      "ProductCode": "HC203E",
+      "ThumbPic": "",
+      "ProductName": "2 Year Pickup and Return Service for Consumer Monitors",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "service"
+    },
+    {
+      "ID": 384845207,
+      "CategoryID": 788,
+      "Preferred": 0,
+      "IcecatID": 253763,
+      "ProductCode": "UC758E",
+      "ThumbPic": "",
+      "ProductName": "3 Year Pickup and Return Service for Consumer Monitors",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "service"
+    },
+    {
+      "ID": 384845890,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89368707,
+      "ProductCode": "3V2V0EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0002na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845891,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89368708,
+      "ProductCode": "3V2V1EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0008na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845892,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89368705,
+      "ProductCode": "3V2V2EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0015na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845513,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 87062454,
+      "ProductCode": "2Z6Y8EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0603sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845277,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 85829723,
+      "ProductCode": "2G2C3EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0012na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845274,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 85829724,
+      "ProductCode": "2G2C4EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0014na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845744,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 88593322,
+      "ProductCode": "39P51EA",
+      "ThumbPic": "",
+      "ProductName": "15-en1007na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845216,
+      "CategoryID": 788,
+      "Preferred": 0,
+      "IcecatID": 76544623,
+      "ProductCode": "UC5Y3E",
+      "ThumbPic": "",
+      "ProductName": "1 year SmartFriend Standalone Service",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "service"
+    },
+    {
+      "ID": 384846027,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89516808,
+      "ProductCode": "3Z3Z8EA",
+      "ThumbPic": "",
+      "ProductName": "15s-fq2039na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845511,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 87062421,
+      "ProductCode": "2Z6Y6EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0607na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845217,
+      "CategoryID": 788,
+      "Preferred": 0,
+      "IcecatID": 76544624,
+      "ProductCode": "UC5Y1E",
+      "ThumbPic": "",
+      "ProductName": "3 month SmartFriend Standalone Service",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "service"
+    },
+    {
+      "ID": 384845215,
+      "CategoryID": 788,
+      "Preferred": 0,
+      "IcecatID": 76544622,
+      "ProductCode": "UC5Y2E",
+      "ThumbPic": "",
+      "ProductName": "6 month SmartFriend Standalone Service",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "service"
+    },
+    {
+      "ID": 384845510,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 87062394,
+      "ProductCode": "2Z6Y7EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0603na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845902,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89368717,
+      "ProductCode": "3V7T5EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0008sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845914,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89516822,
+      "ProductCode": "3Y0L0EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0502sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845925,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89516830,
+      "ProductCode": "3Y1U6EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0502na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845901,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89368704,
+      "ProductCode": "3V7T4EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0002sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845915,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89516816,
+      "ProductCode": "3Y0L1EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0505sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845512,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 87062396,
+      "ProductCode": "2Z6Y9EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0607sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845422,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057226,
+      "ProductCode": "2S3C6EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0597sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845423,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057225,
+      "ProductCode": "2S3C8EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0598sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845418,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057223,
+      "ProductCode": "2S3C5EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0597na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845547,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 87142241,
+      "ProductCode": "30A99EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0018na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845420,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057220,
+      "ProductCode": "2S3C3EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0596sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845339,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 85894209,
+      "ProductCode": "2N1J8EA",
+      "ThumbPic": "",
+      "ProductName": "15-dw1023na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845889,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89368703,
+      "ProductCode": "3V2M5EA",
+      "ThumbPic": "",
+      "ProductName": "14-dy0016na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845508,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 87062400,
+      "ProductCode": "2Z6Y5EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0604sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845855,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89283938,
+      "ProductCode": "3E5V4EA",
+      "ThumbPic": "",
+      "ProductName": "15-en1000na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845280,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 85829715,
+      "ProductCode": "2G2E2EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0009na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845417,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057211,
+      "ProductCode": "2S3C2EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0596na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845421,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057227,
+      "ProductCode": "2S3C7EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0598na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845276,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 85829705,
+      "ProductCode": "2G2E1EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0007na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845509,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 87062469,
+      "ProductCode": "2Z6Y4EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0604na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845836,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222816,
+      "ProductCode": "3D4U2EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0521sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845821,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222838,
+      "ProductCode": "3D4Q6EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0511sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845799,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222856,
+      "ProductCode": "3D4C0EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0054na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845815,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222839,
+      "ProductCode": "3D4Q1EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0039sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384846031,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89421647,
+      "ProductCode": "3Z3Z6EA",
+      "ThumbPic": "",
+      "ProductName": "14s-dq2019na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845798,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89555530,
+      "ProductCode": "3D4D1EA",
+      "ThumbPic": "",
+      "ProductName": "15s-fq2003sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845841,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222853,
+      "ProductCode": "3D4W1EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0048na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845408,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057215,
+      "ProductCode": "2S3B3EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0566na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845837,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222846,
+      "ProductCode": "3D4U0EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0055sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845816,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222824,
+      "ProductCode": "3D4Q0EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0038sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845801,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222822,
+      "ProductCode": "3D4C8EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0519na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845410,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057221,
+      "ProductCode": "2S3B6EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0566sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845824,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222860,
+      "ProductCode": "3D4Q9EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0513sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845829,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222861,
+      "ProductCode": "3D4R4EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0519sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845838,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222813,
+      "ProductCode": "3D4U1EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0056sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845427,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057219,
+      "ProductCode": "2S3D5EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0601sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845424,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057212,
+      "ProductCode": "2S3D2EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0600na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845426,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057214,
+      "ProductCode": "2S3D4EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0601na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845411,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057224,
+      "ProductCode": "2S3B8EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0567sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845429,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057213,
+      "ProductCode": "2S3D6EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0602na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845886,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89368702,
+      "ProductCode": "3T168EA",
+      "ThumbPic": "",
+      "ProductName": "Laptop 14s-dq2007na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845425,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057216,
+      "ProductCode": "2S3D3EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0600sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845813,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222823,
+      "ProductCode": "3D4P9EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0037sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845802,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222826,
+      "ProductCode": "3D4C9EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0520na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845409,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057222,
+      "ProductCode": "2S3B7EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0567na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845809,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222850,
+      "ProductCode": "3D4M6EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0039na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845926,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 92486944,
+      "ProductCode": "3Y0L7EA",
+      "ThumbPic": "",
+      "ProductName": "14s-dq2502sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845428,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057218,
+      "ProductCode": "2S3D7EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0602sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845820,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222819,
+      "ProductCode": "3D4Q5EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0511na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845842,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222858,
+      "ProductCode": "3D4W2EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0515na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845803,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222803,
+      "ProductCode": "3D4C1EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0056na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845805,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222827,
+      "ProductCode": "3D4C3EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0514na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845796,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222845,
+      "ProductCode": "3D4B5EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0052na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845415,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 86057217,
+      "ProductCode": "2S3B9EA",
+      "ThumbPic": "",
+      "ProductName": "14-dv0568na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845826,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222814,
+      "ProductCode": "3D4R1EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0515sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845818,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222859,
+      "ProductCode": "3D4Q3EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0050sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845800,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222843,
+      "ProductCode": "3D4C4EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0517na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845833,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222820,
+      "ProductCode": "3D4T8EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0052sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845804,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222812,
+      "ProductCode": "3D4D0EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0521na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845819,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222808,
+      "ProductCode": "3D4Q4EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0053sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845797,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222811,
+      "ProductCode": "3D4B6EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0053na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845810,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222840,
+      "ProductCode": "3D4M8EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0050na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845817,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222836,
+      "ProductCode": "3D4Q2EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0048sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845812,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222804,
+      "ProductCode": "3D4M7EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0049na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845814,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222815,
+      "ProductCode": "3D4M9EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0055na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845825,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222855,
+      "ProductCode": "3D4R0EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0514sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845835,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222852,
+      "ProductCode": "3D4T9EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0054sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845827,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222854,
+      "ProductCode": "3D4R2EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0517sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845830,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222821,
+      "ProductCode": "3D4R5EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0520sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845806,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222891,
+      "ProductCode": "3D4C2EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0513na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845811,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222857,
+      "ProductCode": "3D4N2EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0518na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845823,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222862,
+      "ProductCode": "3D4Q8EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0512sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845808,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222805,
+      "ProductCode": "3D4M5EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0038na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845822,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222849,
+      "ProductCode": "3D4Q7EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0512na",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    },
+    {
+      "ID": 384845828,
+      "CategoryID": 151,
+      "Preferred": 0,
+      "IcecatID": 89222863,
+      "ProductCode": "3D4R3EA",
+      "ThumbPic": "",
+      "ProductName": "14s-fq0518sa",
+      "Brand": "HP",
+      "BrandID": 1,
+      "ProductRelatedLocales": [
+        {
+          "ID": 0,
+          "Language": "EN",
+          "Preferred": 0,
+          "StartDate": "",
+          "EndDate": ""
+        }
+      ],
+      "RelationTypeCode": "compatible"
+    }
+  ],
+  "CatalogObjectCloud": {},
+  "Variants": [],
+  "ProductStory": [],
+  "Dictionary": {
+    "eu_energy_label": "EU Energy Label",
+    "pdf_url": "User manual",
+    "reviews_head_name": "Reviews",
+    "zoom_panel_dragg": "Mouse dragging",
+    "demo_msg_part2": "your Icecat login name",
+    "zoom_panel_out": "Zoom out",
+    "zoom_panel_in": "Zoom in",
+    "demo_msg_part1": "You are using now a Demo account. Please, use your own Icecat account",
+    "zoom_panel_init": "Original size",
+    "demo_insert_desc": "This is a demo of a seamless insert of an Icecat LIVE product data-sheet in your website. Imagine that this responsive data-sheet is included in the product page of your webshop.",
+    "options_head_name": "Options",
+    "demo_msg_part3": "If you don't have an Icecat account, please register here for free.",
+    "pdf_specs": "Product Brochure",
+    "product_family": "Product family",
+    "supplier_name": "Brand",
+    "flash360": "3D tour",
+    "product_series": "Product series",
+    "desc": "Description",
+    "ean_code": "EAN/UPC code",
+    "specs": "Specs",
+    "marketing_text": "Description",
+    "reasons_to_buy": "Reasons to buy",
+    "release_date": "Release date",
+    "html_content": "",
+    "eu_product_fiche": "EU Product Fiche",
+    "cat_name": "Category",
+    "prod_code": "Product code",
+    "back_to_top": "Back to top",
+    "model_name": "Product name",
+    "repairability_index": "Repairability index",
+    "video": "Video",
+    "link_integrate_desk": "How to integrate Icecat LIVE JavaScript."
+  },
+  "DemoAccount": false
+}
