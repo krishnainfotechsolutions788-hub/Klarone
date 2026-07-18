@@ -27,7 +27,7 @@ export default function FeaturesSection() {
   return (
     <section id="features" className="w-full py-[80px] lg:py-[120px] bg-white">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.1] tracking-tight text-surface-dark mb-6">
@@ -41,8 +41,8 @@ export default function FeaturesSection() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex flex-col bg-surface-soft p-8 rounded-2xl border border-transparent hover:border-[#e2e8f0] transition-colors"
             >
               <div className="mb-6">

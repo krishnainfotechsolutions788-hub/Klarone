@@ -7,25 +7,25 @@ export default function HeroSection() {
     <section className="relative w-full pt-[60px] pb-[80px] lg:pt-[80px] lg:pb-[120px] bg-white overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center lg:items-start">
-          
+
           {/* Left Content */}
           <div className="max-w-xl lg:pt-12">
             <h1 className="text-[56px] md:text-[64px] lg:text-[76px] font-medium leading-[1.1] tracking-tight text-surface-dark mb-6">
-              Buy Technology<br/>With Confidence.
+              Buy Technology<br />With Confidence.
             </h1>
             <p className="text-[16px] md:text-[18px] leading-relaxed text-[#666666] mb-10 max-w-[420px]">
               Personalized technology recommendations based on your goals, budget, and workflow.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-14">
-              <Link 
-                href="/find-laptop" 
+              <Link
+                href="/find-laptop"
                 className="inline-flex items-center justify-center h-12 rounded-full bg-surface-dark px-8 text-[15px] font-medium text-white hover:bg-black transition-all"
               >
                 Find My Laptop
               </Link>
-              <Link 
-                href="/shop" 
+              <Link
+                href="/shop"
                 className="inline-flex items-center justify-center h-12 rounded-full border border-hairline bg-white px-8 text-[15px] font-medium text-surface-dark hover:bg-gray-50 transition-all"
               >
                 Shop Now
@@ -48,7 +48,7 @@ export default function HeroSection() {
 
           {/* Right Content - Auto Scrolling Masonry Grid */}
           <div className="relative w-full h-[600px] sm:h-[700px] lg:h-[750px] grid grid-cols-2 gap-4 sm:gap-6 items-start overflow-hidden">
-            
+
             {/* Left Column Wrapper - Scrolls Up */}
             <div className="flex flex-col gap-4 sm:gap-6 animate-scroll-up">
               {/* Original Images */}

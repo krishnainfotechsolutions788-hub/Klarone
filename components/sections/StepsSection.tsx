@@ -8,7 +8,7 @@ export default function StepsSection() {
     <section id="how-it-works" className="w-full py-[80px] lg:py-[120px] bg-white">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
-          
+
           {/* Left Content - Large Image */}
           <div className="relative w-full rounded-3xl overflow-hidden shadow-sm flex items-center justify-center bg-gray-50">
             <img src="/img2.webp" alt="Expert Guidance" className="w-full h-auto block" />
@@ -24,7 +24,7 @@ export default function StepsSection() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              
+
               {/* Step 1 */}
               <div className="flex flex-col justify-between bg-surface-soft p-8 rounded-2xl border border-transparent hover:border-[#e2e8f0] transition-colors">
                 <div>
@@ -66,7 +66,7 @@ export default function StepsSection() {
                 </div>
                 {/* Semi-transparent black overlay */}
                 <div className="absolute inset-0 z-10 bg-black/60 group-hover:bg-black/70 transition-colors duration-300"></div>
-                
+
                 {/* Content */}
                 <div className="relative z-20 flex flex-col items-center">
                   <h3 className="text-[24px] font-medium text-white mb-4 drop-shadow-md">Find My Laptop</h3>

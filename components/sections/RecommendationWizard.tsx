@@ -32,11 +32,11 @@ export default function RecommendationWizard() {
     e.preventDefault();
     setIsSubmitting(true);
     setErrorMsg("");
-    
+
     const res = await submitRecommendationRequest(formData);
-    
+
     setIsSubmitting(false);
-    
+
     if (res.success) {
       setIsSubmitted(true);
     } else {
@@ -54,7 +54,7 @@ export default function RecommendationWizard() {
         <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-md mx-auto">
           Our technology experts will analyze your requirements and send you a personalized, objective laptop recommendation shortly.
         </p>
-        <button 
+        <button
           onClick={() => {
             setStep(1);
             setIsSubmitted(false);
@@ -76,7 +76,7 @@ export default function RecommendationWizard() {
         <p className="text-gray-300 relative z-10 text-[15px]">
           {step === 1 ? "What do you primarily need a laptop for?" : "Tell us a bit more about yourself"}
         </p>
-        
+
         {/* Progress Bar */}
         <div className="w-full h-1 bg-gray-800 rounded-full mt-6 relative z-10">
           <div className="h-full bg-[#00A7B5] rounded-full transition-all duration-500" style={{ width: step === 1 ? '50%' : '100%' }}></div>
@@ -96,11 +96,10 @@ export default function RecommendationWizard() {
                 <button
                   key={uc.id}
                   onClick={() => setFormData({ ...formData, useCase: uc.id })}
-                  className={`p-5 rounded-xl border-2 text-left transition-all ${
-                    formData.useCase === uc.id 
-                    ? 'border-[#00A7B5] bg-[#F0FBFC]' 
-                    : 'border-gray-100 hover:border-gray-200 hover:bg-gray-50'
-                  }`}
+                  className={`p-5 rounded-xl border-2 text-left transition-all ${formData.useCase === uc.id
+                      ? 'border-[#00A7B5] bg-[#F0FBFC]'
+                      : 'border-gray-100 hover:border-gray-200 hover:bg-gray-50'
+                    }`}
                 >
                   <uc.icon className={`w-7 h-7 mb-3 ${formData.useCase === uc.id ? 'text-[#00A7B5]' : 'text-gray-400'}`} />
                   <h4 className="font-semibold text-gray-900 mb-1">{uc.id}</h4>
@@ -110,7 +109,7 @@ export default function RecommendationWizard() {
             </div>
 
             <div className="flex justify-end pt-4">
-              <button 
+              <button
                 onClick={handleNext}
                 disabled={!formData.useCase}
                 className="flex items-center gap-2 px-8 py-3 bg-[#111111] text-white rounded-full font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -127,28 +126,28 @@ export default function RecommendationWizard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">Name</label>
-                <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="John Doe" />
+                <input required type="text" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="John Doe" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">Email</label>
-                <input required type="email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="john@example.com" />
+                <input required type="email" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="john@example.com" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">Phone (Optional)</label>
-                <input type="tel" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="+91 98765 43210" />
+                <input type="tel" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="+91 98765 43210" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">Budget (₹)</label>
-                <input required type="text" value={formData.budget} onChange={e => setFormData({...formData, budget: e.target.value})} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="e.g. 50,000 - 70,000" />
+                <input required type="text" value={formData.budget} onChange={e => setFormData({ ...formData, budget: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB]" placeholder="e.g. 50,000 - 70,000" />
               </div>
             </div>
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-700">Special Requirements</label>
-              <textarea value={formData.specialRequirements} onChange={e => setFormData({...formData, specialRequirements: e.target.value})} rows={3} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB] resize-none" placeholder="Any specific software you use? Need a numeric keypad?"></textarea>
+              <textarea value={formData.specialRequirements} onChange={e => setFormData({ ...formData, specialRequirements: e.target.value })} rows={3} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00A7B5]/20 focus:border-[#00A7B5] transition-all bg-[#F9FAFB] resize-none" placeholder="Any specific software you use? Need a numeric keypad?"></textarea>
             </div>
 
             {errorMsg && (
@@ -158,14 +157,14 @@ export default function RecommendationWizard() {
             )}
 
             <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-              <button 
+              <button
                 type="button"
                 onClick={handleBack}
                 className="px-6 py-2.5 text-gray-600 font-medium hover:text-gray-900 transition-colors"
               >
                 Back
               </button>
-              <button 
+              <button
                 type="submit"
                 disabled={isSubmitting}
                 className="flex items-center gap-2 px-8 py-3 bg-[#00A7B5] text-white rounded-full font-medium hover:bg-[#0096a3] transition-all disabled:opacity-70 shadow-lg shadow-[#00A7B5]/20"

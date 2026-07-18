@@ -18,11 +18,11 @@ export default function Home() {
         <HeroSection />
         <section className="py-24 bg-[#F8FAFC]" id="find-my-laptop">
           <div className="container mx-auto px-4">
-            <RecommendationWizard />
+            {/* <RecommendationWizard /> */}
           </div>
         </section>
         <StepsSection />
-        <RecommendationExamplesSection />
+        {/* <RecommendationExamplesSection /> */}
         <ServicesSection />
         <TopSoldSection />
         <FeaturesSection />

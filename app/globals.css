@@ -8,44 +8,44 @@
 @theme {
   --color-background: #ffffff;
   --color-foreground: #111111;
-  
+
   --color-primary: #111111;
   --color-primary-foreground: #ffffff;
-  
+
   --color-primary-active: #000000;
-  
+
   --color-accent: #00A7B5;
   --color-accent-foreground: #ffffff;
-  
+
   --color-success: #006400;
   --color-success-foreground: #ffffff;
-  
+
   --color-link: #1b61c9;
-  
+
   --color-surface-soft: #f8fafc;
   --color-surface-strong: #e0e2e6;
   --color-surface-dark: #111111;
   --color-surface-dark-elevated: #1a1a1a;
-  
+
   --color-hairline: #dddddd;
-  
+
   --color-body: #333840;
   --color-muted: #41454d;
-  
+
   --color-signature-coral: #aa2d00;
   --color-signature-forest: #0a2e0e;
   --color-signature-cream: #f5e9d4;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  
+
   /* Geometry */
   --radius-xs: 2px;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 12px;
   --radius-full: 9999px;
-  
+
   /* Spacing Rhythm */
   --spacing-section: 96px;
 }
@@ -116,8 +116,10 @@
   0% {
     transform: translateY(0);
   }
+
   100% {
-    transform: translateY(calc(-50% - 0.75rem)); /* 50% shift for duplicated content, accounting for gap */
+    transform: translateY(calc(-50% - 0.75rem));
+    /* 50% shift for duplicated content, accounting for gap */
   }
 }
 
@@ -125,6 +127,7 @@
   0% {
     transform: translateY(calc(-50% - 0.75rem));
   }
+
   100% {
     transform: translateY(0);
   }
@@ -134,6 +137,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-50% - 0.75rem));
   }
@@ -143,9 +147,11 @@
   .animate-scroll-up {
     animation: scroll-up 30s linear infinite;
   }
+
   .animate-scroll-down {
     animation: scroll-down 30s linear infinite;
   }
+
   .animate-scroll-left {
     animation: scroll-left 40s linear infinite;
   }

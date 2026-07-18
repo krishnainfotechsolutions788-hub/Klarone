@@ -43,12 +43,12 @@ export default function RecommendationExamplesSection() {
               <div className="text-sm text-gray-500 font-medium mb-6">
                 {example.budget}
               </div>
-              
+
               <div className="mb-6 pb-6 border-b border-gray-100">
                 <p className="text-sm text-gray-500 mb-1">Recommended Device</p>
                 <h3 className="text-2xl font-bold font-sora text-gray-900">{example.laptop}</h3>
               </div>
-              
+
               <div className="space-y-3">
                 <p className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Why we recommend it</p>
                 {example.reasons.map((reason, rIdx) => (

@@ -27,9 +27,9 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white border-t border-[#f1f3f5] pt-16 pb-8">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-2 flex flex-col items-start">
             <Link href="/" className="flex items-center group mb-6">
