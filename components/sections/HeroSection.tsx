@@ -1,110 +1,174 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Play, X, Menu, Paperclip, BarChart, Zap, Mic, ArrowUp, Search, Sparkles } from "lucide-react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { useState, useRef } from "react";
+import KlaroneIcon from "@/components/KlaroneIcon";
 
 export default function HeroSection() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Parallax scroll transformations
+  const cardY = useTransform(scrollYProgress, [0, 1], ["0px", "-40px"]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0px", "40px"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
+
   return (
-    <section className="relative w-full pt-[60px] pb-[80px] lg:pt-[80px] lg:pb-[120px] bg-white overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center lg:items-start">
+    <section 
+      ref={sectionRef} 
+      className="relative w-full flex flex-col items-center overflow-hidden bg-[#000000] text-white pt-24 sm:pt-32 pb-16"
+    >
+      
+      {/* ===== TECH HORIZON LANDSCAPE BACKGROUND ===== */}
+      <motion.div 
+        style={{ y: bgY, scale: bgScale }}
+        className="absolute inset-0 w-full h-full pointer-events-none z-0"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img 
+          src="/Hero/tech-landscape.png" 
+          alt="Tech Hub Horizon Landscape"
+          className="w-full h-full object-cover object-center opacity-80"
+        />
+        
+        {/* Subtle Dark Vignette for Text Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/85 via-[#000000]/40 to-[#000000] z-1" />
+      </motion.div>
 
-          {/* Left Content */}
-          <div className="max-w-xl lg:pt-12">
-            <h1 className="text-[56px] md:text-[64px] lg:text-[76px] font-medium leading-[1.1] tracking-tight text-surface-dark mb-6">
-              Buy Technology<br />With Confidence.
-            </h1>
-            <p className="text-[16px] md:text-[18px] leading-relaxed text-[#666666] mb-10 max-w-[420px]">
-              Personalized technology recommendations based on your goals, budget, and workflow.
-            </p>
+      {/* ===== HERO HEADLINE & CTAS (Sitting over the Sky) ===== */}
+      <div className="relative z-20 mx-auto max-w-[900px] px-6 flex flex-col items-center text-center">
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-14">
-              <Link
-                href="/find-laptop"
-                className="inline-flex items-center justify-center h-12 rounded-full bg-surface-dark px-8 text-[15px] font-medium text-white hover:bg-black transition-all"
-              >
-                Find My Laptop
-              </Link>
-              <Link
-                href="/shop"
-                className="inline-flex items-center justify-center h-12 rounded-full border border-hairline bg-white px-8 text-[15px] font-medium text-surface-dark hover:bg-gray-50 transition-all"
-              >
-                Shop Now
-              </Link>
+        {/* Intro Pill */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md mb-7 shadow-sm cursor-pointer hover:bg-white/15 transition-colors"
+        >
+          <span className="flex h-2 w-2 rounded-full bg-[#00A7B5] animate-pulse"></span>
+          <span className="text-[12.5px] font-normal text-white/85 tracking-wide">Klarone V1: Smart Recommendations</span>
+        </motion.div>
+
+        {/* Main Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-[44px] sm:text-[54px] lg:text-[62px] font-medium leading-[1.08] tracking-tight text-white mb-5 drop-shadow-sm max-w-[780px]"
+        >
+          Buy Technology <br className="hidden sm:block" />
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white/95 to-white/70">
+            With Confidence
+          </span>
+        </motion.h1>
+
+        {/* Subheadline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-[15px] sm:text-[16.5px] leading-relaxed text-white/70 mb-9 max-w-[480px] drop-shadow-sm"
+        >
+          Personalized technology recommendations based on your goals, budget, and workflow.
+        </motion.p>
+
+        {/* Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-12"
+        >
+          {/* Primary CTA */}
+          <Link href="/find-laptop">
+            <motion.button
+              whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,1)" }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center h-[46px] rounded-full bg-white px-7 text-[14px] font-medium text-black transition-colors duration-300 shadow-[0_0_22px_rgba(255,255,255,0.18)] hover:shadow-[0_0_32px_rgba(255,255,255,0.28)]"
+            >
+              Find My Laptop
+            </motion.button>
+          </Link>
+
+          {/* Secondary Play CTA */}
+          <motion.button
+            onClick={() => setIsVideoOpen(true)}
+            whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.15)", borderColor: "rgba(255,255,255,0.25)" }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center justify-center gap-2.5 h-[46px] rounded-full border border-white/15 bg-white/5 backdrop-blur-md pl-3 pr-5 text-[14px] font-medium text-white transition-all duration-300"
+          >
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-white/15 shrink-0">
+              <Play className="w-2.5 h-2.5 text-white fill-white translate-x-[1px]" />
             </div>
-
-            {/* Social Proof */}
-            <div className="flex items-center gap-4">
-              <div className="flex -space-x-3">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="User 1" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm" />
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="User 2" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm" />
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="User 3" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm" />
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop" alt="User 4" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm" />
-              </div>
-              <p className="text-[13px] text-[#888888] leading-tight max-w-[180px]">
-                Join <strong className="text-[#444444] font-semibold">2,100+ professionals</strong> making better tech decisions
-              </p>
-            </div>
-          </div>
-
-          {/* Right Content - Auto Scrolling Masonry Grid */}
-          <div className="relative w-full h-[600px] sm:h-[700px] lg:h-[750px] grid grid-cols-2 gap-4 sm:gap-6 items-start overflow-hidden">
-
-            {/* Left Column Wrapper - Scrolls Up */}
-            <div className="flex flex-col gap-4 sm:gap-6 animate-scroll-up">
-              {/* Original Images */}
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex">
-                <img src="/Hero/hero1.webp" alt="Hero Team" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero2.webp" alt="Person typing" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero3.webp" alt="Hero Workspace" className="w-full h-auto block" />
-              </div>
-              {/* Duplicated Images for infinite scroll */}
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex">
-                <img src="/Hero/hero1.webp" alt="Hero Team" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero2.webp" alt="Person typing" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero3.webp" alt="Hero Workspace" className="w-full h-auto block" />
-              </div>
-            </div>
-
-            {/* Right Column Wrapper - Scrolls Down */}
-            <div className="flex flex-col gap-4 sm:gap-6 animate-scroll-down">
-              {/* Original Images */}
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero4.webp" alt="Developer working" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero5.webp" alt="Business meeting" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero6.webp" alt="Technology" className="w-full h-auto block" />
-              </div>
-              {/* Duplicated Images for infinite scroll */}
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero4.webp" alt="Developer working" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero5.webp" alt="Business meeting" className="w-full h-auto block" />
-              </div>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-sm flex">
-                <img src="/Hero/hero6.webp" alt="Technology" className="w-full h-auto block" />
-              </div>
-            </div>
-
-            {/* White Fade Overlays (Top and Bottom) */}
-            <div className="absolute top-0 left-0 right-0 h-24 bg-linear-to-b from-white to-transparent pointer-events-none z-10"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white via-white/80 to-transparent pointer-events-none z-10"></div>
-
-          </div>
-
-        </div>
+            <span>How it works</span>
+          </motion.button>
+        </motion.div>
       </div>
+
+      {/* ===== FLOATING DEMO CHAT CARD IMAGE (Centered Over Hills) ===== */}
+      <div className="relative w-full z-20 flex flex-col items-center mt-2">
+        <motion.div
+          style={{ y: cardY }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="relative z-10 w-full max-w-[880px] px-4 sm:px-6 my-4"
+        >
+          <div className="w-full rounded-2xl sm:rounded-3xl border border-white/15 overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.85)] bg-[#111113] backdrop-blur-xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/sample/comp.png"
+              alt="Klarone AI Recommendation Experience"
+              className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl scale-103"
+            />
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 shadow-2xl z-10"
+            >
+              <button
+                onClick={() => setIsVideoOpen(false)}
+                className="absolute top-4 right-4 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-white/10 text-white/70 hover:text-white transition-colors border border-white/10 backdrop-blur-md"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              <video
+                src="/sample/how-work.mp4"
+                autoPlay
+                controls
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
+
+

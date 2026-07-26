@@ -82,20 +82,20 @@ export default function AdminSidebar() {
   const { hasPermission, isLoading } = useAuth();
 
   return (
-    <aside className="w-[260px] bg-[#ffffff] border-r border-[#dddddd] flex flex-col shrink-0">
+    <aside className="w-[260px] bg-[#0A0A0C]/90 backdrop-blur-xl border-r border-white/10 flex flex-col shrink-0 text-white z-20">
       {/* Logo Area */}
-      <div className="h-[88px] flex items-center px-6 border-b border-[#dddddd]">
-        <div className="flex items-center justify-between w-full border border-[#dddddd] rounded-[10px] p-1.5 hover:bg-[#f8fafc] cursor-pointer transition-colors">
+      <div className="h-[88px] flex items-center px-6 border-b border-white/10">
+        <div className="flex items-center justify-between w-full border border-white/10 rounded-[12px] p-2 bg-[#121215] hover:bg-[#18181C] cursor-pointer transition-all shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-[8px] flex items-center justify-center shadow-none overflow-hidden bg-white">
-              <img src="/icon2.png" alt="Klarone Logo" className="w-full h-full object-contain" />
+            <div className="w-8 h-8 rounded-[8px] flex items-center justify-center overflow-hidden bg-white/10 border border-white/10">
+              <img src="/logo.webp" alt="Klarone Logo" className="w-full h-full object-contain p-1 invert" />
             </div>
             <div>
-              <h1 className="font-heading font-semibold text-[15px] text-[#181d26] leading-tight">Klarone</h1>
-              <p className="text-[11px] text-[#41454d] font-medium">Admin Panel</p>
+              <h1 className="font-heading font-medium text-[14.5px] text-white leading-tight">Klarone</h1>
+              <p className="text-[11px] text-white/50 font-normal">Admin Platform</p>
             </div>
           </div>
-          <ChevronsUpDown className="w-4 h-4 text-[#9297a0] mr-1" />
+          <ChevronsUpDown className="w-4 h-4 text-white/40 mr-1" />
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export default function AdminSidebar() {
 
           return (
             <div key={idx} className="mb-8 last:mb-0">
-              <h2 className="text-[11px] font-medium text-[#41454d] tracking-wider mb-4 px-3">{section.title}</h2>
+              <h2 className="text-[10.5px] font-medium text-white/40 tracking-wider mb-3 px-3 uppercase">{section.title}</h2>
               <div className="flex flex-col gap-1">
                 {filteredItems.map((item) => {
                   const isActive = pathname === item.href;
@@ -121,17 +121,17 @@ export default function AdminSidebar() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`flex items-center justify-between px-3 py-2.5 rounded-[6px] text-[14px] font-medium transition-all group ${isActive
-                          ? "bg-[#f8fafc] text-[#181d26] border border-[#dddddd]"
-                          : "text-[#41454d] hover:bg-[#f8fafc] hover:text-[#181d26] border border-transparent"
+                      className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-[13.5px] font-normal transition-all group ${isActive
+                          ? "bg-white/10 text-white border border-white/15 shadow-sm"
+                          : "text-white/60 hover:bg-white/5 hover:text-white border border-transparent"
                         }`}
                     >
                       <div className="flex items-center gap-3">
-                        <Icon className={`w-[18px] h-[18px] ${isActive ? "text-[#181d26]" : "text-[#41454d] group-hover:text-[#181d26]"}`} />
+                        <Icon className={`w-[17px] h-[17px] ${isActive ? "text-[#00A7B5]" : "text-white/40 group-hover:text-white/80"}`} />
                         {item.name}
                       </div>
                       {item.badge && (
-                        <Badge className="bg-[#181d26] text-white hover:bg-[#181d26] border-none font-semibold text-[10px] px-1.5 min-w-[20px] flex justify-center">
+                        <Badge className="bg-[#00A7B5] text-black hover:bg-[#00A7B5] border-none font-medium text-[10px] px-1.5 min-w-[18px] flex justify-center">
                           {item.badge}
                         </Badge>
                       )}
@@ -145,15 +145,15 @@ export default function AdminSidebar() {
       </div>
 
       {/* User Profile Footer */}
-      <div className="p-6 border-t border-[#dddddd] bg-[#ffffff]">
-        <Link href="/admin/account" className="flex items-center gap-3 p-2 rounded-[8px] hover:bg-[#f8fafc] transition-colors border border-transparent hover:border-[#dddddd] cursor-pointer">
-          <Avatar className="w-[38px] h-[38px] rounded-full ring-1 ring-[#dddddd]">
+      <div className="p-4 border-t border-white/10 bg-[#0A0A0C]">
+        <Link href="/admin/account" className="flex items-center gap-3 p-2 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 cursor-pointer">
+          <Avatar className="w-[36px] h-[36px] rounded-full ring-1 ring-white/20">
             <AvatarImage src="/placeholder-user.jpg" alt="Admin" />
-            <AvatarFallback className="bg-blue-50 text-blue-700 font-semibold text-sm">KS</AvatarFallback>
+            <AvatarFallback className="bg-white/10 text-white font-medium text-xs">KS</AvatarFallback>
           </Avatar>
           <div className="flex-1 min-w-0">
-            <p className="text-[13px] font-semibold text-[#181d26] truncate">Klarone Support</p>
-            <p className="text-[11px] text-[#41454d] font-medium truncate">admin@klarone.com</p>
+            <p className="text-[13px] font-medium text-white truncate">Klarone Admin</p>
+            <p className="text-[11px] text-white/40 font-normal truncate">admin@klarone.com</p>
           </div>
         </Link>
       </div>

@@ -1,109 +1,149 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
-const topLaptops = [
+interface TopProduct {
+  id: string;
+  title: string;
+  category: string;
+  date: string;
+  image: string;
+}
+
+const topProducts: TopProduct[] = [
   {
-    id: 1,
-    name: "MacBook Air M3 - Midnight",
-    tagline: "Free Engraving",
-    price: "₹114900.00",
+    id: "macbook-air-m3",
+    title: "MacBook Air M3: Ultimate Portability & Battery for Developers",
+    category: "Developer Choice",
+    date: "Top Pick · Mar 2026",
     image: "/top/top5.webp",
-    colors: ["#2e3641", "#e3e4e6", "#f0e4d3", "#6f7377"]
   },
   {
-    id: 2,
-    name: "Lenovo ThinkPad X1 - Carbon Fiber",
-    tagline: "Best Seller",
-    price: "₹145000.00",
+    id: "thinkpad-x1-carbon",
+    title: "Lenovo ThinkPad X1: Unmatched Durability & Keyboard Experience",
+    category: "Professional",
+    date: "Top Pick · Mar 2026",
     image: "/top/top1.webp",
-    colors: ["#181d26", "#e3e4e6"]
   },
   {
-    id: 3,
-    name: "Dell XPS 14 - Platinum",
-    tagline: "New Arrival",
-    price: "₹169990.00",
+    id: "dell-xps-14",
+    title: "Dell XPS 14: Stunning 3.2K OLED Display for Creative Workflows",
+    category: "Design & Editing",
+    date: "Top Pick · Mar 2026",
     image: "/top/top2.webp",
-    colors: ["#e3e4e6", "#181d26"]
   },
   {
-    id: 4,
-    name: "ASUS ROG Zephyrus G14 - Eclipse",
-    tagline: "Gamer's Choice",
-    price: "₹154990.00",
+    id: "asus-rog-zephyrus-g14",
+    title: "ASUS ROG Zephyrus G14: High Performance AI & Gaming Powerhouse",
+    category: "Performance & Gaming",
+    date: "Top Pick · Mar 2026",
     image: "/top/top3.webp",
-    colors: ["#6f7377", "#ffffff"]
   },
-  {
-    id: 5,
-    name: "HP Spectre x360 - Nightfall Black",
-    tagline: "Premium 2-in-1",
-    price: "₹139999.00",
-    image: "/top/top4.webp",
-    colors: ["#181d26", "#b08d57", "#1c305b"]
-  }
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1
+    }
+  }
+};
+
+const itemUpVariants = {
+  hidden: { opacity: 0, y: 35 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: [0.215, 0.61, 0.355, 1] as const } 
+  }
+};
 
 export default function TopSoldSection() {
   return (
-    <section id="top-picks" className="w-full py-[80px] lg:py-[120px] bg-white overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12 mb-16">
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-[36px] md:text-[48px] font-medium leading-[1.1] tracking-tight text-surface-dark mb-6">
-            Top Sold Laptops of the Month
-          </h2>
-          <p className="text-[16px] md:text-[18px] text-[#666666]">
-            Based on our community's recommendations, these are the devices people are actively choosing right now.
-          </p>
-        </div>
-      </div>
+    <section className="w-full bg-[#000000] text-white py-16 sm:py-24 overflow-hidden">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+        {/* Animated Header Section */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={containerVariants}
+          className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6"
+        >
+          <div className="flex flex-col items-start">
+            {/* Minimal Pill Badge Animated */}
+            <motion.div variants={itemUpVariants} className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1A1A1A] border border-white/10 mb-6 shadow-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
+              <span className="text-[12px] font-medium text-white/80 tracking-wide">Top Products</span>
+            </motion.div>
 
-      {/* Auto Scrolling Marquee */}
-      <div className="relative w-full overflow-hidden flex">
+            {/* Main Headline Animated */}
+            <motion.h2 
+              variants={itemUpVariants}
+              className="text-[33px] sm:text-[40px] lg:text-[46px] font-normal text-white tracking-tight leading-[1.15] max-w-[700px]"
+            >
+              Top recommended products of the month
+            </motion.h2>
+          </div>
 
-        <div className="flex gap-6 px-6 animate-scroll-left w-max hover:paused py-4">
-          {/* Original List */}
-          {topLaptops.map((laptop) => (
-            <div key={laptop.id} className="w-[300px] sm:w-[320px] shrink-0 bg-white rounded-3xl p-6 sm:p-8 flex flex-col border border-[#e5e7eb] group cursor-pointer hover:shadow-lg transition-all">
-              <div className="relative w-full aspect-square mb-6 flex items-center justify-center">
-                <img src={laptop.image} alt={laptop.name} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              
-              <div className="flex items-center justify-center gap-2 mb-6">
-                {laptop.colors.map((color, index) => (
-                  <div key={index} className="w-4 h-4 rounded-full border border-gray-200 shadow-inner" style={{ backgroundColor: color }}></div>
-                ))}
-              </div>
+          {/* Visit Shop / View All Link Animated */}
+          <motion.div variants={itemUpVariants}>
+            <Link
+              href="/shop"
+              className="group inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors duration-200 shrink-0 pb-1"
+            >
+              <span>Explore shop</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+        </motion.div>
 
-              <div className="flex flex-col flex-1">
-                <p className="text-[13px] font-medium text-[#c2410c] mb-1">{laptop.tagline}</p>
-                <h3 className="text-[18px] sm:text-[20px] font-medium text-surface-dark mb-6 leading-snug">{laptop.name}</h3>
-                <p className="text-[14px] text-[#41454d] mt-auto">MRP {laptop.price} (Incl. of all taxes)</p>
-              </div>
-            </div>
+        {/* 4-Column Card Grid with Entrance Animation */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.15 }}
+          variants={containerVariants}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6"
+        >
+          {topProducts.map((product) => (
+            <motion.div key={product.id} variants={itemUpVariants}>
+              <Link
+                href={`/shop/${product.id}`}
+                className="group flex flex-col bg-[#111113] border border-white/[0.08] hover:border-white/20 rounded-2xl p-1 transition-all duration-300 hover:bg-[#161619] shadow-2xl h-full"
+              >
+                {/* Image Container */}
+                <div className="relative w-full aspect-[4/3] rounded-xl bg-[#050507] overflow-hidden mb-5 flex items-center justify-center border border-white/[0.06]">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover opacity-85 brightness-[0.88] contrast-[1.05] group-hover:scale-105 group-hover:brightness-95 transition-all duration-500 ease-out"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60 pointer-events-none" />
+                  <div className="absolute inset-0 bg-black/25 mix-blend-multiply pointer-events-none group-hover:bg-black/15 transition-colors duration-300" />
+                </div>
+
+                {/* Title & Meta Info */}
+                <div className="flex flex-col flex-1 justify-between px-5 pb-5">
+                  <motion.h3 variants={itemUpVariants} className="text-base sm:text-[17px] font-normal text-white leading-snug mb-5 group-hover:text-white/90 transition-colors">
+                    {product.title}
+                  </motion.h3>
+
+                  <motion.div variants={itemUpVariants} className="flex items-center justify-between text-xs text-white/50 border-t border-white/[0.06] pt-4">
+                    <span>{product.category}</span>
+                    <span>{product.date}</span>
+                  </motion.div>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-          {/* Duplicated List for infinite scroll loop */}
-          {topLaptops.map((laptop) => (
-            <div key={`dup-${laptop.id}`} className="w-[300px] sm:w-[320px] shrink-0 bg-white rounded-3xl p-6 sm:p-8 flex flex-col border border-[#e5e7eb] group cursor-pointer hover:shadow-lg transition-all">
-              <div className="relative w-full aspect-square mb-6 flex items-center justify-center">
-                <img src={laptop.image} alt={laptop.name} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              
-              <div className="flex items-center justify-center gap-2 mb-6">
-                {laptop.colors.map((color, index) => (
-                  <div key={index} className="w-4 h-4 rounded-full border border-gray-200 shadow-inner" style={{ backgroundColor: color }}></div>
-                ))}
-              </div>
-
-              <div className="flex flex-col flex-1">
-                <p className="text-[13px] font-medium text-[#c2410c] mb-1">{laptop.tagline}</p>
-                <h3 className="text-[18px] sm:text-[20px] font-medium text-surface-dark mb-6 leading-snug">{laptop.name}</h3>
-                <p className="text-[14px] text-[#41454d] mt-auto">MRP {laptop.price} (Incl. of all taxes)</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

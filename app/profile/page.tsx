@@ -1,12 +1,33 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { User, Package, Settings, LogOut, Loader2, Mail, Phone, ChevronRight, ShieldCheck, MapPin } from "lucide-react";
+import { User, Package, Settings, LogOut, Loader2, Mail, Phone, ChevronRight, ShieldCheck, MapPin, Edit3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import NotLoggedIn from "@/components/NotLoggedIn";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const itemUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: [0.215, 0.61, 0.355, 1] as const } 
+  }
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
 
 export default function ProfilePage() {
   const [user, setUser] = useState<any>(null);
@@ -43,8 +64,8 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background pt-28 pb-16 flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-accent" />
+      <div className="min-h-screen bg-[#000000] text-white pt-32 pb-24 flex items-center justify-center">
+        <Loader2 className="w-8 h-8 animate-spin text-[#00A7B5]" />
       </div>
     );
   }
@@ -60,140 +81,178 @@ export default function ProfilePage() {
   const getInitials = (name: string) => name.substring(0, 2).toUpperCase();
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] pt-28 pb-16 relative overflow-hidden font-sans">
-      {/* Background ambient light */}
-      <div className="absolute top-0 left-0 w-full h-[300px] bg-gradient-to-b from-accent/5 to-transparent pointer-events-none"></div>
+    <div className="min-h-screen bg-[#000000] text-white relative overflow-hidden pt-32 pb-24">
+      {/* Background Vignette Effect */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none opacity-20 brightness-[0.7]"
+        style={{ backgroundImage: "url('/tech-landscape.png')" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black pointer-events-none" />
 
-      <div className="mx-auto max-w-[1100px] px-6 lg:px-12 relative z-10">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-12">
         
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold font-heading text-foreground tracking-tight">My Account</h1>
-          <p className="text-muted-foreground mt-1">Manage your profile, orders, and preferences.</p>
-        </div>
+        {/* Header Hero Title */}
+        <motion.div 
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="flex flex-col items-start mb-12 sm:mb-16"
+        >
+          <motion.div variants={itemUpVariants} className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1A1A1A] border border-white/10 mb-6 shadow-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#00A7B5]"></span>
+            <span className="text-[12px] font-medium text-white/80 tracking-wide">Account Workspace</span>
+          </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
+          <motion.h1 
+            variants={itemUpVariants}
+            className="text-[36px] sm:text-[48px] lg:text-[56px] font-normal text-white leading-tight tracking-tight mb-2"
+          >
+            My Account & Profile
+          </motion.h1>
+          <motion.p 
+            variants={itemUpVariants}
+            className="text-base sm:text-lg text-white/60 max-w-[600px]"
+          >
+            Manage your personal identity specs, order history, and security preferences.
+          </motion.p>
+        </motion.div>
+
+        <motion.div 
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="flex flex-col lg:flex-row gap-8 items-start"
+        >
           
           {/* Profile Sidebar */}
-          <div className="w-full lg:w-[280px] flex-shrink-0 animate-in fade-in slide-in-from-left-4 duration-500">
-            <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden flex flex-col h-full">
+          <motion.div variants={itemUpVariants} className="w-full lg:w-[320px] flex-shrink-0">
+            <div className="bg-[#111113]/90 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl overflow-hidden flex flex-col">
+              
               {/* User Identity Area */}
-              <div className="p-6 pb-5 border-b border-border bg-gradient-to-b from-secondary/50 to-transparent">
+              <div className="p-6 pb-6 border-b border-white/10 bg-gradient-to-b from-white/5 to-transparent">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-foreground rounded-full flex items-center justify-center text-background font-bold text-lg shadow-md shrink-0">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#00A7B5] to-teal-700 rounded-full flex items-center justify-center text-white font-medium text-lg shadow-lg shrink-0 border border-white/20">
                     {getInitials(fullName)}
                   </div>
-                  <div className="overflow-hidden">
-                    <h2 className="font-bold text-foreground text-lg truncate leading-tight">{fullName}</h2>
-                    <p className="text-[13px] text-muted-foreground truncate mt-0.5">{user.email}</p>
+                  <div className="overflow-hidden min-w-0">
+                    <h2 className="font-medium text-white text-lg truncate leading-tight">{fullName}</h2>
+                    <p className="text-[12.5px] text-white/50 truncate mt-0.5 font-normal">{user.email}</p>
                   </div>
                 </div>
               </div>
               
               {/* Navigation Menu */}
-              <nav className="flex flex-col p-3 flex-1 gap-1">
-                <button className="flex items-center justify-between w-full text-left px-4 py-3 rounded-lg bg-accent/10 text-accent font-semibold transition-colors">
-                  <div className="flex items-center gap-3">
-                    <User className="w-5 h-5" /> Personal Info
+              <nav className="flex flex-col p-4 flex-1 gap-2">
+                <button className="flex items-center justify-between w-full text-left px-4 py-3.5 rounded-2xl bg-white/10 border border-white/15 text-white font-medium transition-all shadow-sm">
+                  <div className="flex items-center gap-3 text-sm">
+                    <User className="w-4 h-4 text-[#00A7B5]" /> Personal Details
                   </div>
-                  <ChevronRight className="w-4 h-4 opacity-70" />
+                  <ChevronRight className="w-4 h-4 text-white/50" />
                 </button>
-                <Link href="/profile/orders" className="flex items-center justify-between w-full text-left px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground font-medium transition-colors">
+
+                <Link href="/profile/orders" className="flex items-center justify-between w-full text-left px-4 py-3.5 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 font-normal text-sm transition-all border border-transparent hover:border-white/10">
                   <div className="flex items-center gap-3">
-                    <Package className="w-5 h-5" /> Order History
+                    <Package className="w-4 h-4 text-white/40" /> Order History
                   </div>
+                  <ChevronRight className="w-4 h-4 opacity-40" />
                 </Link>
-                <Link href="/profile/addresses" className="flex items-center justify-between w-full text-left px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground font-medium transition-colors">
+
+                <Link href="/profile/addresses" className="flex items-center justify-between w-full text-left px-4 py-3.5 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 font-normal text-sm transition-all border border-transparent hover:border-white/10">
                   <div className="flex items-center gap-3">
-                    <MapPin className="w-5 h-5" /> Addresses
+                    <MapPin className="w-4 h-4 text-white/40" /> Delivery Addresses
                   </div>
+                  <ChevronRight className="w-4 h-4 opacity-40" />
                 </Link>
-                <button className="flex items-center justify-between w-full text-left px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground font-medium transition-colors">
+
+                <button className="flex items-center justify-between w-full text-left px-4 py-3.5 rounded-2xl text-white/60 hover:text-white hover:bg-white/5 font-normal text-sm transition-all border border-transparent hover:border-white/10">
                   <div className="flex items-center gap-3">
-                    <Settings className="w-5 h-5" /> Settings
+                    <Settings className="w-4 h-4 text-white/40" /> Account Settings
                   </div>
+                  <ChevronRight className="w-4 h-4 opacity-40" />
                 </button>
               </nav>
 
-              <div className="p-3 border-t border-border mt-auto">
+              <div className="p-4 border-t border-white/10 mt-auto">
                 <button 
                   onClick={handleLogout}
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-red-600 hover:bg-red-50 hover:text-red-700 font-semibold transition-colors"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-2xl text-rose-400 hover:bg-rose-500/10 border border-rose-500/20 font-medium text-xs transition-colors cursor-pointer"
                 >
                   <LogOut className="w-4 h-4" /> Sign Out
                 </button>
               </div>
+
             </div>
-          </div>
+          </motion.div>
 
           {/* Main Content Area */}
-          <div className="flex-1 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
-            <div className="bg-card rounded-2xl border border-border p-8 md:p-10 shadow-sm relative overflow-hidden">
-              {/* Decorative graphic */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center text-accent">
-                  <ShieldCheck className="w-5 h-5" />
+          <motion.div variants={itemUpVariants} className="flex-1 w-full">
+            <div className="bg-[#111113]/90 backdrop-blur-xl rounded-3xl border border-white/10 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+              
+              <div className="flex items-center gap-4 mb-8 pb-6 border-b border-white/10">
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-[#00A7B5] shadow-inner">
+                  <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold font-heading text-foreground">Personal Details</h2>
-                  <p className="text-sm text-muted-foreground">Manage your personal information and contact details.</p>
+                  <h2 className="text-xl sm:text-2xl font-medium text-white tracking-tight">Personal Details</h2>
+                  <p className="text-xs sm:text-sm text-white/50 font-normal">Manage your verified contact info and hardware preferences.</p>
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-10 max-w-3xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 
                 {/* First Name */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-foreground/80 flex items-center gap-2">
-                    <User className="w-4 h-4 text-muted-foreground" /> First Name
+                  <label className="text-xs font-normal text-white/50 uppercase tracking-wider flex items-center gap-2">
+                    <User className="w-3.5 h-3.5 text-[#00A7B5]" /> First Name
                   </label>
-                  <div className="h-12 px-4 border border-border rounded-xl flex items-center bg-secondary/50 text-foreground font-medium">
+                  <div className="h-12 px-4 bg-[#0A0A0C] border border-white/10 rounded-2xl flex items-center text-white font-normal text-sm">
                     {firstName}
                   </div>
                 </div>
 
                 {/* Last Name */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-foreground/80 flex items-center gap-2">
-                    <User className="w-4 h-4 text-muted-foreground" /> Last Name
+                  <label className="text-xs font-normal text-white/50 uppercase tracking-wider flex items-center gap-2">
+                    <User className="w-3.5 h-3.5 text-[#00A7B5]" /> Last Name
                   </label>
-                  <div className="h-12 px-4 border border-border rounded-xl flex items-center bg-secondary/50 text-foreground font-medium">
-                    {lastName}
+                  <div className="h-12 px-4 bg-[#0A0A0C] border border-white/10 rounded-2xl flex items-center text-white font-normal text-sm">
+                    {lastName || "Not set"}
                   </div>
                 </div>
 
                 {/* Email Address */}
                 <div className="space-y-2 md:col-span-2">
-                  <label className="text-sm font-semibold text-foreground/80 flex items-center gap-2">
-                    <Mail className="w-4 h-4 text-muted-foreground" /> Email Address
+                  <label className="text-xs font-normal text-white/50 uppercase tracking-wider flex items-center gap-2">
+                    <Mail className="w-3.5 h-3.5 text-[#00A7B5]" /> Verified Email Address
                   </label>
-                  <div className="h-12 px-4 border border-border rounded-xl flex items-center bg-secondary/50 text-foreground font-medium">
+                  <div className="h-12 px-4 bg-[#0A0A0C] border border-white/10 rounded-2xl flex items-center text-white font-normal text-sm">
                     {user.email}
                   </div>
-                  <p className="text-xs text-muted-foreground mt-1.5 ml-1">Your email address is used for order notifications.</p>
+                  <p className="text-[11.5px] text-white/40 mt-1">Used for order confirmations and direct tech recommendation updates.</p>
                 </div>
 
                 {/* Phone Number */}
                 <div className="space-y-2 md:col-span-2">
-                  <label className="text-sm font-semibold text-foreground/80 flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-muted-foreground" /> Phone Number
+                  <label className="text-xs font-normal text-white/50 uppercase tracking-wider flex items-center gap-2">
+                    <Phone className="w-3.5 h-3.5 text-[#00A7B5]" /> Phone Number
                   </label>
-                  <div className="h-12 px-4 border border-border rounded-xl flex items-center bg-secondary/50 text-foreground font-medium">
+                  <div className="h-12 px-4 bg-[#0A0A0C] border border-white/10 rounded-2xl flex items-center text-white font-normal text-sm">
                     {phone}
                   </div>
                 </div>
+
               </div>
 
-              <div className="flex justify-end pt-6 border-t border-border">
-                <Button className="h-12 px-8 bg-foreground hover:bg-foreground/90 text-background rounded-xl font-semibold shadow-md hover:shadow-lg transition-all">
-                  Edit Details
+              <div className="flex justify-end pt-6 border-t border-white/10">
+                <Button className="h-11 px-7 bg-white hover:bg-white/90 text-black rounded-full font-medium text-xs transition-all shadow-lg flex items-center gap-2 cursor-pointer">
+                  <Edit3 className="w-4 h-4" /> Edit Profile Details
                 </Button>
               </div>
-            </div>
-          </div>
 
-        </div>
+            </div>
+          </motion.div>
+
+        </motion.div>
       </div>
     </div>
   );

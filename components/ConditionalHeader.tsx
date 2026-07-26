@@ -6,10 +6,12 @@ import Header from "@/components/Header";
 export default function ConditionalHeader() {
   const pathname = usePathname();
   
-  // Do not show the header on any admin routes or auth routes
-  if (pathname.startsWith("/admin") || pathname === "/login" || pathname === "/register") {
+  // Do not show the header on any admin routes, auth routes, or the chat UI
+  if (pathname.startsWith("/admin") || pathname === "/login" || pathname === "/register" || pathname === "/find-laptop") {
     return null;
   }
   
-  return <Header />;
+  const isShopRoute = pathname.startsWith("/shop");
+  
+  return <Header variant={isShopRoute ? "shop" : "default"} />;
 }

@@ -139,93 +139,95 @@ export default function CustomerPage() {
                   </TableRow>
                 ) : (
                   customers.slice((page - 1) * pageSize, page * pageSize).map((customer) => (
-                  <TableRow key={customer.id} className="border-b border-hairline last:border-0 hover:bg-surface-strong transition-colors group cursor-pointer">
+                  <TableRow key={customer.id} className="border-b border-white/[0.06] hover:bg-white/[0.03] transition-colors group cursor-pointer">
                     <TableCell className="px-6 py-4">
                       <Checkbox 
                         checked={selectedCustomers.includes(customer.id)}
                         onCheckedChange={() => toggleSelect(customer.id)}
-                        className="border-[#9297a0] data-[state=checked]:bg-[#181d26] data-[state=checked]:border-[#181d26] rounded-[4px]"
+                        className="border-white/20 data-[state=checked]:bg-[#00A7B5] data-[state=checked]:border-[#00A7B5] rounded-md"
                       />
                     </TableCell>
                     <TableCell className="py-4">
                       <div className="flex items-center gap-3">
-                        <Avatar className="w-10 h-10 border border-hairline">
+                        <Avatar className="w-9 h-9 rounded-full ring-1 ring-white/10">
                           {customer.avatar ? (
                             <AvatarImage src={customer.avatar} alt={customer.name} className="object-cover" />
                           ) : (
-                            <AvatarFallback className="bg-soft text-[#41454d]">
-                              <UserCircle2 className="w-5 h-5" />
+                            <AvatarFallback className="bg-white/10 text-white font-medium text-xs">
+                              {customer.name?.substring(0, 2)?.toUpperCase() || 'CU'}
                             </AvatarFallback>
                           )}
                         </Avatar>
                         <div className="flex flex-col">
-                          <span className="text-[14px] font-medium text-[#181d26] leading-tight">{customer.name}</span>
-                          <span className="text-[12px] text-[#9297a0] mt-0.5">Joined {new Date(customer.join_date).toLocaleDateString()}</span>
+                          <span className="text-[14px] font-normal text-white leading-tight">{customer.name}</span>
+                          <span className="text-[12px] text-white/40 mt-0.5">Joined {customer.join_date ? new Date(customer.join_date).toLocaleDateString() : 'Recently'}</span>
                         </div>
                       </div>
                     </TableCell>
                     <TableCell className="py-4">
                       <div className="flex flex-col">
-                        <span className="text-[13px] text-[#181d26] leading-tight">{customer.email}</span>
-                        <span className="text-[12px] text-[#9297a0] mt-0.5">{customer.phone || 'No phone'}</span>
+                        <span className="text-[13px] text-white/90 font-normal">{customer.email}</span>
+                        <span className="text-[12px] text-white/40 mt-0.5">{customer.phone || 'No phone'}</span>
                       </div>
                     </TableCell>
                     <TableCell className="py-4">
-                      <span className="text-[14px] font-medium text-[#181d26]">{customer.total_orders}</span>
+                      <span className="text-[13.5px] text-white/80 font-normal">{customer.total_orders || 0} orders</span>
                     </TableCell>
                     <TableCell className="py-4 text-right">
-                      <span className="text-[14px] font-medium text-[#181d26]">{new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(customer.total_spent)}</span>
+                      <span className="text-[14px] font-medium text-white">₹{(customer.total_spent || 0).toLocaleString()}</span>
                     </TableCell>
                     <TableCell className="py-4">
-                      {customer.status?.toLowerCase() === "active" ? (
-                        <div className="flex items-center gap-1.5 px-2 py-1 rounded-[6px] w-fit bg-[#e6f4ea] text-[#137333]">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#137333]"></div>
-                          <span className="text-[12px] font-medium tracking-wide">Active</span>
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-1.5 px-2 py-1 rounded-[6px] w-fit bg-[#f1f3f4] text-[#41454d]">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#9297a0]"></div>
-                          <span className="text-[12px] font-medium tracking-wide">Inactive</span>
-                        </div>
-                      )}
+                      <div className="flex items-center gap-1.5 text-[#00A7B5] bg-[#00A7B5]/10 border border-[#00A7B5]/20 px-2.5 py-1 rounded-full w-fit">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#00A7B5]"></span>
+                        <span className="text-[11.5px] font-medium tracking-wide">Active</span>
+                      </div>
                     </TableCell>
-                    <TableCell className="px-6 py-4 text-right">
+                    <TableCell className="py-4 text-right px-6" onClick={(e) => e.stopPropagation()}>
                       <DropdownMenu>
-                        <DropdownMenuTrigger className="inline-flex items-center justify-center whitespace-nowrap rounded-[6px] text-sm font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:bg-surface-strong hover:text-[#181d26] h-8 w-8 p-0 text-[#41454d] border-none bg-transparent outline-none">
-                          <span className="sr-only">Open menu</span>
-                          <MoreHorizontal className="h-4 w-4" />
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end" className="w-[160px] rounded-[10px] border-hairline shadow-lg bg-success-foreground p-1">
-                          <DropdownMenuLabel className="text-[11px] font-medium text-[#9297a0] uppercase tracking-wider px-2 py-1.5">Actions</DropdownMenuLabel>
-                          <DropdownMenuItem className="text-[13px] text-[#181d26] rounded-[6px] focus:bg-soft cursor-pointer">
-                            View Profile
+                        <DropdownMenuTrigger
+                          render={
+                            <Button variant="ghost" size="icon" className="h-8 w-8 text-white/50 hover:text-white hover:bg-white/10 rounded-full">
+                              <MoreHorizontal className="w-4 h-4" />
+                            </Button>
+                          }
+                        />
+                        <DropdownMenuContent align="end" className="bg-[#141416] border-white/10 text-white rounded-xl shadow-2xl">
+                          <DropdownMenuLabel className="text-white/50 text-xs">Actions</DropdownMenuLabel>
+                          <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer">
+                            View Customer Profile
                           </DropdownMenuItem>
-                          <DropdownMenuItem className="text-[13px] text-[#181d26] rounded-[6px] focus:bg-soft cursor-pointer">
-                            Email Customer
+                          <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer">
+                            Edit Customer
                           </DropdownMenuItem>
-                          <DropdownMenuSeparator className="bg-hairline my-1" />
-                          <DropdownMenuItem className="text-[13px] text-[#c5221f] rounded-[6px] focus:bg-[#fce8e6] cursor-pointer">
-                            Delete Customer
+                          <DropdownMenuSeparator className="bg-white/10" />
+                          <DropdownMenuItem className="text-rose-400 focus:bg-rose-500/10 focus:text-rose-300 cursor-pointer">
+                            Block Account
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
                     </TableCell>
                   </TableRow>
-                )))}
+                ))
+              )}
               </TableBody>
             </Table>
           </div>
-          <div className="border-t border-hairline">
+          
+          {/* Table Footer / Pagination */}
+          <div className="p-4 border-t border-white/10 bg-[#0A0A0C] flex items-center justify-between">
+            <span className="text-[13px] text-white/50 font-normal">
+              Showing <strong className="text-white font-medium">{customers.length > 0 ? (page - 1) * pageSize + 1 : 0}</strong> to <strong className="text-white font-medium">{Math.min(page * pageSize, totalItems)}</strong> of <strong className="text-white font-medium">{totalItems}</strong> customers
+            </span>
             <Pagination 
-              currentPage={page} 
-              totalPages={Math.ceil(totalItems / pageSize) || 1} 
-              onPageChange={setPage}
-              totalItems={totalItems}
-              itemsPerPage={pageSize}
+              currentPage={page}
+              totalPages={Math.ceil(totalItems / pageSize) || 1}
+              onPageChange={(p) => setPage(p)}
             />
           </div>
         </CardContent>
+
       </Card>
+
     </div>
   );
 }
