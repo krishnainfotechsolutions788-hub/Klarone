@@ -16,6 +16,44 @@ export interface LaptopScores {
   business: number;
 }
 
+import { estimateLaptopScoresAndValue } from "../services/mlModelService";
+
+/**
+ * Enhanced ML-backed scoring engine.
+ * Tries Klarone ML Model service first, with automatic fallback to heuristics.
+ */
+export async function calculateScoresAsync(specs: LaptopSpecs & { brand?: string }): Promise<LaptopScores & { predictedPrice?: number }> {
+  const ramGB = parseRamGB(specs.ram);
+  const storageGB = specs.storage ? parseInt(specs.storage.match(/(\d+)/)?.[1] || "512", 10) : 512;
+
+  const mlResult = await estimateLaptopScoresAndValue({
+    brand: specs.brand || "Generic",
+    processor_name: specs.cpu || "Intel Core i5",
+    graphics: specs.gpu || "Integrated Graphics",
+    "ram(GB)": ramGB,
+    "ssd(GB)": storageGB,
+    "resolution (pixels)": specs.display || "1920x1080"
+  });
+
+  if (mlResult) {
+    const progScore = Math.round((mlResult.gaming_score * 0.4) + (mlResult.business_score * 0.6));
+    return {
+      programming: progScore,
+      gaming: mlResult.gaming_score,
+      student: mlResult.student_score,
+      business: mlResult.business_score,
+      predictedPrice: mlResult.predicted_price,
+    };
+  }
+
+  // Fallback to local heuristic scoring engine
+  const baseScores = calculateScores(specs);
+  return {
+    ...baseScores,
+    predictedPrice: specs.msrp,
+  };
+}
+
 /**
  * Basic heuristic scoring engine for V1.
  * Evaluates a laptop's objective specs to calculate scores (0-100) for different profiles.

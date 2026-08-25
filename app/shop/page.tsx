@@ -274,7 +274,7 @@ export default function ShopPage() {
 
   return (
     <div className="relative flex min-h-screen flex-col bg-[#000000] text-white font-sans overflow-x-hidden">
-      <main className="flex-1 mt-24 pb-32">
+      <main className="flex-1 mt-32 sm:mt-36 pb-32">
         <motion.div
           variants={pageContainerVariants}
           initial="hidden"
@@ -285,13 +285,9 @@ export default function ShopPage() {
           {/* Hero Header Banner with Smooth Entrance */}
           <motion.div
             variants={itemUpVariants}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10 mb-8"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10 mb-8 pt-2"
           >
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1A1A1A] border border-white/10 mb-4 shadow-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#00A7B5]"></span>
-                <span className="text-[12px] font-normal text-white/70 tracking-wide">Catalog</span>
-              </div>
               <h1 className="text-[32px] sm:text-[40px] font-medium tracking-tight text-white">
                 Discover Verified Laptops
               </h1>

@@ -65,7 +65,7 @@ const itemUpVariants = {
 
 export default function TopSoldSection() {
   return (
-    <section className="w-full bg-[#000000] text-white py-16 sm:py-24 overflow-hidden">
+    <section id="products" className="w-full bg-[#000000] text-white py-16 sm:py-24 overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         {/* Animated Header Section */}
         <motion.div 

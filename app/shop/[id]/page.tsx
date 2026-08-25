@@ -166,7 +166,7 @@ export default function ShopProductDetailPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#000000] text-white font-sans overflow-x-hidden">
-      <main className="flex-1 max-w-[1320px] mx-auto w-full px-6 lg:px-10 pt-28 pb-28">
+      <main className="flex-1 max-w-[1400px] mx-auto w-full px-6 lg:px-12 pt-28 pb-28">
         
         <motion.div 
           variants={pageContainerVariants}

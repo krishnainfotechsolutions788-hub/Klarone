@@ -3,7 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { revalidatePath } from "next/cache";
-import { calculateScores } from "@/lib/scoring";
+import { calculateScores, calculateScoresAsync } from "@/lib/scoring";
 import { ImportMatchingService, MatchAction } from "@/lib/services/ImportMatchingService";
 
 export async function matchKnowledgeProductAction(masterData: any, variantData: any) {
@@ -56,8 +56,9 @@ export async function addKnowledgeLaptop(data: AddLaptopParams) {
       brandId = newBrand.id;
     }
 
-    // 2. Calculate heuristic scores
-    const scores = calculateScores({
+    // 2. Calculate ML-backed scores with heuristic fallback
+    const scores = await calculateScoresAsync({
+      brand: data.brandName,
       cpu: data.cpu,
       gpu: data.gpu,
       ram: data.ram,
@@ -118,8 +119,9 @@ export async function addV2ManualKnowledgeEntry(data: any) {
   try {
     const { master, variant, dynamicSpecs } = data;
 
-    // Build intelligence data
-    const scores = calculateScores({
+    // Build intelligence data using ML model with fallback
+    const scores = await calculateScoresAsync({
+      brand: master.brandName,
       cpu: variant.cpu,
       gpu: variant.gpu || '',
       ram: variant.ram,
@@ -190,6 +192,26 @@ export async function saveV2KnowledgeData({
 }) {
   try {
     const supabase = createAdminClient();
+
+    // Dynamically compute ML scores via Klarone ML Model service if intelligenceData is incomplete
+    if (!intelligenceData || !intelligenceData.student_score) {
+      const mlScores = await calculateScoresAsync({
+        brand: masterData?.brand || '',
+        cpu: variantData?.cpu || '',
+        gpu: variantData?.gpu || '',
+        ram: variantData?.ram || '',
+        storage: variantData?.storage || '',
+        display: variantData?.display || '',
+        battery: variantData?.battery || '',
+        msrp: masterData?.msrp || 0
+      });
+      intelligenceData = {
+        student_score: mlScores.student,
+        business_score: mlScores.business,
+        gaming_score: mlScores.gaming,
+        programming_score: mlScores.programming,
+      };
+    }
 
     let masterProductId = actionType === 'CREATE_VARIANT' ? targetId : null;
     let variantId = actionType === 'UPDATE_VARIANT' ? targetId : null;

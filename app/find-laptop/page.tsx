@@ -9,93 +9,94 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import KlaroneIcon from "@/components/KlaroneIcon";
+import { getMLRecommendationsAction, getDynamicSuggestionsAction } from "@/app/actions/mlScoring";
 
-// Guided Recommendation Questions Flow
+// Guided Recommendation Questions Flow (Tailored for Indian Market)
 const GUIDED_QUESTIONS = [
   {
     id: "primary_use",
-    question: "What will be the primary use for your new laptop?",
+    question: "What is your primary use case or professional requirement?",
     options: [
-      { label: "Software Development & Coding", value: "Software Development & Coding" },
-      { label: "College & Academic Work", value: "College & Academic Work" },
-      { label: "Graphic Design & Video Editing", value: "Graphic Design & Video Editing" },
-      { label: "Business & Management", value: "Business & Management" },
-      { label: "Gaming & Heavy Rendering", value: "Gaming & Heavy Rendering" }
+      { label: "Software Development & Coding (B.Tech / Dev)", value: "Software Development & Coding" },
+      { label: "College & Academic Use (Student Budget)", value: "College & Academic Work" },
+      { label: "Graphic Design, Video Editing & YouTube", value: "Graphic Design & Content Creation" },
+      { label: "Business, Finance & Corporate Work", value: "Business & Productivity" },
+      { label: "Gaming, AI Workloads & 3D Rendering", value: "Gaming & Heavy Rendering" }
     ]
   },
   {
     id: "budget",
-    question: "What is your target budget range?",
+    question: "What is your target budget range (in Indian Rupees ₹)?",
     options: [
-      { label: "Under ₹50,000", value: "Under ₹50,000" },
-      { label: "₹50,000 - ₹75,000", value: "₹50,000 - ₹75,000" },
-      { label: "₹75,000 - ₹1,10,000", value: "₹75,000 - ₹1,10,000" },
-      { label: "Above ₹1,10,000", value: "Above ₹1,10,000" }
+      { label: "Under ₹45,000 (Entry Budget)", value: "Under ₹45,000" },
+      { label: "₹45,000 - ₹65,000 (Mid-Range Value)", value: "₹45,000 - ₹65,000" },
+      { label: "₹65,000 - ₹95,000 (High Performance)", value: "₹65,000 - ₹95,000" },
+      { label: "Above ₹95,000 (Flagship & Premium)", value: "Above ₹95,000" }
     ]
   },
   {
     id: "priority",
-    question: "Which feature matters most for your daily work?",
+    question: "Which feature is most critical for your daily Indian usage?",
     options: [
-      { label: "Long Battery Life & Portability", value: "Long Battery Life & Portability" },
-      { label: "Maximum CPU & GPU Power", value: "Maximum CPU & GPU Power" },
-      { label: "Color Accurate High-Res Display", value: "Color Accurate High-Res Display" },
-      { label: "Durable Build & Keyboard Quality", value: "Durable Build & Keyboard Quality" }
+      { label: "All-day Battery Life & Travel Friendly", value: "Long Battery Life & Portability" },
+      { label: "Raw CPU & GPU Processing Power", value: "Maximum CPU & GPU Power" },
+      { label: "Color Accurate OLED / High-Res Display", value: "Color Accurate High-Res Display" },
+      { label: "Durable Metal Build & Tactile Keyboard", value: "Durable Build & Keyboard Quality" }
     ]
   },
   {
     id: "os_preference",
-    question: "Do you have an Operating System preference?",
+    question: "Do you have a preferred OS & Service Brand in India?",
     options: [
-      { label: "macOS (Apple Silicon)", value: "macOS" },
-      { label: "Windows 11", value: "Windows 11" },
-      { label: "Linux Compatible", value: "Linux Compatible" },
-      { label: "Best Value (Any OS)", value: "Best Value (Any OS)" }
+      { label: "macOS (Apple M2/M3 Silicon)", value: "macOS" },
+      { label: "Windows 11 (Lenovo / HP / Dell / ASUS)", value: "Windows 11" },
+      { label: "Linux / Ubuntu Coding Ready", value: "Linux Compatible" },
+      { label: "Best Value & Service Network in India", value: "Best Value (Any OS)" }
     ]
   }
 ];
 
-// Sample Curated Recommendations with Images
+// Sample Curated Recommendations tailored for Indian buyers with real INR pricing
 const SAMPLE_RECOMMENDATIONS = [
   {
-    name: "MacBook Air M3",
-    tagline: "Best overall for Developers & Creative Professionals",
-    price: "₹1,04,900",
+    name: "Apple MacBook Air M2 / M3",
+    tagline: "Top choice in India for Developers, Students & Creators",
+    price: "₹89,900",
     image: "/top/top1.webp",
-    specs: ["Apple M3 8-Core", "16GB Unified RAM", "512GB SSD", "18 Hr Battery"],
+    specs: ["Apple M2/M3 Chip", "8GB/16GB Unified RAM", "512GB SSD", "18 Hr Battery"],
     score: "98% Match",
-    reasons: ["Extremely quiet fanless design", "Industry leading battery stamina", "Retina color accuracy"],
+    reasons: ["Silent fanless build ideal for long coding sessions", "Best-in-class battery life for college & travel", "High resale value & Apple Care support in India"],
     badge: "Top Recommendation"
   },
   {
-    name: "ThinkPad E14 Gen 5",
-    tagline: "Unmatched Keyboard & Commercial Durability",
-    price: "₹74,500",
+    name: "Lenovo ThinkPad E14 Gen 5",
+    tagline: "Unmatched Keyboard & Commercial Onsite Warranty in India",
+    price: "₹64,990",
     image: "/top/top2.webp",
-    specs: ["Intel Core i7-1355U", "16GB DDR5", "512GB NVMe", "Thunderbolt 4"],
-    score: "94% Match",
-    reasons: ["Best tactile keyboard for coding", "MIL-STD 810H durability", "Easy RAM upgradeability"],
-    badge: "Best Reliability"
+    specs: ["Intel Core i5-1335U", "16GB DDR5 (Upgradable)", "512GB NVMe SSD", "Thunderbolt 4"],
+    score: "95% Match",
+    reasons: ["Legendary tactile keyboard preferred by software engineers", "MIL-STD 810H military-grade build durability", "Widespread Lenovo onsite service center network in India"],
+    badge: "Best for Coding"
   },
   {
-    name: "ASUS ROG Zephyrus G14",
-    tagline: "Compact Powerhouse for Gaming & Heavy Workloads",
-    price: "₹1,18,900",
+    name: "ASUS Vivobook S 15 OLED",
+    tagline: "Stunning 2.8K OLED Display for Creators & Multitaskers",
+    price: "₹72,990",
     image: "/top/top3.webp",
-    specs: ["AMD Ryzen 9 8945HS", "RTX 4060 8GB", "16GB RAM", "OLED 120Hz"],
-    score: "91% Match",
-    reasons: ["Stunning OLED panel", "Ultra-portable gaming chassis", "Vapor chamber cooling"],
-    badge: "Highest Performance"
+    specs: ["Intel Core Evo i5-13500H", "16GB LPDDR5", "512GB Gen4 SSD", "120Hz OLED"],
+    score: "92% Match",
+    reasons: ["100% DCI-P3 color accuracy for video editing & design", "High performance H-series processor", "Sleek all-metal chassis with Harma Kardon speakers"],
+    badge: "Best Display"
   },
   {
-    name: "Dell XPS 13 9340",
-    tagline: "Sleek Ultraportable for Professionals",
-    price: "₹1,09,900",
+    name: "HP Victus / Pavilion Plus 14",
+    tagline: "Balanced Power for Student Coding & Light Gaming",
+    price: "₹58,990",
     image: "/top/top4.webp",
-    specs: ["Intel Core Ultra 7", "16GB LPDDR5X", "512GB SSD", "FHD+ InfinityEdge"],
+    specs: ["AMD Ryzen 5 7535HS", "RTX 2050 / 3050 4GB", "16GB RAM", "144Hz FHD"],
     score: "89% Match",
-    reasons: ["Ultra-thin aluminum chassis", "Gorilla Glass touchpad", "Vibrant InfinityEdge display"],
-    badge: "Premium Design"
+    reasons: ["Dedicated GPU for machine learning & casual gaming", "Pan-India HP home pickup & doorstep warranty", "Excellent price-to-performance ratio for Indian students"],
+    badge: "Best Student Value"
   }
 ];
 
@@ -105,17 +106,43 @@ export default function FindLaptopPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [dynamicSuggestions, setDynamicSuggestions] = useState<{ icon?: any; text: string }[]>([]);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  // Initial prompt cards (Exact original layout maintained)
-  const suggestions = [
-    { icon: <HelpCircle className="w-4 h-4 text-white/50" />, text: "Gaming laptop under $1000" },
-    { icon: <LinkIcon className="w-4 h-4 text-white/50" />, text: "Best laptop for programming" },
-    { icon: <Mail className="w-4 h-4 text-white/50" />, text: "Lightweight student laptop" },
-    { icon: <BarChart2 className="w-4 h-4 text-white/50" />, text: "Video editing powerhouse" },
-    { icon: <FileText className="w-4 h-4 text-white/50" />, text: "Compare Mac and Windows" },
-    { icon: <Users className="w-4 h-4 text-white/50" />, text: "Longest battery life" },
+  // Initial fallback prompt cards tailored for Indian buyers
+  const fallbackSuggestions = [
+    { icon: <HelpCircle className="w-4 h-4 text-[#00A7B5]" />, text: "Best laptop for B.Tech CSE coding under ₹60,000" },
+    { icon: <LinkIcon className="w-4 h-4 text-[#00A7B5]" />, text: "Lightweight student laptop with 10+ hr battery life" },
+    { icon: <Mail className="w-4 h-4 text-[#00A7B5]" />, text: "Video editing & YouTube content creation laptop under ₹80,000" },
+    { icon: <BarChart2 className="w-4 h-4 text-[#00A7B5]" />, text: "MacBook Air M2 vs Lenovo ThinkPad for software developers" },
+    { icon: <FileText className="w-4 h-4 text-[#00A7B5]" />, text: "Gaming & ML laptop with RTX graphics under ₹75,000" },
+    { icon: <Users className="w-4 h-4 text-[#00A7B5]" />, text: "Best business laptop with doorstep onsite warranty in India" },
   ];
+
+  // Fetch dynamic suggestions from DB on mount
+  useEffect(() => {
+    async function loadDynamicSuggestions() {
+      const res = await getDynamicSuggestionsAction();
+      if (res && res.success && res.suggestions && res.suggestions.length > 0) {
+        const icons = [
+          <HelpCircle key="1" className="w-4 h-4 text-[#00A7B5]" />,
+          <LinkIcon key="2" className="w-4 h-4 text-[#00A7B5]" />,
+          <Mail key="3" className="w-4 h-4 text-[#00A7B5]" />,
+          <BarChart2 key="4" className="w-4 h-4 text-[#00A7B5]" />,
+          <FileText key="5" className="w-4 h-4 text-[#00A7B5]" />,
+          <Users key="6" className="w-4 h-4 text-[#00A7B5]" />
+        ];
+        const formatted = res.suggestions.map((s: any, idx: number) => ({
+          icon: icons[idx % icons.length],
+          text: s.text
+        }));
+        setDynamicSuggestions(formatted);
+      }
+    }
+    loadDynamicSuggestions();
+  }, []);
+
+  const activeSuggestions = dynamicSuggestions.length > 0 ? dynamicSuggestions : fallbackSuggestions;
 
   // Auto-scroll chat
   useEffect(() => {
@@ -184,13 +211,23 @@ export default function FindLaptopPage() {
       }, 500);
     } else {
       setIsCompleted(true);
-      setTimeout(() => {
+      setTimeout(async () => {
+        // Build natural language query from user answers
+        const userSummary = updatedMessages
+          .filter(m => m.role === "user")
+          .map(m => m.content)
+          .join(". ");
+
+        // Call Klarone ML Model Recommendation Engine
+        const mlRes = await getMLRecommendationsAction(userSummary);
+
         setMessages([
           ...updatedMessages,
           {
             role: "assistant",
-            content: "Thank you! I've analyzed your requirements and calculated personalized laptop recommendations for your exact workflow.",
-            isResultsCard: true
+            content: "Thank you! I've analyzed your requirements using Klarone's Machine Learning Recommendation Engine and selected the best laptop matches for your exact workflow.",
+            isResultsCard: true,
+            recommendations: mlRes.success && mlRes.recommendations.length > 0 ? mlRes.recommendations : undefined
           }
         ]);
       }, 700);
@@ -305,13 +342,13 @@ export default function FindLaptopPage() {
         <div className="flex-1 overflow-y-auto flex flex-col relative pb-36">
 
           {messages.length === 0 ? (
-            // Empty State (Exact original UI restored)
+            // Empty State (Tailored for Indian buyers)
             <div className="flex-1 flex flex-col items-center justify-center px-4 max-w-4xl mx-auto w-full mt-[-8vh]">
-              <h1 className="text-[32px] font-medium text-white mb-2">What do you want to do?</h1>
-              <p className="text-[15px] text-white/50 mb-10">Ask anything and I'll handle the busywork.</p>
+              <h1 className="text-[32px] font-medium text-white mb-2">Find Your Ideal Laptop in India</h1>
+              <p className="text-[15px] text-white/50 mb-10 text-center max-w-xl">Get unbiased, AI-driven recommendations based on your budget in ₹, degree/work requirements, and official Indian brand warranty.</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-3xl">
-                {suggestions.map((item, i) => (
+                {activeSuggestions.map((item, i) => (
                   <button
                     key={i}
                     onClick={() => handleAnswerSubmit(item.text)}
@@ -358,7 +395,16 @@ export default function FindLaptopPage() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {SAMPLE_RECOMMENDATIONS.map((item, rIdx) => (
+                          {(msg.recommendations && msg.recommendations.length > 0 ? msg.recommendations.map((r: any) => ({
+                            name: r.model_name || r.name,
+                            tagline: r.tagline || "Matched by Klarone AI Recommendation Engine",
+                            price: typeof r.actual_price === 'number' ? `₹${r.actual_price.toLocaleString('en-IN')}` : (r.price || '₹60,000'),
+                            score: typeof r.recommendation_score === 'number' ? `${r.recommendation_score}% Match` : (r.score || "94% Match"),
+                            badge: r.badge || "Top Match",
+                            image: typeof r.image === 'string' ? r.image : (r.image?.url || r.image?.src || (r.official_images && typeof r.official_images[0] === 'string' ? r.official_images[0] : r.official_images?.[0]?.url) || "/top/top1.webp"),
+                            specs: r.specs || [`Gaming: ${r.gaming_score}/100`, `Student: ${r.student_score}/100`, `Business: ${r.business_score}/100`],
+                            reasons: r.reasons || (r.reason ? [r.reason] : ["Matched for your workload"])
+                          })) : SAMPLE_RECOMMENDATIONS).map((item: any, rIdx: number) => (
                             <div
                               key={rIdx}
                               className="rounded-2xl bg-[#1C1C1F] border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between overflow-hidden shadow-xl group"
@@ -404,7 +450,7 @@ export default function FindLaptopPage() {
 
                                   {/* Specs Badges */}
                                   <div className="mt-3 flex flex-wrap gap-1.5">
-                                    {item.specs.map((spec, sIdx) => (
+                                    {item.specs.map((spec: string, sIdx: number) => (
                                       <span key={sIdx} className="px-2.5 py-1 rounded-md bg-white/[0.06] text-white/80 text-[11.5px] font-medium border border-white/[0.05]">
                                         {spec}
                                       </span>
@@ -418,7 +464,7 @@ export default function FindLaptopPage() {
                                 <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.05] flex flex-col gap-1.5">
                                   <span className="text-[11px] font-semibold text-white/50 uppercase tracking-wider">Klarone Analysis</span>
                                   <ul className="text-[12px] text-white/85 space-y-1">
-                                    {item.reasons.slice(0, 2).map((r, reasonIdx) => (
+                                    {item.reasons.slice(0, 2).map((r: string, reasonIdx: number) => (
                                       <li key={reasonIdx} className="flex items-center gap-1.5">
                                         <ShieldCheck className="w-3.5 h-3.5 text-[#00A7B5] shrink-0" />
                                         <span className="truncate">{r}</span>
@@ -492,7 +538,7 @@ export default function FindLaptopPage() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask anything. Type @ for mentions and / for shortcuts."
+                placeholder="Describe your requirements (e.g. B.Tech coding laptop under ₹65k with good battery)..."
                 className="w-full bg-transparent px-5 pt-5 pb-12 text-[15px] text-white placeholder-white/30 focus:outline-none"
               />
 

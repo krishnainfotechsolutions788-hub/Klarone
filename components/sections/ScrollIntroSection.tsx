@@ -44,6 +44,7 @@ export default function ScrollIntroSection() {
 
   return (
     <section 
+      id="about"
       className="relative w-full bg-[#000000] text-white pt-16 pb-40 sm:pb-56 px-6 flex flex-col items-center overflow-hidden"
     >
       <div className="w-full max-w-[680px] flex flex-col items-start">
