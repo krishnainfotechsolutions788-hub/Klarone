@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import ScrollIntroSection from "@/components/sections/ScrollIntroSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 import TopSoldSection from "@/components/sections/TopSoldSection";
 import StatsSection from "@/components/sections/StatsSection";
 import PricingSection from "@/components/sections/PricingSection";
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ScrollIntroSection />
+        <ServicesSection />
         <TopSoldSection />
         <FaqSection />
       </main>

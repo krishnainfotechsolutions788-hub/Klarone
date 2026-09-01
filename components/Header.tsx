@@ -39,6 +39,7 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
   const navItems = [
     { name: "Shop", href: "/shop" },
     { name: "About", href: isLandingPage ? "#about" : "/#about" },
+    { name: "Services", href: isLandingPage ? "#services" : "/#services" },
     { name: "Products", href: isLandingPage ? "#products" : "/#products" },
     { name: "FAQ", href: isLandingPage ? "#faq" : "/#faq" },
   ];
