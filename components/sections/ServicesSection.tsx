@@ -177,11 +177,6 @@ export default function ServicesSection() {
                     <span className="text-[13px] font-mono font-medium tracking-wider text-white/50">
                       {col.number}
                     </span>
-                    {col.isParentCompany && (
-                      <span className="inline-block text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded-md bg-amber-500/15 text-amber-300 border border-amber-500/30 max-w-fit">
-                        By {col.parentLabel}
-                      </span>
-                    )}
                   </div>
 
                   <div className="w-10 h-10 rounded-xl bg-[#1A1A20] border border-white/10 flex items-center justify-center text-white/80 group-hover:text-white group-hover:scale-105 transition-all duration-300">
